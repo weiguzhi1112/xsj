@@ -422,6 +422,57 @@ textarea.wbi{height:auto;padding:10px 14px;line-height:1.6;resize:none;display:b
 .mmn .mi{display:flex;flex-direction:column;padding:2px 6px 4px}
 .mmn .mi button{display:flex;align-items:center;justify-content:flex-start;gap:10px;border:0;border-bottom:1px solid rgba(120,120,128,.14);background:none;color:var(--ink);font:inherit;font-size:14px;font-weight:500;padding:0 10px;height:40px;border-radius:0;cursor:pointer;text-align:left}
 .mmn .mi button:last-child{border-bottom:0}.mmn .mi button .ico{width:16px;height:16px;opacity:.8;flex:none}.mmn .mi button span{flex:1}.mmn .mi button.dg{color:var(--danger)}
+
+/* ---- prompts / worldbook test / search / badges ---- */
+.pgt{width:100%;box-sizing:border-box;font:inherit;font-size:13px!important;line-height:1.65;min-height:220px;resize:vertical;border:1px solid var(--line)!important;border-radius:14px;padding:12px!important;background:none;color:var(--ink);margin-top:10px}
+pre.pv{margin:0 0 12px;max-height:46vh;overflow:auto;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:12.5px;line-height:1.65;color:var(--ink);background:var(--card);border-radius:14px;padding:12px 14px;-webkit-user-select:text;user-select:text}
+.lr.col{flex-direction:column;align-items:stretch;gap:10px}
+.wbi{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:14px;line-height:1.6;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:none;color:var(--ink);resize:vertical;outline:0}
+.wtx{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--card);font-size:14px;line-height:1.7;white-space:pre-wrap;word-break:break-word;-webkit-user-select:text;user-select:text}
+mark.p,mark.s{border-radius:4px;padding:0 2px;color:inherit}
+mark.p{background:rgba(255,204,0,.55)}mark.s{background:rgba(52,199,89,.45)}
+.wtr{margin-top:10px;padding:12px 16px;border-radius:16px;background:var(--card);border:1px solid transparent}
+.wtr.hit{border-color:rgba(52,199,89,.6)}
+.wth{display:flex;align-items:center;gap:10px}.wth b{flex:1;min-width:0;font-weight:500;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wtg{font-size:11px;padding:2px 9px;border-radius:10px;border:1px solid var(--line);color:var(--t4)}.wtr.hit .wtg{background:rgba(52,199,89,.2);border-color:transparent;color:var(--ink)}
+.wtr small{display:block;font-size:12px;color:var(--t4);margin-top:4px;line-height:1.55}.wtr small.nt{color:var(--danger)}
+.shd{padding:14px 20px 6px;font-size:12px;color:var(--t4);letter-spacing:.04em}
+.mr.flash .bb{animation:fl 1.8s ease-out}
+@keyframes fl{0%,60%{box-shadow:0 0 0 3px rgba(255,204,0,.75)}100%{box-shadow:0 0 0 3px rgba(255,204,0,0)}}
+.ic .ibg{position:absolute;top:-6px;left:calc(50% + 14px);min-width:20px;height:20px;box-sizing:border-box;padding:0 6px;border-radius:10px;background:#ff3b30;color:#fff;font:600 12px/20px -apple-system,system-ui,sans-serif;text-decoration:none;text-align:center;box-shadow:0 0 0 1.5px rgba(255,255,255,.9);z-index:2;pointer-events:none}
+.ic .ibg[hidden]{display:none}
+#dock .ic .ibg{top:-6px}
+
+/* ---- quote pill: iMessage skin (tail-shaped pill + curved connector) ---- */
+.mr.hq{margin-top:50px}.mr.hq.gf{margin-top:50px}
+.mr.hq .bb{max-width:58%}
+.qp{position:absolute;bottom:100%;margin:0;box-sizing:border-box;width:96px;height:38px;max-width:96px;padding:9px 14px 8px;line-height:18px;font-size:12px;border-radius:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 467.54 151.08'%3E%3Cpath fill='black' d='M417.2 259.23c13.29 0 26.62 0 39.86 1 26.1 2 45.94 14 57.1 38.46 3.67 8 4.81 16.59 4.92 25.35.27 21-8 38.13-23.94 51.4a52.51 52.51 0 0 1-28.43 12.36c-13.08 1.29-26.26 2.19-39.4 2.23-61.75.22-123.5.12-185.24.08q-55.95 0-111.88-.33c-7-.05-12.64 2.06-18.41 6-7.63 5.26-16.14 9.24-24.3 13.72a4.29 4.29 0 0 1-2.57.69c-2.07-.44-5.17-.65-5.84-2-.92-1.81-.41-4.71.29-6.89.81-2.5 2.79-4.62 3.76-7.09 2.5-6.38 1-12.72-4.24-17.15C71.6 371 64.7 364.57 60.28 356c-5.37-10.39-9.63-21.2-8.58-33.2 2.07-23.47 11.62-42.44 33-54.33 10.54-5.87 22-8.18 33.73-8.32 55.97-.64 255.17-.94 298.77-.82Z' transform='translate(-51.54 -259.21)'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 467.54 151.08'%3E%3Cpath fill='black' d='M417.2 259.23c13.29 0 26.62 0 39.86 1 26.1 2 45.94 14 57.1 38.46 3.67 8 4.81 16.59 4.92 25.35.27 21-8 38.13-23.94 51.4a52.51 52.51 0 0 1-28.43 12.36c-13.08 1.29-26.26 2.19-39.4 2.23-61.75.22-123.5.12-185.24.08q-55.95 0-111.88-.33c-7-.05-12.64 2.06-18.41 6-7.63 5.26-16.14 9.24-24.3 13.72a4.29 4.29 0 0 1-2.57.69c-2.07-.44-5.17-.65-5.84-2-.92-1.81-.41-4.71.29-6.89.81-2.5 2.79-4.62 3.76-7.09 2.5-6.38 1-12.72-4.24-17.15C71.6 371 64.7 364.57 60.28 356c-5.37-10.39-9.63-21.2-8.58-33.2 2.07-23.47 11.62-42.44 33-54.33 10.54-5.87 22-8.18 33.73-8.32 55.97-.64 255.17-.94 298.77-.82Z' transform='translate(-51.54 -259.21)'/%3E%3C/svg%3E");-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.qp.qm{background:var(--bub-me);color:var(--bub-me-t)}.qp.qo{background:var(--bub-ot);color:var(--bub-ot-t)}
+.mr.me .qp{right:100%;margin-right:26px;left:auto}.mr:not(.me) .qp{left:100%;margin-left:26px;right:auto}
+.mc:has(>.qp)::after{content:"";position:absolute;bottom:100%;margin-bottom:-40px;width:40px;height:40px;border-radius:0;opacity:1;background:rgba(128,128,128,.3);-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150' width='200' height='150'%3E%3Cpath d='M 30,15 Q 40,110 170,115' fill='none' stroke='black' stroke-width='16' stroke-linecap='round'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150' width='200' height='150'%3E%3Cpath d='M 30,15 Q 40,110 170,115' fill='none' stroke='black' stroke-width='16' stroke-linecap='round'/%3E%3C/svg%3E");-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;pointer-events:none}
+.mr.me .mc:has(>.qp)::after{right:calc(100% + 60px);left:auto}
+.mr:not(.me) .mc:has(>.qp)::after{left:calc(100% + 60px);right:auto;transform:scaleX(-1)}
+
+.mc:has(>.qp):has(>.nl)>.qp{bottom:calc(100% - 20px)}.mc:has(>.qp):has(>.nl)::after{bottom:calc(100% - 20px)}
+/* ---- manual reply mode ---- */
+.ib.man .sd{transform:none;opacity:1;pointer-events:auto}
+.ib.man:not(.has) .sd{background:var(--soft)}.ib.man:not(.has) .sd .ico{color:var(--ink)}
+.ib.man:not(.has) .emb{right:42px}
+
+/* ---- phone & contacts ---- */
+.pnq{padding:4px 20px 6px}.pnq input{width:100%;box-sizing:border-box;height:38px;border-radius:19px;border:0;background:var(--soft);padding:0 16px;font:inherit;font-size:15px;color:var(--ink);outline:0}
+#app .sc .rw{padding:11px 4px}.pns{display:block;font-size:12px;color:var(--t4);margin-top:2px}.pnm{color:var(--danger)}.pnt{font-style:normal;font-size:12px;color:var(--t4)}
+.pnd{width:44px;height:44px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-size:18px;color:var(--t3);flex:none}
+.pnc{width:auto!important;font-size:13px;padding:0 6px}
+.pnb{flex:none;display:flex;justify-content:space-around;padding:8px 20px 30px;border-top:1px solid var(--line2);background:var(--app)}
+.pnb button{border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:var(--t4);cursor:pointer;min-width:64px}.pnb button.on{color:var(--ink)}.pnb .ico{width:24px;height:24px}
+.pnp{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:12px}
+.pnn{font-size:34px;font-weight:300;letter-spacing:1px;min-height:44px;color:var(--ink)}.pnh{min-height:32px;font-size:13px;color:var(--t4)}.pnh button{border:0;background:none;color:var(--ink);font-size:13px;text-decoration:underline;cursor:pointer}
+.pnk{display:grid;grid-template-columns:repeat(3,76px);gap:14px 22px;margin-top:10px}
+.phk{width:76px;height:76px;border-radius:50%;border:0;background:var(--soft);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;padding:0}.phk b{font-size:28px;font-weight:300;line-height:1}.phk small{font-size:9px;letter-spacing:2px;color:var(--t4);min-height:11px}
+.phk.go{background:#34c759;color:#fff}.phk.go .ico{width:30px;height:30px}.phk.bk{background:none}.phk.bk .ico{width:28px;height:28px}.phk:disabled{opacity:.3}
+.pnx{padding-top:22px;display:flex;flex-direction:column;align-items:center;text-align:center}.pnx h2{margin:14px 0 0;font-weight:400;font-size:24px}.pnx .ls{width:100%;box-sizing:border-box;text-align:left}
+.pna{display:flex;gap:18px;margin:22px 0 4px}.pna button{width:76px;height:64px;border-radius:18px;border:0;background:var(--card);box-shadow:0 0 0 .5px rgba(0,0,0,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;color:var(--ink);cursor:pointer}.pna .ico{width:22px;height:22px}
 </style></head>
 <body>
 <div id="phone">
@@ -499,7 +550,9 @@ const phone=$('#phone'),track=$('#track');
 // pages & icons
 const pgs=[0,1].map(()=>{const d=document.createElement('div');d.className='pg';track.appendChild(d);return d});
 pgs[0].insertAdjacentHTML('beforeend','<div class="wg"><small id="wm"></small><em id="ww"></em><b id="wd"></b><div class="bar"><u id="wp"></u></div></div>');
-function mk(k){const e=document.createElement('div');e.className='ic';e.dataset.k=k;e.tabIndex=0;e.setAttribute('role','button');e.setAttribute('aria-label',APPS[k][0]);e.innerHTML=`<i>${ic(APPS[k][1])}</i><span>${APPS[k][0]}</span>`;els[k]=e;return e}
+function mk(k){const e=document.createElement('div');e.className='ic';e.dataset.k=k;e.tabIndex=0;e.setAttribute('role','button');e.setAttribute('aria-label',APPS[k][0]);e.innerHTML=`<i>${ic(APPS[k][1])}</i><span>${APPS[k][0]}</span><u class="ibg" hidden></u>`;els[k]=e;return e}
+const smsUnread=()=>Object.values(SMS.u||{}).reduce((a,n)=>a+(+n||0),0);
+function updBadges(){const f=(k,n)=>{const e=els[k]&&els[k].querySelector('.ibg');if(!e)return;e.hidden=!n;e.textContent=n>99?'99+':n;if(els[k])els[k].setAttribute('aria-label',APPS[k][0]+(n?'，'+n+'条未读':''))};try{f('chat',wxUnread());f('sms',smsUnread())}catch(x){}}
 function put(k){const p=pos[k],e=els[k];e.style.left=((p.d?8+p.s*W:X+(p.s%4)*W)+(PW-390)/2)+'px';e.style.top=(p.d?11:Y+Math.floor(p.s/4)*H)+'px'}
 DOCK.forEach((k,i)=>{pos[k]={d:1,s:i};$('#dock').appendChild(mk(k));put(k)});
 P1.forEach((k,i)=>{pos[k]={p:0,s:8+i};pgs[0].appendChild(mk(k));put(k)});
@@ -551,6 +604,7 @@ $('#lf').innerHTML=ic('torch');$('#lc').innerHTML=ic('cam');$('#lf').setAttribut
 $('#lf').onclick=()=>{S.torch^=1;$('#lf').classList.toggle('on',S.torch);rt()};
 $('#lc').onclick=()=>unlock(()=>openApp('cam'));
 // app open/close (registry)
+let STK=0;const keepScroll=(e,f)=>{const near=e.scrollHeight-e.scrollTop-e.clientHeight<140||STK,y=e.scrollTop;STK=0;f();e.scrollTop=near?1e9:y};
 let cur=null;const CONS=['#wx','#st','#sm','#cr','#app'];
 function openApp(k){if(!APPS[k])return;if(CFG.hap&&navigator.vibrate)navigator.vibrate(8);
  const e=els[k],r=phone.getBoundingClientRect(),q=e.getBoundingClientRect(),sc=r.width/PW,cx=(q.left+q.width/2-r.left)/sc,cy=(q.top+30*sc-r.top)/sc;
@@ -640,7 +694,7 @@ a11y();
 // ---------- WeChat ----------
 Object.assign(I,{back:'M15 5l-7 7 7 7',chev:'M9 5l7 7-7 7',plus:'M12 5v14M5 12h14',scan:'M4 8V5h3M17 4h3v3M20 16v3h-3M7 20H4v-3M4 12h16',star:'M12 3l2.7 5.6 6.3.9-4.5 4.4 1 6.2L12 17.2 6.5 20l1-6.2L3 9.5l6.3-.9z',send:'M4 12l16-8-6 16-3-6z',more:'M6 12h.01M12 12h.01M18 12h.01',ctc:'M6 4h12v16H6zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM9 17a3 3 0 0 1 6 0'});
 const WX={acc:null,cons:[],msgs:{},tab:0,codes:{},tmp:'',edit:null,cur:null,hint:{}};
-const wsave=()=>{const m={};for(const k in WX.msgs){stampMsgs(WX.msgs[k]);m[k]=WX.msgs[k].filter(x=>!x.p)}return store('wx',{acc:WX.acc,cons:WX.cons,msgs:m})};
+const wsave=()=>{const m={};for(const k in WX.msgs){stampMsgs(WX.msgs[k]);m[k]=WX.msgs[k].filter(x=>!x.p)}const r=store('wx',{acc:WX.acc,cons:WX.cons,msgs:m});updBadges();return r};
 const view=i=>{if(window.mpClose)mpClose();['s','r','m','e','k','c'].forEach(x=>$('#v'+x).classList.toggle('on',x==i))};
 function toast(m){gtoast(m,1800)}
 const av=(c,s=48)=>`<div class="av" style="width:${s}px;height:${s}px;border-radius:${Math.round(s*.3)}px;font-size:${Math.round(s*.4)}px;${c.av?`background-image:url('${c.av}')`:''}">${c.av?'':esc((c.name||'+')[0])}</div>`;
@@ -667,17 +721,20 @@ function wxList(){const q=(WX.q||'').trim().toLowerCase(),ts=c=>{const L=WX.msgs
  let cs=WX.cons.filter(c=>c.chat||(WX.msgs[c.id]||[]).length);
  if(q)cs=WX.cons.filter(c=>(nm(c)+' '+c.name+' '+(c.wid||'')).toLowerCase().includes(q)||(WX.msgs[c.id]||[]).some(m=>!m.p&&String(m.t).toLowerCase().includes(q)));
  return cs.sort((a,b)=>(b.pin?1:0)-(a.pin?1:0)||ts(b)-ts(a))}
-function chatRows(){const cs=wxList(),q=(WX.q||'').trim();
- if(!cs.length)return`<p class="em">${q?'没有找到相关聊天或联系人':'还没有聊天<br>从通讯录添加好友后开始对话'}</p>`;
+function wxMsgHits(q){const k=q.toLowerCase(),out=[];for(const c of WX.cons){const L=WX.msgs[c.id]||[];L.forEach((m,i)=>{if(m.s||m.p)return;const t=m.call!==undefined?(m.log||[]).map(l=>l.t).join(' '):(m.t||'');if(t&&t.toLowerCase().includes(k))out.push({c,i,m,t,ts:m.ts||0})})}out.sort((a,b)=>b.ts-a.ts||b.i-a.i);return out.slice(0,100)}
+function wxSnip(t,q){const k=q.toLowerCase(),at=t.toLowerCase().indexOf(k),a=Math.max(0,at-12),seg=(a?'…':'')+t.slice(a,at+q.length+40),j=seg.toLowerCase().indexOf(k);return esc(seg.slice(0,j))+'<mark class="p">'+esc(seg.slice(j,j+q.length))+'</mark>'+esc(seg.slice(j+q.length))}
+function chatRows(){const cs=wxList(),q=(WX.q||'').trim(),hits=q?wxMsgHits(q):[];
+ if(!cs.length&&!hits.length)return`<p class="em">${q?'没有找到相关聊天、联系人或消息':'还没有聊天<br>从通讯录添加好友后开始对话'}</p>`;
+ const mh=hits.length?`<div class="shd">聊天记录 · ${hits.length>=100?'100+':hits.length} 条</div>`+hits.map(x=>`<div class="rw cl" data-a="msgjump" data-id="${x.c.id}" data-i="${x.i}">${av(x.c,40)}<div class="cm"><div class="rl1"><b>${esc(nm(x.c))}</b><em>${esc(wTime(x.m))}</em></div><div class="rl2"><s>${wxSnip(x.t,q)}</s></div></div></div>`).join(''):'';
  return cs.map(c=>{const A=WX.msgs[c.id]||[],L=A.filter(m=>!m.p),m=L[L.length-1],pend=A.some(x=>x.p);
-  return`<div class="rw cl${c.pin?' pin':''}" data-a="chat" data-id="${c.id}">${av(c,50)}<div class="cm"><div class="rl1"><b>${esc(nm(c))}</b><em>${esc(wTime(m))}</em></div><div class="rl2"><s>${esc(pend?'对方正在输入…':m?msgLabel(m):'暂无消息')}</s>${c.mute?ic('mute').replace('class="ico"','class="ico mu"'):''}${c.unread?`<i class="bd">${c.unread>99?'99+':c.unread}</i>`:''}</div></div></div>`}).join('')}
+  return`<div class="rw cl${c.pin?' pin':''}" data-a="chat" data-id="${c.id}">${av(c,50)}<div class="cm"><div class="rl1"><b>${esc(nm(c))}</b><em>${esc(wTime(m))}</em></div><div class="rl2"><s>${esc(pend?'对方正在输入…':m?msgLabel(m):'暂无消息')}</s>${c.mute?ic('mute').replace('class="ico"','class="ico mu"'):''}${c.unread?`<i class="bd">${c.unread>99?'99+':c.unread}</i>`:''}</div></div></div>`}).join('')+mh}
 const wxUnread=()=>WX.cons.reduce((a,c)=>a+(c.unread||0),0);
-function wxTouch(){const l=$('#wcl');if(l)l.innerHTML=chatRows();const n=$('#wnb'),u=wxUnread();if(n){n.textContent=u>99?'99+':u;n.style.display=u?'':'none'}}
+function wxTouch(){updBadges();const l=$('#wcl');if(l)l.innerHTML=chatRows();const n=$('#wnb'),u=wxUnread();if(n){n.textContent=u>99?'99+':u;n.style.display=u?'':'none'}}
 function ctcHtml(){const by={};WX.cons.forEach(c=>{(by[initial(nm(c))]??=[]).push(c)});const ks=Object.keys(by).sort((a,b)=>a=='#'?1:b=='#'?-1:a<b?-1:1),idn=k=>'ci_'+(k=='#'?'hash':k);
  const row=c=>`<div class="rw" data-a="ct" data-id="${c.id}">${av(c,42)}<div><b>${esc(nm(c))}</b></div></div>`;
  return`<div class="rw" data-a="add"><div class="ci0">${ic('plus')}</div><div><b>添加好友</b></div></div>`+(ks.length?ks.map(k=>`<div class="sh26" id="${idn(k)}">${k}</div>`+by[k].sort((a,b)=>COL?COL.compare(nm(a),nm(b)):0).map(row).join('')).join('')+`<p class="stt" style="text-align:center;margin:18px 0 0">${WX.cons.length} 位联系人</p>`:'<p class="em" style="margin-top:80px">暂无好友<br>点击上方添加好友</p>')}
 function rMain(){const a=WX.acc,ks=[...new Set(WX.cons.map(c=>initial(nm(c))))].sort((x,y)=>x=='#'?1:y=='#'?-1:x<y?-1:1);
- $('#vm').innerHTML=`<div class="pp"><div class="ph"><b>聊天</b></div><div class="sb26"><svg class="ico" viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4"/></svg><input id="wq" type="search" placeholder="搜索" aria-label="搜索聊天和联系人" autocomplete="off" value="${esc(WX.q||'')}"></div><div class="sc" id="wcl">${chatRows()}</div></div>
+ $('#vm').innerHTML=`<div class="pp"><div class="ph"><b>聊天</b></div><div class="sb26"><svg class="ico" viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4"/></svg><input id="wq" type="search" placeholder="搜索聊天与全部消息" aria-label="搜索聊天、联系人和消息记录" autocomplete="off" value="${esc(WX.q||'')}"></div><div class="sc" id="wcl">${chatRows()}</div></div>
 <div class="pp"><div class="ph"><b>通讯录</b><button class="tbn" data-a="menu" aria-label="添加">${ic('plus')}</button></div><div class="sc" id="wct">${ctcHtml()}</div>${ks.length>4?`<div class="idx">${ks.map(k=>`<button data-a="idx" data-l="${k}" aria-label="跳到 ${k}">${k}</button>`).join('')}</div>`:''}</div>
 <div class="pp"><div class="ph"><b>发现</b></div><div class="sc">${[['朋友圈','spark'],['视频号','cam'],['小程序','store']].map(x=>`<div class="rw" data-a="soon">${ic(x[1])}<div><b>${x[0]}</b></div>${ic('chev').replace('class="ico"','class="ico ch"')}</div>`).join('')}</div></div>
 <div class="pp"><div class="mine">${av(a,68)}<div><b>${esc(a.wid)}</b><s>微信号：${esc(a.wid)}</s><s>${esc(a.sig||'未设置个性签名')}</s></div></div><div class="sc">${[['服务','wallet'],['收藏','star'],['朋友圈','photo'],['设置','gear']].map(x=>`<div class="rw" data-a="soon">${ic(x[1])}<div><b>${x[0]}</b></div>${ic('chev').replace('class="ico"','class="ico ch"')}</div>`).join('')}</div></div>
@@ -707,7 +764,7 @@ function grpOf(L,i){const g=L[i]&&L[i].g;if(!g)return[i,i];let a=i,b=i;while(a>0
 function grpEdit(L,i,done){const[a,b]=grpOf(L,i),old=L.slice(a,b+1);
  editSheet('编辑回复',old.map(lineOf).join('\n'),v=>{const ls=splitLines(v);if(!ls.length)return gtoast('内容不能为空');const g=old[0].g||(ls.length>1?newGid():'');
   const nw=ls.map((t,n)=>{const e=n<old.length?Object.assign({},old[n]):{h:old[0].h,ts:old[0].ts};const pl=parseLine(t);e.t=pl.t;if(pl.v)e.v=pl.v;else delete e.v;if(g)e.g=g;return e});L.splice(a,b-a+1,...nw);done()},'每一行是一条消息，用换行分隔')}
-function fitIb(root){const ib=document.querySelector(root+' .ib'),ms=document.querySelector(root+' .ms');if(ib&&ms)ms.style.paddingBottom=(ib.offsetHeight+22)+'px'}
+function fitIb(root){const ib=document.querySelector(root+' .ib'),ms=document.querySelector(root+' .ms');if(ib){const c=root=='#sm'?smsContact(SO.k):WX.cons.find(x=>x.id==WX.cur);ib.classList.toggle('man',!!c&&c.auto===0)}if(ib&&ms)ms.style.paddingBottom=(ib.offsetHeight+22)+'px'}
 const EMO='😀 😁 😂 🤣 😊 😍 🥰 😘 😎 🤔 😅 😭 😢 😡 😴 🥺 😏 🙄 😬 🤗 🤝 👍 👎 👏 🙏 💪 👌 ✌️ 🙌 ❤️ 💔 🔥 ✨ 🎉 🌹 🍺 ☕ 🍜 🍔 🍉 🌙 ☀️ 🌧️ 🐶 🐱 🙈 💤 💯 ‼️ ❓ 👀 🤦 🤷 😳 🥱 😋 😤 🫠'.split(' ');
 const RXE=['❤️','👍','👎','😂','‼️','❓'];
 const rxh=k=>RXI[k]?RXI[k]():esc(k);
@@ -716,38 +773,44 @@ function emoIns(b,e){const t=b.querySelector('textarea');if(!t)return;const a=t.
 function rChat(id){const c=WX.cons.find(x=>x.id==id);if(!c)return;WX.cur=id;WX.rq=null;if(c.unread||!c.chat){c.unread=0;c.chat=1;wsave()}
  const u=wxUnread();
  $('#vk').innerHTML=`<div class="hd26"><button class="gz bk" data-a="home" aria-label="返回">${ic('back')}${u?`<i class="bn">${u>99?'99+':u}</i>`:''}</button><div class="cn" role="button" tabindex="0" data-a="cmore" aria-label="聊天设置">${av(c,56)}<div class="np gz"><b>${esc(nm(c))}</b>${ic('chev')}</div></div><button class="gz rt" data-a="cmore" aria-label="聊天设置">${ic('more')}</button></div><div class="ms" id="ml"></div>
-<div class="ib" id="ib"><div class="pmn gz" id="pmn">${[['img','发送图片','photo'],['vm','发送语音条','mic'],['vc','语音通话','phone'],['sys','插入系统提示','edit'],['set','聊天设置','gear']].map(x=>`<button data-a="pi" data-k="${x[0]}">${ic(x[2])}<span>${x[1]}</span></button>`).join('')}</div>${emoPanel()}<div class="qbar" id="qbar"></div><div class="ibr"><button class="gz pl" data-a="plus" aria-label="更多">${ic('plus')}</button><div class="tw gz"><textarea id="mi" rows="1" placeholder="iMessage" autocomplete="off"></textarea><button class="emb" data-a="emt" aria-label="表情">${ic('smile')}</button><button class="sd" data-a="send" aria-label="发送">${ic('up')}</button></div></div><input type="file" id="mf" accept="image/*" hidden></div>`;ml();view('k')}
+<div class="ib" id="ib"><div class="pmn gz" id="pmn">${[['img','发送图片','photo'],['vm','发送语音条','mic'],['vc','语音通话','phone'],['sys','插入系统提示','edit'],['set','聊天设置','gear']].map(x=>`<button data-a="pi" data-k="${x[0]}">${ic(x[2])}<span>${x[1]}</span></button>`).join('')}</div>${emoPanel()}<div class="qbar" id="qbar"></div><div class="ibr"><button class="gz pl" data-a="plus" aria-label="更多">${ic('plus')}</button><div class="tw gz"><textarea id="mi" rows="1" placeholder="iMessage" autocomplete="off"></textarea><button class="emb" data-a="emt" aria-label="表情">${ic('smile')}</button><button class="sd" data-a="send" aria-label="发送">${ic('up')}</button></div></div><input type="file" id="mf" accept="image/*" hidden></div>`;ml();view('k');{const e=$('#ml');if(e)e.scrollTop=1e9}setTimeout(wxJump,80)}
+function wxJump(){if(WX.jump==null)return;const i=WX.jump;WX.jump=null;const el=document.querySelector(`#ml .mr[data-i="${i}"]`);if(el){el.scrollIntoView({block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),1900)}}
 function qbarRender(sms){const e=document.querySelector(sms?'#sm #qbar':'#vk #qbar');if(!e)return;const q=sms?SO.rq:WX.rq;e.classList.toggle('on',!!q);e.innerHTML=q?`<span><b>回复 ${esc(q.me?'我':q.n||'对方')}</b> ${esc(q.t)}</span><button data-a="qx" aria-label="取消回复">${ic('plus')}</button>`:'';fitIb(sms?'#sm':'#vk')}
 function ml(){const c=WX.cons.find(x=>x.id==WX.cur),e=$('#ml');if(!c||!e)return;const L=WX.msgs[WX.cur]||[];let prev=0,first=1,li=-1,late=false;
  L.forEach((m,i)=>{if(m.me&&!m.s&&!m.p)li=i});if(li>=0)late=L.slice(li+1).some(m=>!m.me&&!m.s&&!m.p);
- e.innerHTML=L.map((m,i)=>{let tm='';if(m.ts&&(!prev||m.ts-prev>3e5)){tm=`<div class="sy tm">${first?'<small>iMessage</small>':''}${tmLabel(m.ts)}</div>`;first=0}if(m.ts)prev=m.ts;
+ keepScroll(e,()=>{e.innerHTML=L.map((m,i)=>{let tm='';if(m.ts&&(!prev||m.ts-prev>3e5)){tm=`<div class="sy tm">${first?'<small>iMessage</small>':''}${tmLabel(m.ts)}</div>`;first=0}if(m.ts)prev=m.ts;
   if(m.s)return tm+`<div class="sy" data-i="${i}" role="button" tabindex="0">${esc(m.t)}</div>`;
   if(m.p)return tm+`<div class="mr"><div class="mc"><div class="bb gf ge typ"><i></i><i></i><i></i></div></div></div>`;
   const g=grpCls(L,i),rx=m.rx?`<i class="rx" aria-label="已回应">${rxh(m.rx)}</i>`:'';
   const body=(m.img?`<img src="${m.img}" alt="图片">`:m.v?voiceHtml(m,i):m.call!==undefined?callHtml(m,i):esc(m.t));
-  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}${!m.me&&g.includes('gf')?`<div class="nl">${esc(nm(c))}</div>`:''}<div class="bb${g}${m.img?' im':m.v?' vo':m.call!==undefined?' ca':''}">${body}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('');fitIb('#vk');e.scrollTop=1e9}
+  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}${!m.me&&g.includes('gf')?`<div class="nl">${esc(nm(c))}</div>`:''}<div class="bb${g}${m.img?' im':m.v?' vo':m.call!==undefined?' ca':''}">${body}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('');fitIb('#vk')})}
 function copy(t){const done=()=>gtoast('已复制');const fb=()=>{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;left:-99px;opacity:0;user-select:text;-webkit-user-select:text';document.body.appendChild(a);a.select();try{document.execCommand('copy')?done():gtoast('复制失败，请手动选择')}catch(e){gtoast('复制失败，请手动选择')}a.remove()};
  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(done,fb);else fb()}
 function wxDelConv(id){const c=WX.cons.find(x=>x.id==id);delete WX.msgs[id];if(c){c.chat=0;c.unread=0}wsave();WX.tab=0;rMain();view('m');gtoast('已删除会话')}
 function editSheet(title,val,cb,ph){SHs.items=[{t:'保存',f:()=>cb($('#sh_in').value)}];shOpen(title,'',`<textarea class="q" id="sh_in" rows="${Math.min(8,Math.max(3,String(val).split('\n').length+1))}" placeholder="${esc(ph||'')}">${esc(val)}</textarea><div class="l"><button class="si" data-sk="0"><span>保存</span></button><button class="si" data-sk="x"><span>取消</span></button></div>`);setTimeout(()=>{const t=$('#sh_in');if(t){t.focus();try{t.setSelectionRange(t.value.length,t.value.length)}catch(x){}}},140)}
 function wxMore(){if(WX.cur!=null)rCS(WX.cur)}
 function rCS(id){const c=WX.cons.find(x=>x.id==id);if(!c)return;
- const sw=(k,l,sub)=>`<div class="lr"><div><b>${l}</b>${sub?`<small>${sub}</small>`:''}</div><button class="sw${c[k]?' on':''}" role="switch" aria-checked="${c[k]?'true':'false'}" aria-label="${l}" data-a="csw" data-k="${k}"><i></i></button></div>`,
+ const swA=`<div class="lr"><div><b>自动回复</b><small>关闭后，发送消息不会自动回复；点输入框右侧按钮，或长按你的最后一条消息选「让对方回复」</small></div><button class="sw${c.auto===0?'':' on'}" role="switch" aria-checked="${c.auto===0?'false':'true'}" aria-label="自动回复" data-a="csw" data-k="auto"><i></i></button></div>`,
+ sw=(k,l,sub)=>`<div class="lr"><div><b>${l}</b>${sub?`<small>${sub}</small>`:''}</div><button class="sw${c[k]?' on':''}" role="switch" aria-checked="${c[k]?'true':'false'}" aria-label="${l}" data-a="csw" data-k="${k}"><i></i></button></div>`,
  sg=(k,l,sub,o,def)=>`<div class="lr col"><div><b>${l}</b><small>${sub}</small></div><div class="sgc" role="group" aria-label="${l}">${o.map(x=>`<button data-a="cseg" data-k="${k}" data-v="${x[0]}"${String(c[k]||def)==String(x[0])?' class="on"':''}>${x[1]}</button>`).join('')}</div></div>`,
  rw=(a,l,ex,cls)=>`<div class="lr btn${cls||''}" role="button" tabindex="0" data-a="${a}" data-id="${id}"><div><b>${l}</b></div>${ex===0?'':ic('chev').replace('class="ico"','class="ico ch"')}</div>`;
- const cxh=`<div class="lr col"><div><b>参考的聊天记录</b><small>每次回复时带上最近多少条消息，可自由设置（1 到 500）</small></div><div class="sgc" role="group" aria-label="参考的聊天记录">${[10,30,60,100].map(v=>`<button data-a="cseg" data-k="ctx" data-v="${v}"${(+c.ctx||30)==v?' class="on"':''}>${v} 条</button>`).join('')}</div><div class="cxr"><input class="wbi wbn" type="number" inputmode="numeric" min="1" max="500" data-cx value="${+c.ctx||30}" aria-label="自定义条数"><span>条（自定义）</span></div></div>`;
+ const cxh=`<div class="lr col"><div><b>参考的聊天记录</b><small>每次回复时带上最近多少条消息，默认 500 条，可自定义；条数越多，每次消耗的 token 也越多</small></div><div class="sgc" role="group" aria-label="参考的聊天记录">${[500,1000,2000].map(v=>`<button data-a="cseg" data-k="ctx" data-v="${v}"${(+c.ctx||500)==v?' class="on"':''}>${v} 条</button>`).join('')}</div><div class="cxr"><input class="wbi wbn" type="number" inputmode="numeric" min="1" max="99999" data-cx value="${+c.ctx||500}" aria-label="自定义条数"><span>条（自定义）</span></div></div>`;
  $('#vc').innerHTML=gh('聊天设置','chat',null,id)+`<div class="sc"><div class="cp">${av(c,76)}<b>${esc(nm(c))}</b><s>微信号：${esc(c.wid||'未设置')}</s></div>
 <div class="ls">${rw('cprof','查看资料与人设')}</div>
+<div class="ls">${swA}</div>
 <div class="ls">${sw('pin','置顶聊天')}${sw('mute','消息免打扰','对方回复时不弹出通知横幅')}</div>
 <div class="ls">${sg('sty','回复风格','影响对方每次回复的长短',[['short','简短'],['norm','自然'],['long','详细']],'norm')}${cxh}</div>
+<div class="ls">${rw('csys','专属提示词'+(c.sys&&c.sys.trim()?'（已设置）':'（使用全局）'))}${rw('cprev','预览提示词')}</div>
 <div class="ls">${rw('ccall','模拟对方来电')}${rw('cins','插入系统提示')}${rw('cclr','清空聊天记录',0,' dg')}</div>
 <div class="ls">${rw('cdelconv','删除会话',0,' dg')}${rw('cdelfr','删除好友',0,' dg')}</div>
 <p class="stt" style="text-align:center;margin:18px 0 0">在聊天中长按系统提示或消息，可以编辑、复制或删除</p></div>`;view('c')}
 function csDo(a,el){const id=WX.cur,c=WX.cons.find(x=>x.id==id);if(!c)return;const L=WX.msgs[id]??=[];
- if(a=='csw'){const k=el.dataset.k;c[k]=c[k]?0:1;wsave();el.classList.toggle('on',!!c[k]);el.setAttribute('aria-checked',c[k]?'true':'false')}
+ if(a=='csw'){const k=el.dataset.k;if(k=='auto'){c.auto=c.auto===0?1:0;wsave();const on=c.auto!==0;el.classList.toggle('on',on);el.setAttribute('aria-checked',on?'true':'false');return}c[k]=c[k]?0:1;wsave();el.classList.toggle('on',!!c[k]);el.setAttribute('aria-checked',c[k]?'true':'false')}
  else if(a=='cseg'){const k=el.dataset.k,v=el.dataset.v;c[k]=k=='ctx'?+v:v;wsave();[...el.parentNode.children].forEach(b=>b.classList.toggle('on',b==el));if(k=='ctx'){const i=document.querySelector('#vc [data-cx]');if(i)i.value=c.ctx}}
  else if(a=='cprof')rEdit(id);
  else if(a=='ccall')callOpen(id,'in');
+ else if(a=='csys')editSheet('专属提示词（留空使用全局）',c.sys||'',v=>{c.sys=v.trim();wsave();rCS(id);gtoast(c.sys?'已保存':'已清除，使用全局提示词')},'留空则使用全局提示词');
+ else if(a=='cprev')actSheet('预览提示词',[{t:'微信',f:()=>previewSheet('微信提示词',promptPreview(c,'wx'))},{t:'短信',f:()=>previewSheet('短信提示词',promptPreview(c,'sms'))},{t:'语音通话',f:()=>previewSheet('通话提示词',promptPreview(c,'call'))}]);
  else if(a=='cins')editSheet('插入系统提示','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');L.push({s:1,t:v,h:hm()});wsave();gtoast('已插入，回到聊天查看');},'例如：三天后');
  else if(a=='cclr')confirmSheet('清空聊天记录？','清空',()=>{WX.msgs[id]=[];c.unread=0;wsave();gtoast('已清空聊天记录')},'将删除与「'+nm(c)+'」的全部消息和系统提示，无法恢复。');
  else if(a=='cdelconv')confirmSheet('删除会话？','删除会话',()=>wxDelConv(id),'会话和聊天记录会被删除，好友会保留在通讯录。');
@@ -760,9 +823,12 @@ function msgPop(i,c){const L=c.L,m=L[i],row=document.querySelector(`${c.sel} .mr
  const wr=$(c.root).getBoundingClientRect(),sc=wr.width/PW,r=row.getBoundingClientRect(),x=(r.left-wr.left)/sc,y=(r.top-wr.top)/sc,w=r.width/sc,h=r.height/sc;
  const items=[{k:'reply',t:'回复',i:'reply',f:()=>c.setq({t:(m.v?'[语音] '+m.t:msgLabel(m)).slice(0,60),me:!!m.me,n:c.qn})}];
  if(!m.img&&m.call===undefined)items.push({k:'copy',t:'复制',i:'copy',f:()=>copy(m.t)});
+ else if(m.call!==undefined&&(m.log||[]).length)items.push({k:'copy',t:'复制',i:'copy',f:()=>copy(callText(m))});
+ if(m.call!==undefined)items.push({k:'edit',t:'编辑',i:'edit',f:()=>callEdit(m,()=>{c.sv();c.paint()})});
  if(!m.img&&!m.code&&m.call===undefined)items.push({k:'edit',t:'编辑',i:'edit',f:()=>{if(m.me)editSheet(m.v?'编辑语音文字':'编辑消息',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;if(m.v)m.v=vSecs(v);c.sv();c.paint()});else grpEdit(L,i,()=>{c.sv();c.paint()})}});
  if(m.me&&c.recall!==0)items.push({k:'undo',t:'撤回',i:'undo',f:()=>{L[i]={s:1,t:'你撤回了一条消息',h:m.h,ts:m.ts};c.sv();c.paint()}});
  else if(!m.me&&c.regen)items.push({k:'redo',t:'重新生成',i:'redo',f:()=>{L.splice(grpOf(L,i)[0]);c.sv();c.paint();c.regen()}});
+ if(m.me&&c.regen&&i==L.map((x,n)=>x.s||x.p?-1:n).reduce((a,b)=>Math.max(a,b),-1))items.push({k:'redo',t:'让对方回复',i:'redo',f:()=>{STK=1;c.regen()}});
  items.push({k:'del',t:'删除',i:'trash',dg:1,f:()=>{L.splice(i,1);c.sv();c.paint()}});
  MP.items=items;MP.i=i;MP.L=L;MP.sv=c.sv;MP.paint=c.paint;const mine=!!m.me,mh=items.length*40+64,top=Math.max(110,Math.min(y,760-h));
  const o=document.createElement('div');o.id='mpop';
@@ -774,16 +840,16 @@ function mpRx(k){const m=MP.L&&MP.L[MP.i];if(!m)return;m.rx=m.rx==k?'':k;if(!m.r
 function mpItem(n){const it=MP.items[n];mpClose();if(it)setTimeout(it.f,0)}
 function plusDo(k){$('#pmn').classList.remove('on');if(k=='img')$('#mf').click();else if(k=='vc')callOpen(WX.cur,'out');else if(k=='vm')editSheet('语音条','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');const L=WX.msgs[WX.cur]??=[];L.push({me:1,v:vSecs(v),t:v,h:hm(),ts:Date.now()});wsave();ml();wxTouch();wxReply(WX.cur)},'输入你想说的话，会作为语音条发出去');else if(k=='sys')editSheet('插入系统提示','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');(WX.msgs[WX.cur]??=[]).push({s:1,t:v,h:hm()});wsave();ml()},'例如：三天后');else rCS(WX.cur)}
 $('#wx').addEventListener('click',e=>{const pm=$('#pmn');if(pm&&pm.classList.contains('on')&&!e.target.closest('#pmn,.pl'))pm.classList.remove('on');{const ep=document.querySelector('#vk .emp.on');if(ep&&!e.target.closest('.emp,.emb'))ep.classList.remove('on')}const a=e.target.closest('[data-a]');if(!a)return;const id=a.dataset.id,P=()=>$('#wpop').classList.remove('on');
- ({code:()=>sendCode(a.dataset.k),sub:regSub,tab:()=>showTab(+a.dataset.n),menu:()=>$('#wpop').classList.add('on'),pclose:P,add:()=>{P();rEdit()},soon:()=>{P();toast('该功能即将开放')},ct:()=>rEdit(id),chat:()=>rChat(id),home:()=>{rMain();view('m')},csave,send,cmore:wxMore,mpx:mpClose,rxk:()=>mpRx(a.dataset.k),rxmo:()=>a.closest('.mmn').classList.add('big'),emt:()=>{const b=a.closest('.ib');b.querySelector('.emp').classList.toggle('on');$('#pmn').classList.remove('on')},emi:()=>emoIns(a.closest('.ib'),a.dataset.e),mit:()=>mpItem(+a.dataset.n),plus:()=>{$('#pmn').classList.toggle('on');const p=a.closest('.ib').querySelector('.emp');if(p)p.classList.remove('on')},pi:()=>plusDo(a.dataset.k),qx:()=>{WX.rq=null;qbarRender()},csw:()=>csDo('csw',a),cseg:()=>csDo('cseg',a),cprof:()=>csDo('cprof',a),cins:()=>csDo('cins',a),ccall:()=>csDo('ccall',a),vplay:()=>vPlay(+a.closest('.mr').dataset.i,a),vtxt:()=>vTxt(+a.closest('.mr').dataset.i),ctog:()=>vTxt(+a.closest('.mr').dataset.i),cend:callEnd,cmute:()=>{CALL.mute^=1;callPaint()},cspk:()=>{CALL.spk^=1;if(!CALL.spk)try{speechSynthesis.cancel()}catch(e){}callPaint()},csnd:callSendUi,cacc:callConnect,cdec:()=>callEnd('已拒绝'),cclr:()=>csDo('cclr',a),cdelconv:()=>csDo('cdelconv',a),cdelfr:()=>csDo('cdelfr',a),idx:()=>{const e=$('#ci_'+(a.dataset.l=='#'?'hash':a.dataset.l));if(e)e.scrollIntoView({block:'start'})},gocar:()=>{closeApp();setTimeout(()=>openApp('car'),420)}}[a.dataset.a]||(()=>{}))()});
+ ({code:()=>sendCode(a.dataset.k),sub:regSub,tab:()=>showTab(+a.dataset.n),menu:()=>$('#wpop').classList.add('on'),pclose:P,add:()=>{P();rEdit()},soon:()=>{P();toast('该功能即将开放')},ct:()=>rEdit(id),chat:()=>rChat(id),home:()=>{rMain();view('m')},csave,send,cmore:wxMore,mpx:mpClose,rxk:()=>mpRx(a.dataset.k),rxmo:()=>a.closest('.mmn').classList.add('big'),emt:()=>{const b=a.closest('.ib');b.querySelector('.emp').classList.toggle('on');$('#pmn').classList.remove('on')},emi:()=>emoIns(a.closest('.ib'),a.dataset.e),mit:()=>mpItem(+a.dataset.n),plus:()=>{$('#pmn').classList.toggle('on');const p=a.closest('.ib').querySelector('.emp');if(p)p.classList.remove('on')},pi:()=>plusDo(a.dataset.k),qx:()=>{WX.rq=null;qbarRender()},csw:()=>csDo('csw',a),cseg:()=>csDo('cseg',a),cprof:()=>csDo('cprof',a),cins:()=>csDo('cins',a),ccall:()=>csDo('ccall',a),csys:()=>csDo('csys',a),cprev:()=>csDo('cprev',a),msgjump:()=>{WX.jump=+a.dataset.i;rChat(a.dataset.id)},vplay:()=>vPlay(+a.closest('.mr').dataset.i,a),vtxt:()=>vTxt(+a.closest('.mr').dataset.i),ctog:()=>vTxt(+a.closest('.mr').dataset.i),cend:callEnd,cmute:()=>{CALL.mute^=1;callPaint()},cspk:()=>{CALL.spk^=1;if(!CALL.spk)try{speechSynthesis.cancel()}catch(e){}callPaint()},csnd:callSendUi,cacc:callConnect,cdec:()=>callEnd('已拒绝'),cclr:()=>csDo('cclr',a),cdelconv:()=>csDo('cdelconv',a),cdelfr:()=>csDo('cdelfr',a),idx:()=>{const e=$('#ci_'+(a.dataset.l=='#'?'hash':a.dataset.l));if(e)e.scrollIntoView({block:'start'})},gocar:()=>{closeApp();setTimeout(()=>openApp('car'),420)}}[a.dataset.a]||(()=>{}))()});
 $('#wx').addEventListener('change',async e=>{const t=e.target;if(t.id=='mf'){const f=t.files[0];t.value='';if(!f||WX.cur==null)return;try{const u=await imgData(f,800,.75);const id=WX.cur,L=WX.msgs[id]??=[];L.push({me:1,img:u,h:hm()});if(!wsave()){L.pop();gtoast('空间不足，图片未发送');return}ml();wxTouch();wxReply(id)}catch(x){gtoast('这张图片无法读取，请换一张')}return}if(t.type!='file'||!t.files[0])return;const f=t.files[0],l=t.closest('.ava');t.value='';
  try{WX.tmp=await imgData(f,256,.82,true)}catch(x){return gtoast('这张图片无法读取，请换一张')}
  if(!l)return;const v=l.querySelector('.av');v.style.backgroundImage=`url('${WX.tmp}')`;v.textContent='';l.querySelector('span').textContent='更换头像'});
 
 // ---------- Settings & API ----------
-const PREF_KEYS=['shell','sbar','isl','hbar','ui','rad','hap','snd','theme'];
+const PREF_KEYS=['shell','sbar','isl','hbar','persona','ui','rad','hap','snd','theme'];
 const nx=()=>({type:'openai',url:'',key:'',model:''});
 const apiDef=()=>({a:nx(),b:nx(),presets:[],pi:-1,stream:'auto',temp:.8,reason:'off',bare:0,fb:1,black:[],tok:0,ml:{a:{sig:'',list:[]},b:{sig:'',list:[]}}});
-const prefDef=()=>({shell:1,sbar:1,isl:1,hbar:1,ui:100,rad:19,hap:1,snd:1,theme:'auto'});
+const prefDef=()=>({shell:1,sbar:1,isl:1,hbar:1,persona:'',ui:100,rad:19,hap:1,snd:1,theme:'auto'});
 let CFG=Object.assign(apiDef(),prefDef());
 function fixCfg(){for(const x of['a','b'])CFG[x]=Object.assign(nx(),isObj(CFG[x])?CFG[x]:{});
  if(!Array.isArray(CFG.presets))CFG.presets=[];CFG.presets=CFG.presets.filter(isObj);if(!Array.isArray(CFG.black))CFG.black=[];
@@ -875,8 +941,9 @@ const sel=(attr,o,v)=>`<select ${attr}>${o.map(x=>`<option value="${x[0]}"${x[0]
 const fx=(x,f,l,t='text',ph='')=>`<div class="fd"><small>${l}</small><input data-x="${x}" data-f="${f}" type="${t}" value="${esc(CFG[x][f])}" placeholder="${ph}" autocomplete="off"></div>`;
 const mrow=x=>{const c=CFG[x],n=mlist(x).length;return`<div class="fd"><small>模型</small><div class="pkr" role="button" tabindex="0" data-pick="${x}"><span id="mv_${x}"${c.model?'':' class="ph0"'}>${c.model?esc(c.model):'点击选择或输入模型'}</span><em>${n?n+' 个可选':''}</em>${ic('chev')}</div><p class="hint" id="mh_${x}"></p></div>`};
 const api=x=>{const b=ST.busy[x],m=ST.msg[x]||{t:'',err:0};return`<div class="card"><h3>${x=='a'?'主接口':'副接口（备用）'}</h3><div class="fd"><small>接口类型</small>${sel(`data-x="${x}" data-f="type"`,[['openai','OpenAI 兼容'],['anthropic','Anthropic']],CFG[x].type)}</div>${fx(x,'url','接口地址','text','https://api.example.com/v1')}${fx(x,'key','密钥','password')}${mrow(x)}<div class="r2"><button class="cb${b?' busy':''}" id="bf_${x}" data-a="fetch" data-x="${x}"${b?' disabled':''}>${b=='fetch'?'拉取中…':'拉取模型'}</button><button class="cb${b?' busy':''}" id="bt_${x}" data-a="test" data-x="${x}"${b?' disabled':''}>${b=='test'?'测试中…':'链接测试'}</button></div><p class="stt${m.err?' err':''}" id="s_${x}">${esc(m.t)}</p></div>`};
-function rSet(keep){const t=ST.tab,sc0=keep&&$('#st .sc'),y0=sc0?sc0.scrollTop:0;let body='';if(t==4)body=dataBody();const sub=t==4&&ST.dv;let h=`<div class="ph" style="padding-top:20px"><b>设置</b></div>${sub?dataSubHead():`<div class="seg">${['接口','预设','高级','外观','数据'].map((n,i)=>`<button data-s="${i}"${i==t?' class="on"':''}>${n}</button>`).join('')}</div>`}<div class="sc">`;
+function rSet(keep){const t=ST.tab,sc0=keep&&$('#st .sc'),y0=sc0?sc0.scrollTop:0;let body='';if(t==4)body=dataBody();const sub=t==4&&ST.dv;let h=`<div class="ph" style="padding-top:20px"><b>设置</b></div>${sub?dataSubHead():`<div class="seg">${[['接口',0],['预设',1],['提示词',5],['高级',2],['外观',3],['数据',4]].map(x=>`<button data-s="${x[1]}"${x[1]==t?' class="on"':''}>${x[0]}</button>`).join('')}</div>`}<div class="sc">`;
  if(t==0)h+=api('a')+api('b');
+ if(t==5)h+=persTab();
  if(t==1)h+=`<div class="card"><h3>API 预设</h3><div class="fd"><small>选择预设</small>${sel('id="psel"',[['-1','未选择']].concat(CFG.presets.map((p,i)=>[i,esc(p.name)])),CFG.pi)}</div><div class="fd"><small>预设名称</small><input id="pnm" value="${esc((CFG.presets[CFG.pi]||{}).name||'')}" autocomplete="off"></div><div class="r2"><button class="cb" data-a="pupd">更新当前</button><button class="cb" data-a="pnew">另存为新</button></div><div class="r2"><button class="cb" data-a="pdel">删除此预设</button></div><p class="stt" id="s_p">预设包含主副接口与高级参数</p></div>`;
  if(t==2)h+=`<div class="card"><h3>请求方式</h3><div class="fd"><small>流式模式</small>${sel('data-b="stream"',[['auto','自动推荐'],['off','强制非流式'],['on','强制流式']],CFG.stream)}</div><div class="fd"><small>温度 <span id="tv">${(+CFG.temp).toFixed(1)}</span></small><input type="range" data-b="temp" data-n="1" min="0" max="2" step="0.1" value="${CFG.temp}"></div><div class="fd"><small>推理深度</small>${sel('data-b="reason"',[['off','关闭'],['low','低'],['mid','中'],['high','高']],CFG.reason)}</div></div>
 <div class="card"><h3>兼容与备用</h3><div class="fd"><small>裸反代 Anthropic 格式</small>${sel('data-b="bare" data-n="1"',[[0,'关闭'],[1,'开启']],CFG.bare)}</div><div class="fd"><small>主接口失败时切换副接口</small>${sel('data-b="fb" data-n="1"',[[1,'开启'],[0,'关闭']],CFG.fb)}</div><div class="r2"><button class="cb" data-a="rblack">重置流式黑名单（${CFG.black.length}）</button></div><p class="stt">累计 token（估算）：${CFG.tok}</p></div>`;
@@ -907,17 +974,22 @@ const HUMAN=`【总原则】你是一个活生生的普通人，和对方是完�
 - 只输出你要发出去的话，不写旁白、动作、心理描写和括号注释；不暴露自己是模型，也不说自己在扮演。
 - 偶尔可以像真人一样随手用 emoji 或颜文字，不堆砌，不要每条都带。
 - 每条消息单独占一行（用换行分隔），一次发 1 到 4 条。`;
+const humanOf=c=>((c&&c.sys&&String(c.sys).trim())||(CFG.persona&&String(CFG.persona).trim())||HUMAN);
+const smsSys=c=>`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在在和对方发手机短信，现在是${nowStr()}。短信比微信更克制简短。\n`+humanOf(c);
+const wxHist=c=>mergeH((WX.msgs[c.id]||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500)).map(m=>({role:m.me?'user':'assistant',content:histOf(m)})));
+const smsThread=c=>Object.keys(SMS.t).find(k=>smsContact(k)===c);
+const smsHist=(k,c)=>mergeH(((SMS.t[k])||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500)).map(m=>({role:m.me?'user':'assistant',content:(m.q?'（回复「'+m.q.t+'」）':'')+m.t})));
 const nowStr=()=>new Date().toLocaleString('zh-CN',{hour12:false,weekday:'long',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'});
-const wxSys=c=>`你是「${c.name}」，正在和对方用微信聊天。人设：${c.persona||'普通朋友'}。现在是${nowStr()}，请按这个时间点该有的状态说话（比如深夜会困、饭点会提吃的）。\n`+HUMAN+'\n- 偶尔（不要频繁，大多数时候还是打字）可以发语音：把那一条单独写一行，以「[语音]」开头，后面是你说的话，口语化。'+({short:'\n这次尽量简短，每条不超过 20 个字。',long:'\n可以多说一些，分几条把话说清楚，但仍然是口语。'}[c.sty]||'');
+const wxSys=c=>`你是「${c.name}」，正在和对方用微信聊天。人设：${c.persona||'普通朋友'}。现在是${nowStr()}，请按这个时间点该有的状态说话（比如深夜会困、饭点会提吃的）。\n`+humanOf(c)+'\n- 偶尔（不要频繁，大多数时候还是打字）可以发语音：把那一条单独写一行，以「[语音]」开头，后面是你说的话，口语化。'+({short:'\n这次尽量简短，每条不超过 20 个字。',long:'\n可以多说一些，分几条把话说清楚，但仍然是口语。'}[c.sty]||'');
 async function wxReply(id){const c=WX.cons.find(x=>x.id==id),L=WX.msgs[id]??=[];if(!c)return;
  if(!CFG.a.url||!CFG.a.model){if(!WX.hint[id]){WX.hint[id]=1;L.push({s:1,t:'请先在「设置」中配置接口与模型'});wsave();if(WX.cur==id)ml();wxTouch()}return}
- const hist=mergeH(L.filter(m=>!m.s&&!m.p).slice(-(+c.ctx||30)).map(m=>({role:m.me?'user':'assistant',content:histOf(m)})));if(!hist.some(h=>h.role=='user'))return;
+ const hist=wxHist(c);if(!hist.some(h=>h.role=='user'))return;
  const r={t:'…',h:hm(),p:1};L.push(r);if(WX.cur==id)ml();wxTouch();let out='';const W=wbApply(c.id,hist,wxSys(c));
  try{out=await chat(W.hist,W.sys,t=>{r.t=t;if(WX.cur==id)ml()});{const ls=splitLines(out),g=newGid(),i0=L.indexOf(r);if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>Object.assign({t,h:hm(),ts:Date.now(),g},parseLine(t))))}}
  catch(e){const i=L.indexOf(r);if(i>=0)L.splice(i,1);L.push({s:1,t:'发送失败：'+em(e)})}
- const seen=cur=='chat'&&WX.cur==id&&$('#wx').classList.contains('open');if(out&&!seen){c.unread=(c.unread||0)+1;if(!c.mute)notify('chat',nm(c),out)}
+ const seen=cur=='chat'&&WX.cur==id&&$('#wx').classList.contains('open');if(out&&!seen){c.unread=(c.unread||0)+Math.max(1,splitLines(out).length);if(!c.mute)notify('chat',nm(c),out)}
  wsave();if(WX.cur==id)ml();wxTouch()}
-function send(){const i=$('#mi');if(!i)return;const t=i.value.trim();if(!t)return;const id=WX.cur,L=WX.msgs[id]??=[];const mm={me:1,t,h:hm()};if(WX.rq){mm.q={t:WX.rq.t.slice(0,60),me:WX.rq.me,n:WX.rq.n};WX.rq=null;qbarRender()}mm.ts=Date.now();L.push(mm);i.value='';i.style.height='';{const b=i.closest('.ib');if(b)b.classList.remove('has')}wsave();ml();wxTouch();wxReply(id)}
+function send(){const i=$('#mi');if(!i)return;const t=i.value.trim();if(!t){const c0=WX.cons.find(x=>x.id==WX.cur);if(c0&&c0.auto===0){STK=1;wxReply(WX.cur)}return}STK=1;const id=WX.cur,L=WX.msgs[id]??=[];const mm={me:1,t,h:hm()};if(WX.rq){mm.q={t:WX.rq.t.slice(0,60),me:WX.rq.me,n:WX.rq.n};WX.rq=null;qbarRender()}mm.ts=Date.now();L.push(mm);i.value='';i.style.height='';{const b=i.closest('.ib');if(b)b.classList.remove('has')}wsave();ml();wxTouch();{const c1=WX.cons.find(x=>x.id==id);if(!c1||c1.auto!==0)wxReply(id)}}
 // banner swipe-up dismiss + lock opacity
 {const bn=$('#bn');let by=null;const K=()=>+phone.style.getPropertyValue('--k')||1;
 bn.onpointerdown=e=>{by=e.clientY;bn.moved=0;bn.style.transition='none';clearTimeout(bt);bn.setPointerCapture&&bn.setPointerCapture(e.pointerId)};
@@ -927,9 +999,11 @@ $('#lo').oninput=e=>phone.style.setProperty('--lo',e.target.value/100)}
 
 // ---------- Carrier & SMS ----------
 
-var CAR={nums:[],act:0},SMS={t:{},o:[]},SO={v:'l',k:'',h:{}};
-const sv=()=>{for(const k in SMS.t)stampMsgs(SMS.t[k]);store('car',CAR);store('sms',SMS)};
-function smsRecv(from,text,code,to){const L=SMS.t[from]??=[];if(code)L.forEach(m=>{if(m.code)m.old=1});L.push({t:text,h:hm(),code:code||0,to:to||'',ts:Date.now()});SMS.o=[from].concat(SMS.o.filter(x=>x!=from));sv();notify('sms',from,text);if($('#sm').classList.contains('open'))rSms()}
+var CAR={nums:[],act:0},SMS={t:{},o:[],u:{}},SO={v:'l',k:'',h:{}};
+const sv=()=>{for(const k in SMS.t)stampMsgs(SMS.t[k]);store('car',CAR);const r=store('sms',SMS);updBadges();return r};
+const smsSeen=k=>cur=='sms'&&SO.v=='t'&&SO.k==k&&$('#sm').classList.contains('open');
+const smsBump=(k,n)=>{if(smsSeen(k))return;(SMS.u??={})[k]=(SMS.u[k]||0)+(n||1)};
+function smsRecv(from,text,code,to){const L=SMS.t[from]??=[];if(code)L.forEach(m=>{if(m.code)m.old=1});L.push({t:text,h:hm(),code:code||0,to:to||'',ts:Date.now()});SMS.o=[from].concat(SMS.o.filter(x=>x!=from));smsBump(from,1);sv();notify('sms',from,text);if($('#sm').classList.contains('open'))rSms()}
 const PF={移动:['134','135','136','137','138','139','150','151','152','157','158','159','178','182','183','184','187','188','198'],联通:['130','131','132','155','156','166','175','176','185','186'],电信:['133','153','177','180','181','189','199']};
 const gen=c=>PF[c][Math.floor(Math.random()*PF[c].length)]+String(Math.floor(Math.random()*1e8)).padStart(8,'0');
 const CS={c:'移动',list:[],pick:'',msg:''};
@@ -956,29 +1030,30 @@ const smBody=L=>{let prev=0,li=-1,late=false;L.forEach((m,i)=>{if(m.me&&!m.s&&!m
   if(m.p)return tm+`<div class="mr"><div class="mc"><div class="bb gf ge typ"><i></i><i></i><i></i></div></div></div>`;
   const g=grpCls(L,i),rx=m.rx?`<i class="rx" aria-label="已回应">${rxh(m.rx)}</i>`:'';
   return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}<div class="bb${g}${m.old?' old':''}">${esc(m.t)}${m.old?'<br><small>验证码已失效</small>':''}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('')};
-function smPaint(){const el=$('#sml');if(el){el.innerHTML=smBody(SMS.t[SO.k]||[]);fitIb('#sm');el.scrollTop=1e9}}
+function smPaint(){const el=$('#sml');if(el)keepScroll(el,()=>{el.innerHTML=smBody(SMS.t[SO.k]||[]);fitIb('#sm')})}
 const smsContact=k=>WX.cons.find(x=>x.ph==k||x.name==k||nm(x)==k);
 function rSms(){const e=$('#sm');e.classList.toggle('th',SO.v=='t');
- if(SO.v=='l')e.innerHTML=`<div class="ph" style="padding-top:20px"><b>信息</b><button class="tbn" data-a="snew" aria-label="新信息">${ic('edit')}</button></div><div class="sc">${SMS.o.length?SMS.o.map(k=>{const m=[...(SMS.t[k]||[])].reverse().find(x=>!x.s)||{t:'',h:''};return`<div class="rw" data-a="sopen" data-k="${esc(k)}"><div class="ac">${esc(k[0])}</div><div><b>${esc(k)}</b><s>${esc(m.t)}</s></div><em>${m.h||''}</em></div>`}).join(''):'<p class="em">暂无信息<br>验证码和通知会显示在这里</p>'}</div>`;
+ if(SO.v=='l')e.innerHTML=`<div class="ph" style="padding-top:20px"><b>信息</b><button class="tbn" data-a="snew" aria-label="新信息">${ic('edit')}</button></div><div class="sc">${SMS.o.length?SMS.o.map(k=>{const m=[...(SMS.t[k]||[])].reverse().find(x=>!x.s)||{t:'',h:''};return`<div class="rw" data-a="sopen" data-k="${esc(k)}"><div class="ac">${esc(k[0])}</div><div><b>${esc(k)}</b><s>${esc(m.t)}</s></div><em>${m.h||''}</em>${(SMS.u||{})[k]?`<i class="bd">${SMS.u[k]>99?'99+':SMS.u[k]}</i>`:''}</div>`}).join(''):'<p class="em">暂无信息<br>验证码和通知会显示在这里</p>'}</div>`;
  else if(SO.v=='n')e.innerHTML=sh('sback','新信息')+`<div class="sc"><div class="fd"><small>收件人（号码或联系人）</small><input id="i_to" autocomplete="off"></div><div class="fd"><small>信息</small><input id="i_tm" autocomplete="off"></div><button class="pb" data-a="ssend0">发送</button></div>`;
  else{const k=SO.k;if(!SMS.t[k]){SO.v='l';return rSms()}const kept=($('#smi')||{}).value||'',had=document.activeElement&&document.activeElement.id=='smi';
   const sc=smsContact(k);e.innerHTML=`<div class="hd26"><button class="gz bk" data-a="sback" aria-label="返回">${ic('back')}</button><div class="cn" role="button" tabindex="0" data-a="smore" aria-label="会话选项">${sc?av(sc,56):`<div class="ac" style="width:56px;height:56px;font-size:22px">${esc(k[0])}</div>`}<div class="np gz"><b>${esc(sc?nm(sc):k)}</b>${ic('chev')}</div></div><button class="gz rt" data-a="smore" aria-label="会话选项">${ic('more')}</button></div><div class="ms" id="sml"></div><div class="ib" id="smib">${emoPanel()}<div class="qbar" id="qbar"></div><div class="ibr"><div class="tw gz"><textarea id="smi" rows="1" placeholder="信息" autocomplete="off"></textarea><button class="emb" data-a="emt" aria-label="表情">${ic('smile')}</button><button class="sd" data-a="smsg" aria-label="发送">${ic('up')}</button></div></div></div>`;
   const ta=$('#smi');ta.value=kept;if(kept){ta.style.height='auto';ta.style.height=Math.min(110,ta.scrollHeight)+'px';ta.closest('.ib').classList.add('has')}if(had)ta.focus();qbarRender(1);smPaint()}}
-function smsDel(k){delete SMS.t[k];SMS.o=SMS.o.filter(x=>x!=k);sv();SO.v='l';rSms();gtoast('已删除会话')}
+function smsDel(k){delete SMS.t[k];if(SMS.u)delete SMS.u[k];SMS.o=SMS.o.filter(x=>x!=k);sv();SO.v='l';rSms();gtoast('已删除会话')}
 function smsMsg(i){const k=SO.k,L=SMS.t[k]||[],m=L[i];if(!m||m.p)return;
  if(m.s){actSheet('系统提示',[{t:'编辑',f:()=>editSheet('编辑系统提示',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;sv();smPaint()})},{t:'复制',f:()=>copy(m.t)},{t:'删除',dg:1,f:()=>{L.splice(i,1);sv();smPaint()}}]);return}
- const c=smsContact(k);msgPop(i,{L,root:'#sm',sel:'#sml',sv,paint:smPaint,recall:0,regen:(!m.me&&!m.code&&c)?()=>smsReply(k):null,setq:q=>{SO.rq=q;qbarRender(1);const t=$('#smi');if(t)t.focus()},qn:c?nm(c):k})}
-function smsGo(){const i=$('#smi');if(!i)return;const m=i.value.trim();if(!m)return;i.value='';i.style.height='';i.closest('.ib').classList.remove('has');const q=SO.rq?{t:SO.rq.t,me:SO.rq.me,n:SO.rq.n}:null;SO.rq=null;qbarRender(1);smsPush(SO.k,m,q)}
-function smsPush(k,t,q){const L=SMS.t[k]??=[];const mm={me:1,t,h:hm(),ts:Date.now()};if(q)mm.q=q;L.push(mm);SMS.o=[k].concat(SMS.o.filter(x=>x!=k));sv();SO.k=k;if(SO.v=='t')smPaint();else rSms();smsReply(k)}
+ const c=smsContact(k);msgPop(i,{L,root:'#sm',sel:'#sml',sv,paint:smPaint,recall:0,regen:(!m.code&&c)?()=>smsReply(k):null,setq:q=>{SO.rq=q;qbarRender(1);const t=$('#smi');if(t)t.focus()},qn:c?nm(c):k})}
+function smsGo(){const i=$('#smi');if(!i)return;const m=i.value.trim();if(!m){const c0=smsContact(SO.k);if(c0&&c0.auto===0){STK=1;smsReply(SO.k)}return}STK=1;i.value='';i.style.height='';i.closest('.ib').classList.remove('has');const q=SO.rq?{t:SO.rq.t,me:SO.rq.me,n:SO.rq.n}:null;SO.rq=null;qbarRender(1);smsPush(SO.k,m,q)}
+function smsPush(k,t,q){const L=SMS.t[k]??=[];const mm={me:1,t,h:hm(),ts:Date.now()};if(q)mm.q=q;L.push(mm);SMS.o=[k].concat(SMS.o.filter(x=>x!=k));sv();SO.k=k;if(SO.v=='t')smPaint();else rSms();{const c1=smsContact(k);if(!c1||c1.auto!==0)smsReply(k)}}
 async function smsReply(k){const L=SMS.t[k],c=smsContact(k);if(!L||!c)return;const paint=()=>{if(SO.v=='t'&&SO.k==k&&$('#sm').classList.contains('open'))smPaint()};
  if(!CFG.a.url||!CFG.a.model){if(!SO.h[k]){SO.h[k]=1;L.push({s:1,t:'请先在「设置」中配置接口与模型，对方才能回复'});sv();paint()}return}
- const hist=mergeH(L.filter(m=>!m.s&&!m.p).slice(-(+c.ctx||20)).map(m=>({role:m.me?'user':'assistant',content:(m.q?'（回复「'+m.q.t+'」）':'')+m.t})));if(!hist.some(h=>h.role=='user'))return;
- const r={t:'…',h:hm(),p:1};L.push(r);paint();const W=wbApply(c.id,hist,`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在在和对方发手机短信，现在是${nowStr()}。短信比微信更克制简短。\n`+HUMAN);
+ const hist=smsHist(k,c);if(!hist.some(h=>h.role=='user'))return;
+ const t0=Date.now(),r={t:'…',h:hm(),p:1};L.push(r);paint();const W=wbApply(c.id,hist,smsSys(c));
  try{const out=await chat(W.hist,W.sys,t=>{r.t=t;paint()});{const ls=splitLines(out),g=newGid(),i0=L.indexOf(r);if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>({t,h:hm(),ts:Date.now(),g})))}}
  catch(e){const i=L.indexOf(r);if(i>=0)L.splice(i,1);L.push({s:1,t:'发送失败：'+em(e)})}
+ if(L.some(m=>m.g&&m.ts>=t0)){smsBump(k,L.filter(m=>m.g&&m.ts>=t0&&!m.me).length)}
  sv();paint()}
 $('#sm').addEventListener('click',e=>{{const ep=document.querySelector('#sm .emp.on');if(ep&&!e.target.closest('.emp,.emb'))ep.classList.remove('on')}const t=e.target.closest('[data-a]');if(!t)return;const d=t.dataset;if(d.a=='emt'){t.closest('.ib').querySelector('.emp').classList.toggle('on');return}if(d.a=='emi'){emoIns(t.closest('.ib'),d.e);return}if(d.a=='rxmo'){t.closest('.mmn').classList.add('big');return}
- if(d.a=='sopen'){SO.k=d.k;SO.v='t';SO.rq=null;rSms()}else if(d.a=='mpx')mpClose();else if(d.a=='rxk')mpRx(d.k);else if(d.a=='mit')mpItem(+d.n);else if(d.a=='qx'){SO.rq=null;qbarRender(1)}else if(d.a=='sback'){SO.v='l';rSms()}else if(d.a=='snew'){SO.v='n';rSms()}
+ if(d.a=='sopen'){SO.k=d.k;SO.v='t';SO.rq=null;if(SMS.u&&SMS.u[d.k]){delete SMS.u[d.k];sv()}rSms()}else if(d.a=='mpx')mpClose();else if(d.a=='rxk')mpRx(d.k);else if(d.a=='mit')mpItem(+d.n);else if(d.a=='qx'){SO.rq=null;qbarRender(1)}else if(d.a=='sback'){SO.v='l';rSms()}else if(d.a=='snew'){SO.v='n';rSms()}
  else if(d.a=='ssend0'){const to=$('#i_to').value.trim(),m=$('#i_tm').value.trim();if(!to||!m)return;const c=smsContact(to);SO.v='t';smsPush(c?nm(c):to,m);rSms()}
  else if(d.a=='smsg')smsGo();
  else if(d.a=='smore')actSheet(SO.k,[{t:'删除会话',dg:1,f:()=>smsDel(SO.k)}])});
@@ -1214,7 +1289,7 @@ regData({id:'sms',name:'短信',keys:()=>['sms'],affects:'短信会话、消息�
  merge(cur,inc){const a=cur.sms||{t:{},o:[]},b=inc.sms||{t:{},o:[]},t={};for(const k in a.t)t[k]=a.t[k].slice();
   for(const k in b.t)t[k]=mergeThread(t[k],b.t[k]);for(const k in t)fixCodes(t[k]);
   const lastTs=k=>{const L=t[k];const m=[...L].reverse().find(x=>x.ts);return m?m.ts:0};const o=Object.keys(t).sort((x,y)=>lastTs(y)-lastTs(x));return{sms:{t,o}}},
- hydrate(){let s=rd('sms');if(!isObj(s)||!isObj(s.t)||!Array.isArray(s.o))s={t:{},o:[]};for(const k in s.t)s.t[k]=Array.isArray(s.t[k])?s.t[k].filter(m=>isObj(m)&&!m.p):[];s.o=s.o.filter(k=>s.t[k]);SMS=s;SO={v:'l',k:'',h:{}}}});
+ hydrate(){let s=rd('sms');if(!isObj(s)||!isObj(s.t)||!Array.isArray(s.o))s={t:{},o:[]};if(!isObj(s.u))s.u={};for(const k in s.t)s.t[k]=Array.isArray(s.t[k])?s.t[k].filter(m=>isObj(m)&&!m.p):[];s.o=s.o.filter(k=>s.t[k]);SMS=s;SO={v:'l',k:'',h:{}};updBadges()}});
 regData({id:'car',name:'营业厅',keys:()=>['car'],affects:'已办理的号码与当前主号码（微信注册需要从这里选号）',
  info:m=>{const c=m.car||{nums:[],act:0};return[['号码',(c.nums||[]).length+' 个']].concat((c.nums||[]).map((x,i)=>[x.n,'中国'+x.c+(i==c.act?'（主号）':'')]))},
  check:m=>{if(m.car===undefined)return'';const c=m.car;if(!isObj(c)||!Array.isArray(c.nums))return'号码数据格式不正确';if(!c.nums.every(x=>isObj(x)&&/^1\d{10}$/.test(String(x.n))))return'号码数据格式不正确（含无效号码）';return''},
@@ -1240,7 +1315,7 @@ regData({id:'apps',name:'其他应用数据',keys:()=>LS.keys().filter(k=>k.star
 // ----- per-app state that must survive reloads (apps register under the app:* namespace) -----
 
 // ---------- Worldbook ----------
-const WB={e:[],on:1,v:'l',id:0,q:'',tm:0};
+const WB={e:[],on:1,v:'l',id:0,q:'',tm:0,test:''};
 const WBL={and_any:['AND ANY','主要关键词命中，且次要关键词至少命中一个'],not_all:['NOT ALL','主要关键词命中，且次要关键词没有全部命中'],not_any:['NOT ANY','主要关键词命中，且次要关键词一个都没命中'],and_all:['AND ALL','主要关键词命中，且次要关键词全部命中']};
 const wbDef=()=>({id:Date.now()+Math.floor(Math.random()*999),on:1,memo:'',keys:[],keys2:[],logic:'and_any',const:0,prob:100,pos:'before',depth:4,role:'system',scan:4,norec:0,order:100,grp:'',chars:[],vec:0,content:''});
 const wbNum=(v,lo,hi,d)=>{v=+v;return isFinite(v)?Math.max(lo,Math.min(hi,Math.round(v))):d};
@@ -1267,8 +1342,28 @@ const wbTitle=e=>e.memo.trim()||e.keys.slice(0,3).join('、')||e.content.trim().
 const wbSub=e=>[e.const?'常驻':e.keys.length?'关键词：'+e.keys.slice(0,3).join('、'):'无关键词',e.prob<100?'概率 '+e.prob+'%':'',{before:'前置',after:'后置',depth:'深度 '+e.depth}[e.pos],e.chars.length?'限定 '+e.chars.length+' 位角色':''].filter(Boolean).join(' · ');
 function wbListHtml(){const q=WB.q.trim().toLowerCase(),L=WB.e.filter(e=>!q||(wbTitle(e)+e.keys.join()+e.content).toLowerCase().includes(q));
  return L.length?`<div class="ls">${L.map(e=>`<div class="lr btn" role="button" tabindex="0" data-wb="open" data-id="${e.id}"><div><b>${esc(wbTitle(e))}</b><small>${esc(wbSub(e))}</small></div><button class="sw${e.on?' on':''}" role="switch" aria-checked="${e.on?'true':'false'}" aria-label="启用" data-wb="tog" data-id="${e.id}"><i></i></button></div>`).join('')}</div>`:`<p class="em" style="margin-top:40px">${WB.e.length?'没有匹配的条目':'还没有条目<br>点右上角新建，写下世界观、人物关系或关键设定'}</p>`}
+
+const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+function wbExplain(e,txt){const ph=e.keys.filter(k=>wbHit(txt,k)),sh=e.keys2.filter(k=>wbHit(txt,k));let hit=false,why='';
+ if(e.const){hit=true;why='常驻条目，不需要关键词'}
+ else if(!e.keys.length)why='没有设置主要关键词'
+ else if(!ph.length)why='主要关键词都没有出现：'+e.keys.join('、')
+ else if(!e.keys2.length){hit=true;why='主要关键词命中：'+ph.join('、')}
+ else{const h=e.keys2.map(k=>wbHit(txt,k)),okk=e.logic=='and_any'?h.some(Boolean):e.logic=='not_all'?!h.every(Boolean):e.logic=='not_any'?!h.some(Boolean):h.every(Boolean);hit=okk;why='主要关键词命中：'+ph.join('、')+'；次要关键词（'+WBL[e.logic][0]+'）'+(sh.length?'命中：'+sh.join('、'):'没有命中')+(okk?'，条件满足':'，条件不满足')}
+ const notes=[];if(!e.on)notes.push('此条目已停用，实际不会触发');if(!e.content.trim())notes.push('内容为空');if(e.prob<100&&!e.const)notes.push('触发概率 '+e.prob+'%，实际每次不一定出现');if(e.chars.length)notes.push('仅对指定角色生效');return{hit,ph,sh,why,notes}}
+function wbRanges(txt,keys,cls){const out=[];for(const k0 of keys){const k=String(k0).trim();if(!k)continue;let re;const m=k.match(/^\/(.+)\/([gimsuy]*)$/);try{re=m?new RegExp(m[1],(m[2].replace('g','')||'i')+'g'):new RegExp(reEsc(k),'gi')}catch(x){continue}let r,n=0;while((r=re.exec(txt))&&n++<200){if(!r[0].length){re.lastIndex++;continue}out.push([r.index,r.index+r[0].length,cls])}}return out}
+function wbMark(txt,rg){rg.sort((a,b)=>a[0]-b[0]);let h='',p=0;for(const[x,y,c]of rg){if(x<p)continue;h+=esc(txt.slice(p,x))+`<mark class="${c}">${esc(txt.slice(x,y))}</mark>`;p=y}return h+esc(txt.slice(p))}
+function wbTestHtml(txt,fid){if(!txt.trim())return'<p class="stt">输入文本后，这里会显示哪些条目会命中、是哪个关键词命中的。</p>';
+ const rows=WB.e.map(e=>({e,x:wbExplain(e,txt)})),hits=rows.filter(r=>r.x.hit),focus=fid?rows.find(r=>r.e.id==fid):null;let rg=[];
+ (focus?[focus]:hits).forEach(r=>{rg=rg.concat(wbRanges(txt,r.e.keys,'p'),wbRanges(txt,r.e.keys2,'s'))});
+ const card=r=>`<div class="wtr${r.x.hit?' hit':''}"><div class="wth"><b>${esc(wbTitle(r.e))}</b><span class="wtg">${r.x.hit?'命中':'未命中'}</span></div><small>${esc(r.x.why)}</small>${r.x.notes.map(n=>`<small class="nt">${esc(n)}</small>`).join('')}</div>`;
+ let h=`<div class="wtx">${wbMark(txt,rg)}</div><p class="stt">黄色是主要关键词，绿色是次要关键词。</p>`;
+ if(focus){const oth=hits.filter(r=>r.e.id!=fid);h+=card(focus)+(oth.length?`<p class="stt">同样会命中的其他条目（${oth.length}）</p>`+oth.map(card).join(''):'')}
+ else{const miss=rows.filter(r=>!r.x.hit);h+=hits.length?`<p class="stt">命中 ${hits.length} 个条目</p>`+hits.map(card).join(''):'<p class="stt">没有条目命中</p>';if(miss.length)h+=`<p class="stt">未命中 ${miss.length} 个</p>`+miss.map(card).join('')}
+ return h}
 function wbRender(){const e=$('#app');
- if(WB.v=='l')e.innerHTML=`<div class="ph" style="padding-top:20px"><b>世界书</b><button class="tbn" data-wb="new" aria-label="新建条目">${ic('plus')}</button></div><div class="sc"><div class="ls"><div class="lr"><div><b>启用世界书</b><small>命中的条目会在角色回复前自动加入设定</small></div><button class="sw${WB.on?' on':''}" role="switch" aria-checked="${WB.on?'true':'false'}" aria-label="启用世界书" data-wb="master"><i></i></button></div></div>${WB.e.length?`<div class="srch" style="padding:14px 0 0"><input id="k_wq" type="search" placeholder="搜索条目" aria-label="搜索条目" autocomplete="off" value="${esc(WB.q)}"></div>`:''}<div id="k_wl">${wbListHtml()}</div></div>`;
+ if(WB.v=='l')e.innerHTML=`<div class="ph" style="padding-top:20px"><b>世界书</b><button class="tbn" data-wb="new" aria-label="新建条目">${ic('plus')}</button></div><div class="sc"><div class="ls"><div class="lr"><div><b>启用世界书</b><small>命中的条目会在角色回复前自动加入设定</small></div><button class="sw${WB.on?' on':''}" role="switch" aria-checked="${WB.on?'true':'false'}" aria-label="启用世界书" data-wb="master"><i></i></button></div></div>${WB.e.length?`<div class="srch" style="padding:14px 0 0"><input id="k_wq" type="search" placeholder="搜索条目" aria-label="搜索条目" autocomplete="off" value="${esc(WB.q)}"></div>`:''}${WB.e.length?`<div class="ls"><div class="lr btn" role="button" tabindex="0" data-wb="test"><div><b>测试命中</b><small>粘贴一段对话，看看会触发哪些条目</small></div>${ic('chev').replace('class="ico"','class="ico ch"')}</div></div>`:''}<div id="k_wl">${wbListHtml()}</div></div>`;
+ else if(WB.v=='t')e.innerHTML=`<div class="tb"><button class="tbn" data-wb="back" aria-label="返回">${ic('back')}</button><b>测试命中</b><span></span></div><div class="sc"><div class="ls"><div class="lr col"><div><b>测试文本</b><small>粘贴一段对话或输入一段文字，立刻显示结果</small></div><textarea class="wbi" id="wbt" data-wt rows="5" placeholder="例如：最近公司好忙，又要加班">${esc(WB.test)}</textarea></div></div><div id="k_wt">${wbTestHtml(WB.test,null)}</div></div>`;
  else{const x=WB.e.find(v=>v.id==WB.id);if(!x){WB.v='l';return wbRender()}
   const sw=(k,l,sub)=>`<div class="lr"><div><b>${l}</b>${sub?`<small>${sub}</small>`:''}</div><button class="sw${x[k]?' on':''}" role="switch" aria-checked="${x[k]?'true':'false'}" aria-label="${l}" data-wb="f" data-k="${k}"><i></i></button></div>`,
   sg=(k,l,sub,o)=>`<div class="lr col"><div><b>${l}</b>${sub?`<small>${sub}</small>`:''}</div><div class="sgc" role="group" aria-label="${l}">${o.map(v=>`<button data-wb="seg" data-k="${k}" data-v="${v[0]}"${x[k]==v[0]?' class="on"':''}>${v[1]}</button>`).join('')}</div></div>`,
@@ -1279,11 +1374,13 @@ function wbRender(){const e=$('#app');
 <div class="ls">${sw('const','常驻','不需要关键词，每次都加入')}${tx('keys','主要关键词','任意一个出现在最近的对话里就触发；用逗号分隔，也可以写 /正则/','例如：公司，上班')}${tx('keys2','次要关键词','与下面的逻辑配合；留空则不使用','')}${sg('logic','次要关键词逻辑',WBL[x.logic][1],Object.keys(WBL).map(k=>[k,WBL[k][0]]))}${nm_('prob','触发概率','0 到 100','0','100')}${nm_('scan','扫描深度','检查最近多少条消息','1','50')}</div>
 <div class="ls">${sg('pos','插入位置','',[['before','设定之前'],['after','设定之后'],['depth','按深度']])}${x.pos=='depth'?nm_('depth','深度','从最新消息往前数第几条之前','0','50')+sg('role','消息角色','',[['system','系统'],['user','用户'],['assistant','角色']]):''}${nm_('order','顺序','数字小的排在前面','-9999','9999')}</div>
 <div class="ls">${sw('norec','不可递归','不会被其他条目的内容触发')}${tx('grp','包含组','同组条目一次只会保留顺序值最大的一条','例如：天气')}${sw('vec','向量化','已记录此选项，目前仍按关键词匹配')}<div class="lr col"><div><b>角色过滤</b><small>不选表示对所有角色生效</small></div><div class="wbc">${WX.cons.length?WX.cons.map(c=>`<button data-wb="chr" data-c="${c.id}" class="${x.chars.includes(c.id)?'on':''}">${esc(nm(c))}</button>`).join(''):'<small>还没有微信好友</small>'}</div></div></div>
+<div class="ls"><div class="lr col"><div><b>测试命中</b><small>粘贴一段对话，看看这个条目会不会触发</small></div><textarea class="wbi" id="wbt" data-wt rows="4" placeholder="例如：最近公司好忙，又要加班">${esc(WB.test)}</textarea></div></div><div id="k_wt">${wbTestHtml(WB.test,x.id)}</div>
 </div>`}
  a11y()}
 function wbDo(a,t){const d=t.dataset,x=WB.e.find(v=>v.id==(d.id||WB.id));
  if(a=='new'){const n=wbDef();WB.e.unshift(n);WB.id=n.id;WB.v='e';wbSave();wbRender()}
  else if(a=='open'){WB.id=+d.id||d.id;WB.v='e';wbRender()}
+ else if(a=='test'){WB.v='t';wbRender()}
  else if(a=='back'){wbFlush();WB.v='l';wbRender()}
  else if(a=='master'){WB.on=WB.on?0:1;wbSave();t.classList.toggle('on',!!WB.on);t.setAttribute('aria-checked',WB.on?'true':'false')}
  else if(a=='tog'){if(!x)return;x.on=x.on?0:1;wbSave();t.classList.toggle('on',!!x.on);t.setAttribute('aria-checked',x.on?'true':'false')}
@@ -1293,7 +1390,8 @@ function wbDo(a,t){const d=t.dataset,x=WB.e.find(v=>v.id==(d.id||WB.id));
  else if(a=='dup'){if(!x)return;const n=Object.assign(JSON.parse(JSON.stringify(x)),{id:Date.now()+Math.floor(Math.random()*999),memo:(x.memo||wbTitle(x))+' 副本'});WB.e.splice(WB.e.indexOf(x)+1,0,n);WB.id=n.id;wbSave();wbRender();gtoast('已复制')}
  else if(a=='del')confirmSheet('删除这个条目？','删除条目',()=>{WB.e=WB.e.filter(v=>v.id!=WB.id);wbSave();WB.v='l';wbRender()})}
 $('#app').addEventListener('click',e=>{const t=e.target.closest('[data-wb]');if(!t||cur!='wb')return;wbDo(t.dataset.wb,t)});
-$('#app').addEventListener('input',e=>{const t=e.target;if(cur!='wb')return;if(t.id=='k_wq'){WB.q=t.value;const l=$('#k_wl');if(l){l.innerHTML=wbListHtml();a11y()}return}
+$('#app').addEventListener('input',e=>{const t=e.target;if(cur!='wb')return;if(t.dataset&&t.dataset.wt!==undefined){WB.test=t.value;const o=$('#k_wt');if(o)o.innerHTML=wbTestHtml(WB.test,WB.v=='e'?WB.id:null);return}
+ if(t.id=='k_wq'){WB.q=t.value;const l=$('#k_wl');if(l){l.innerHTML=wbListHtml();a11y()}return}
  const k=t.dataset&&t.dataset.wf;if(!k)return;const x=WB.e.find(v=>v.id==WB.id);if(!x)return;
  if(k=='keys'||k=='keys2')x[k]=wbArr(t.value.split(/[,，、\n]/));else if(k=='prob')x[k]=wbNum(t.value,0,100,100);else if(k=='scan')x[k]=wbNum(t.value,1,50,4);else if(k=='depth')x[k]=wbNum(t.value,0,50,4);else if(k=='order')x[k]=wbNum(t.value,-9999,9999,100);else x[k]=t.value;
  clearTimeout(WB.tm);const g=GEN;WB.tm=setTimeout(()=>{if(g==GEN)wbSave()},300)});
@@ -1320,14 +1418,15 @@ function callOpen(id,dir){const c=WX.cons.find(x=>x.id==id);if(!c||CALL.on)retur
  if(dir=='out')CALL.tm=setTimeout(callConnect,1800+Math.random()*1400)}
 function callConnect(){if(!CALL.on||CALL.st=='live')return;clearTimeout(CALL.tm);CALL.st='live';CALL.t0=Date.now();clearInterval(CALL.iv);CALL.iv=setInterval(()=>{const e=$('#cst');if(e)e.textContent=mmss(Math.floor((Date.now()-CALL.t0)/1000))},1000);callPaint();callSay(true)}
 function callSendUi(){const i=$('#cmsg');if(!i||CALL.mute||CALL.busy)return;const t=i.value.trim();if(!t)return;i.value='';CALL.log.push({me:1,t});callLog();callSay(false)}
+const callSys=(c,dir)=>`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在是${nowStr()}。你们正在进行微信语音通话${dir=='in'?'，是你打给对方的':'，是对方打给你的'}。\n`+humanOf(c)+'\n【通话规则】这是电话：只说你会说出口的话，每次说一两句；不要发表情符号、不写动作和旁白；不要分条，一次只输出一段话。';
 async function callSay(first){const c=WX.cons.find(x=>x.id==CALL.id);if(!c||!CALL.on)return;
  if(!CFG.a.url||!CFG.a.model){if(first){CALL.log.push({me:0,t:'（请先在「设置」中配置接口与模型，对方才能说话）'});callLog()}return}
  CALL.busy=1;callLog();const id=CALL.id,L=WX.msgs[id]||[];
- const base=mergeH(L.filter(m=>!m.s&&!m.p).slice(-(+c.ctx||30)).map(m=>({role:m.me?'user':'assistant',content:histOf(m)})));
+ const base=mergeH(L.filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500)).map(m=>({role:m.me?'user':'assistant',content:histOf(m)})));
  const live=CALL.log.map(l=>({role:l.me?'user':'assistant',content:l.t}));
  let hist=mergeH(base.concat(first?[{role:'user',content:CALL.dir=='in'?'（我接起了你打来的电话）':'（电话接通了）'}]:[],live));
  if(!hist.length||hist[hist.length-1].role!='user')hist.push({role:'user',content:'（继续通话）'});
- const sys=`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在是${nowStr()}。你们正在进行微信语音通话${CALL.dir=='in'?'，是你打给对方的':'，是对方打给你的'}。\n`+HUMAN+'\n【通话规则】这是电话：只说你会说出口的话，每次说一两句；不要发表情符号、不写动作和旁白；不要分条，一次只输出一段话。';
+ const sys=callSys(c,CALL.dir);
  const W=wbApply(c.id,hist,sys);
  try{const out=await chat(W.hist,W.sys);if(!CALL.on||CALL.id!=id)return;const t=splitLines(out).join('，');if(t){CALL.log.push({me:0,t});if(CALL.spk)try{const u=new SpeechSynthesisUtterance(t);u.lang='zh-CN';speechSynthesis.speak(u)}catch(e){}}}
  catch(e){if(CALL.on)CALL.log.push({me:0,t:'（连接不稳定：'+em(e)+'）'})}
@@ -1335,10 +1434,88 @@ async function callSay(first){const c=WX.cons.find(x=>x.id==CALL.id);if(!c||!CAL
 function callEnd(why){if(!CALL.on)return;const c=WX.cons.find(x=>x.id==CALL.id),live=CALL.st=='live',secs=live?Math.max(1,Math.floor((Date.now()-CALL.t0)/1000)):0,dir=CALL.dir,ring=CALL.st=='ring-in';
  clearTimeout(CALL.tm);clearInterval(CALL.iv);try{speechSynthesis.cancel()}catch(e){}const log=CALL.log.slice(-200),id=CALL.id;CALL.on=0;CALL.st='';
  const o=$('#vcall');if(o){o.classList.remove('on');setTimeout(()=>o.remove(),320)}
- if(c){const L=WX.msgs[id]??=[];const m={me:dir=='out'?1:0,call:secs,t:secs?'语音通话':(typeof why=='string'?why:dir=='out'?'已取消':'未接通'),h:hm(),ts:Date.now()};if(secs&&log.length)m.log=log;if(!c.chat)c.chat=1;L.push(m);wsave();if(WX.cur==id&&cur=='chat')ml();wxTouch()}}
+ if(c){const L=WX.msgs[id]??=[];const m={me:dir=='out'?1:0,call:secs,t:secs?'语音通话':(typeof why=='string'?why:dir=='out'?'已取消':'未接通'),h:hm(),ts:Date.now()};if(secs&&log.length)m.log=log;if(!c.chat)c.chat=1;L.push(m);wsave();if(WX.cur==id&&cur=='chat')ml();wxTouch();pnLog(c,dir,secs)}}
 $('#wx').addEventListener('keydown',e=>{if(e.target.id=='cmsg'&&e.key=='Enter'&&!e.isComposing){e.preventDefault();callSendUi()}});
-$('#wx').addEventListener('input',e=>{const t=e.target;if(t.dataset&&t.dataset.cx!==undefined){const c=WX.cons.find(x=>x.id==WX.cur);if(!c)return;const v=Math.max(1,Math.min(500,Math.round(+t.value)||30));c.ctx=v;wsave();document.querySelectorAll('#vc .sgc button[data-k=ctx]').forEach(b=>b.classList.toggle('on',+b.dataset.v==v))}});
+$('#wx').addEventListener('input',e=>{const t=e.target;if(t.dataset&&t.dataset.cx!==undefined){const c=WX.cons.find(x=>x.id==WX.cur);if(!c)return;const v=Math.max(1,Math.min(99999,Math.round(+t.value)||500));c.ctx=v;wsave();document.querySelectorAll('#vc .sgc button[data-k=ctx]').forEach(b=>b.classList.toggle('on',+b.dataset.v==v))}});
 REG.chat.close=()=>{if(CALL.on)callEnd()};
+
+
+
+// ---------- editable call text ----------
+const callText=m=>(m.log||[]).map(l=>(l.me?'我':'对方')+'：'+l.t).join('\n');
+function callParse(v){const out=[];v.split('\n').forEach(r=>{r=r.trim();if(!r)return;const x=/^(我|对方)\s*[：:]\s*(.*)$/.exec(r);if(x){if(x[2].trim())out.push({me:x[1]=='我'?1:0,t:x[2].trim()})}else out.push({me:0,t:r})});return out}
+function callEdit(m,done){
+ const ed=()=>editSheet('编辑通话文字',callText(m),v=>{const l=callParse(v);if(l.length){m.log=l}else delete m.log;if(!m.call&&l.length)m.open=1;done()},'每行一句，行首写「我：」或「对方：」，没写默认算对方');
+ if(m.call)actSheet('编辑通话',[{t:'通话文字',f:ed},{t:'通话时长',f:()=>editSheet('通话时长（秒）',String(m.call),v=>{const n=Math.round(+v);if(!(n>0&&n<86400))return gtoast('请输入 1 到 86399 之间的秒数');m.call=n;done()})}]);
+ else actSheet('编辑通话',[{t:'状态文字',f:()=>editSheet('状态文字',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;done()})},{t:'通话文字',f:ed}])}
+// tap a line during a live call to edit it
+document.addEventListener('click',e=>{const q=e.target.closest&&e.target.closest('#clog .cq:not(.typ2)');if(!q||!CALL.on)return;const all=[...document.querySelectorAll('#clog .cq:not(.typ2)')],n=all.indexOf(q),off=Math.max(0,CALL.log.length-8),l=CALL.log[off+n];if(!l)return;editSheet('编辑这句话',l.t,v=>{v=v.trim();if(v){l.t=v}else CALL.log.splice(off+n,1);callLog()},'清空则删除这句')});
+// ---------- Phone & Contacts ----------
+Object.assign(I,{bks:'M21 5H9l-6 7 6 7h12zM13 9.5l5 5M18 9.5l-5 5'});
+var PH={mode:'phone',tab:0,num:'',q:'',v:'l',id:0,log:[],d:{}};
+PRIS['app:phone']=v=>!(v.log||[]).length;
+const pnSave=()=>store('app:phone',{log:PH.log.slice(-300)});
+regApp('app:phone','通话记录',()=>{const s=rd('app:phone');PH.log=[];if(isObj(s)&&Array.isArray(s.log))PH.log=s.log.filter(x=>isObj(x)&&x.ts).slice(-300);PH.num='';PH.v='l'});
+const digs=x=>String(x||'').replace(/\D/g,'');
+const pnFind=n=>{const d=digs(n);return d?WX.cons.find(c=>digs(c.ph)==d):null};
+function pnLog(c,dir,secs,raw){PH.log.push({id:c?c.id:0,name:c?nm(c):raw,ph:c?c.ph||'':raw,dir,sec:secs||0,miss:!secs&&dir=='in',ts:Date.now()});pnSave();if(cur=='phone')pnRender()}
+const pnAgo=ts=>{const d=new Date(ts),n=new Date(),p=x=>String(x).padStart(2,'0');if(d.toDateString()==n.toDateString())return p(d.getHours())+':'+p(d.getMinutes());const y=new Date(n-864e5);return d.toDateString()==y.toDateString()?'昨天':(d.getMonth()+1)+'/'+d.getDate()};
+const pnSort=()=>[...WX.cons].sort((a,b)=>nm(a).localeCompare(nm(b),'zh'));
+function pnRows(list){return list.map(c=>`<div class="rw" data-pn="open" data-id="${c.id}">${av(c,44)}<div><b>${esc(nm(c))}</b><small class="pns">${esc(c.ph||'未设置号码')}</small></div></div>`).join('')}
+function pnCon(){const q=PH.q.trim().toLowerCase(),l=pnSort().filter(c=>!q||(nm(c)+(c.ph||'')+(c.name||'')).toLowerCase().includes(q));
+ return `<div class="pnq"><input id="pn_q" value="${esc(PH.q)}" placeholder="搜索联系人" autocomplete="off" aria-label="搜索联系人"></div><div class="sc" id="pn_l">${l.length?pnRows(l):`<p class="em">${q?'没有找到联系人':'还没有联系人<br>点右上角添加'}</p>`}</div>`}
+function pnRec(){const l=[...PH.log].reverse();return `<div class="sc">${l.length?l.map((x,i)=>{const k=PH.log.length-1-i;return `<div class="rw" data-pn="redial" data-i="${k}"><div class="pnd">${x.id?'':''}${(x.name||'?')[0]}</div><div><b${x.miss?' class="pnm"':''}>${esc(x.name)}</b><small class="pns">微信语音 · ${x.miss?'未接来电':x.dir=='in'?'来电':'呼出'}${x.sec?' · '+mmss(x.sec):x.dir=='out'&&!x.id?' · 无人接听':''}</small></div><em class="pnt">${pnAgo(x.ts)}</em></div>`}).join(''):'<p class="em">暂无通话记录</p>'}</div>`}
+const PNK=[['1',''],['2','ABC'],['3','DEF'],['4','GHI'],['5','JKL'],['6','MNO'],['7','PQRS'],['8','TUV'],['9','WXYZ'],['*',''],['0','+'],['#','']];
+function pnPad(){const c=pnFind(PH.num);return `<div class="pnp"><div class="pnn" id="pn_n">${esc(PH.num)||'&nbsp;'}</div><div class="pnh" id="pn_h">${c?esc(nm(c)):PH.num?'<button data-pn="save">添加到通讯录</button>':'&nbsp;'}</div><div class="pnk">${PNK.map(k=>`<button class="phk" data-pn="key" data-k="${k[0]}" aria-label="${k[0]}"><b>${k[0]}</b><small>${k[1]}</small></button>`).join('')}<span></span><button class="phk go" data-pn="dial" aria-label="拨打">${ic('phone')}</button><button class="phk bk" data-pn="del" aria-label="删除"${PH.num?'':' disabled'}>${ic('bks')}</button></div></div>`}
+function pnDetail(){const c=WX.cons.find(x=>x.id==PH.id);if(!c){PH.v='l';return pnRender()}
+ return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>联系人</b><span></span></div><div class="sc pnx">${av(c,96)}<h2>${esc(nm(c))}</h2><p class="pns">${esc(c.ph||'未设置号码')}</p><div class="pna"><button data-pn="sms" aria-label="发信息">${ic('sms')}<span>信息</span></button><button data-pn="call" aria-label="通话">${ic('phone')}<span>通话</span></button><button data-pn="wx" aria-label="微信">${ic('chat')}<span>微信</span></button></div>${c.persona?`<div class="ls"><div class="lr col"><div><b>人设</b><small>${esc(c.persona)}</small></div></div></div>`:''}<div class="ls"><div class="lr btn dg" role="button" tabindex="0" data-pn="del2"><div><b>删除联系人</b></div></div></div></div>`}
+function pnAdd(){return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>新建联系人</b><span></span></div><div class="sc"><div class="fd"><small>昵称</small><input id="pn_nm" value="${esc(PH.d.name||'')}" autocomplete="off"></div><div class="fd"><small>手机号</small><input id="pn_ph" inputmode="tel" value="${esc(PH.d.ph||'')}" autocomplete="off"></div><div class="fd"><small>人设（可选）</small><textarea id="pn_ps" rows="3">${esc(PH.d.persona||'')}</textarea></div><div class="r2" style="margin-top:28px"><button class="cb" data-pn="back">取消</button><button class="cb pri" data-pn="saveC">保存</button></div></div>`}
+function pnRender(){const e=$('#app'),con=PH.mode=='con';let h;
+ if(PH.v=='d'){e.innerHTML=pnDetail();a11y();return}if(PH.v=='a'){e.innerHTML=pnAdd();return}
+ const tt=con?'通讯录':['最近通话','通讯录','拨号键盘'][PH.tab];
+ h=`<div class="ph" style="padding-top:20px"><b>${tt}</b>${con||PH.tab==1?`<button class="tbn" data-pn="new" aria-label="新建联系人">${ic('plus')}</button>`:PH.tab==0&&PH.log.length?`<button class="tbn pnc" data-pn="clr" aria-label="清空记录">清空</button>`:'<span></span>'}</div>`;
+ h+=con||PH.tab==1?pnCon():PH.tab==0?pnRec():pnPad();
+ if(!con)h+=`<div class="pnb">${[['最近','clock'],['通讯录','user'],['键盘','phone']].map((x,i)=>`<button data-pn="tab" data-t="${i}" class="${PH.tab==i?'on':''}">${ic(x[1])}<span>${x[0]}</span></button>`).join('')}</div>`;
+ const q=$('#pn_q'),had=document.activeElement&&document.activeElement.id=='pn_q';e.innerHTML=h;if(had){const n=$('#pn_q');if(n){n.focus();n.setSelectionRange(n.value.length,n.value.length)}}a11y()}
+function pnCall(c){closeApp(true);openApp('chat');setTimeout(()=>callOpen(c.id,'out'),450)}
+function pnDo(a,d){const c=WX.cons.find(x=>x.id==d.id)||WX.cons.find(x=>x.id==PH.id);
+ if(a=='tab'){PH.tab=+d.t;PH.v='l';pnRender()}
+ else if(a=='key'){if(PH.num.length<20){PH.num+=d.k;pnRender()}}
+ else if(a=='del'){PH.num=PH.num.slice(0,-1);pnRender()}
+ else if(a=='dial'){if(!PH.num)return;const m=pnFind(PH.num);if(m){PH.num='';pnCall(m)}else{pnLog(null,'out',0,PH.num);gtoast('该号码暂时无人接听');PH.num='';pnRender()}}
+ else if(a=='save'){PH.d={ph:PH.num};PH.v='a';pnRender()}
+ else if(a=='redial'){const x=PH.log[+d.i];if(!x)return;const m=x.id&&WX.cons.find(c=>c.id==x.id);if(m)pnCall(m);else{PH.tab=2;PH.num=x.ph||'';PH.v='l';pnRender()}}
+ else if(a=='clr')confirmSheet('清空全部通话记录？','清空',()=>{PH.log=[];pnSave();pnRender()});
+ else if(a=='new'){PH.d={};PH.v='a';pnRender()}
+ else if(a=='open'){PH.id=+d.id;PH.v='d';pnRender()}
+ else if(a=='back'){PH.v='l';pnRender()}
+ else if(a=='saveC'){const name=($('#pn_nm').value||'').trim();if(!name)return gtoast('请输入昵称');const nid=Date.now();WX.cons.push({id:nid,wid:'wxid_'+nid.toString(36),name,remark:'',ph:($('#pn_ph').value||'').trim(),grp:'我的好友',persona:($('#pn_ps').value||'').trim(),av:''});wsave();PH.v='l';if(PH.mode=='phone')PH.tab=1;pnRender();gtoast('已添加联系人')}
+ else if(a=='del2'&&c)confirmSheet('删除联系人「'+nm(c)+'」？','删除',()=>{WX.cons=WX.cons.filter(x=>x.id!=c.id);delete WX.msgs[c.id];wsave();PH.v='l';pnRender()},'同时会删除与对方的微信聊天记录');
+ else if(a=='call'&&c)pnCall(c);
+ else if(a=='wx'&&c){closeApp(true);openApp('chat');setTimeout(()=>rChat(c.id),450)}
+ else if(a=='sms'&&c){const k=c.ph||nm(c);closeApp(true);openApp('sms');setTimeout(()=>{SMS.t[k]??=[];if(!SMS.o.includes(k))SMS.o.unshift(k);SO.k=k;SO.v='t';rSms()},450)}}
+$('#app').addEventListener('click',e=>{const t=e.target.closest('[data-pn]');if(!t||(cur!='phone'&&cur!='con'))return;pnDo(t.dataset.pn,t.dataset)});
+$('#app').addEventListener('input',e=>{if(cur!='phone'&&cur!='con')return;if(e.target.id=='pn_q'){PH.q=e.target.value;const l=$('#pn_l');const q=PH.q.trim().toLowerCase(),r=pnSort().filter(c=>!q||(nm(c)+(c.ph||'')+(c.name||'')).toLowerCase().includes(q));if(l){l.innerHTML=r.length?pnRows(r):`<p class="em">${q?'没有找到联系人':'还没有联系人'}</p>`;a11y()}}});
+document.addEventListener('keydown',e=>{if(cur!='phone'||PH.tab!=2||PH.v!='l'||e.target.closest('input,textarea'))return;if(/^[0-9*#]$/.test(e.key)){pnDo('key',{k:e.key})}else if(e.key=='Backspace')pnDo('del',{});else if(e.key=='Enter')pnDo('dial',{})});
+REG.phone={el:'#app',open:()=>{PH.mode='phone';PH.tab=0;PH.v='l';PH.q='';PH.num='';pnRender()}};
+REG.con={el:'#app',open:()=>{PH.mode='con';PH.v='l';PH.q='';pnRender()}};
+// ---------- prompt settings / preview ----------
+function previewSheet(title,text,sub){SHs.items=[{t:'复制',f:()=>copy(text)}];shOpen(title,sub||'',`<pre class="pv">${esc(text)}</pre><div class="l"><button class="si" data-sk="0"><span>复制全部</span></button><button class="si" data-sk="x"><span>关闭</span></button></div>`)}
+function promptPreview(c,kind){const sample=!c||!c.id;c=c||{id:0,name:'示例角色',persona:'性格随和的普通朋友'};
+ let sys,hist;
+ if(kind=='sms'){sys=smsSys(c);hist=sample?[{role:'user',content:'在吗？今晚想吃点什么'}]:smsHist(smsThread(c),c)}
+ else if(kind=='call'){sys=callSys(c,'out');hist=sample?[{role:'user',content:'（电话接通了）'}]:wxHist(c)}
+ else{sys=wxSys(c);hist=sample?[{role:'user',content:'在吗？今晚想吃点什么'}]:wxHist(c)}
+ const W=wbApply(sample?null:c.id,hist,sys),h=W.hist,last=h.slice(-6);
+ return '【System 提示词】\n'+W.sys+'\n\n【对话历史】共 '+h.length+' 条'+(h.length>6?'，以下是最后 6 条':'')+'\n'+(last.length?last.map(x=>'['+x.role+'] '+x.content).join('\n'):'（还没有对话）')+'\n\n※ 世界书里设有触发概率的条目，每次发送时命中情况可能不同。'+(sample?'\n※ 这是示例角色的预览，选择具体联系人可以看到真实内容。':'')}
+function persTab(){const cs=WX.cons;return `<div class="card"><h3>全局提示词</h3><p class="stt">所有微信、短信和语音通话里的角色，会先读这段基准设定，再读各自的人设。清空会恢复默认内容。</p><div class="fd"><textarea id="pg_sys" class="pgt" rows="14" aria-label="全局提示词">${esc(CFG.persona&&CFG.persona.trim()?CFG.persona:HUMAN)}</textarea></div><div class="r2"><button class="cb" data-pr="reset">恢复默认</button></div></div>
+<div class="card"><h3>预览</h3><p class="stt">查看真正会发给模型的完整 system 提示词（含全局或专属提示词、人设、当前时间和世界书命中的内容）。</p><div class="fd"><small>选择角色</small>${sel('id="pg_c"',[['0','示例角色']].concat(cs.map(c=>[c.id,esc(nm(c))])),ST.pc||0)}</div><div class="r2"><button class="cb" data-pr="pv" data-k="wx">微信</button><button class="cb" data-pr="pv" data-k="sms">短信</button><button class="cb" data-pr="pv" data-k="call">通话</button></div></div>
+<div class="card"><h3>联系人专属提示词</h3><p class="stt">给某位联系人单独设置后，会代替全局提示词（微信与短信共用）。留空则使用全局。</p>${cs.length?`<div class="ls" style="margin-top:12px">${cs.map(c=>`<div class="lr btn" role="button" tabindex="0" data-pr="edit" data-id="${c.id}"><div><b>${esc(nm(c))}</b><small>${c.sys&&c.sys.trim()?'已单独设置':'使用全局'}</small></div>${ic('chev').replace('class="ico"','class="ico ch"')}</div>`).join('')}</div>`:'<p class="stt">还没有联系人</p>'}</div>`}
+$('#st').addEventListener('click',e=>{const b=e.target.closest('[data-pr]');if(!b)return;const d=b.dataset;
+ if(d.pr=='reset'){CFG.persona='';savePrefs();const t=$('#pg_sys');if(t)t.value=HUMAN;gtoast('已恢复默认')}
+ else if(d.pr=='pv'){const id=+($('#pg_c')||{}).value||0,c=id?WX.cons.find(x=>x.id==id):null;ST.pc=id;previewSheet({wx:'微信提示词',sms:'短信提示词',call:'通话提示词'}[d.k],promptPreview(c,d.k))}
+ else if(d.pr=='edit'){const c=WX.cons.find(x=>x.id==d.id);if(!c)return;editSheet('「'+nm(c)+'」的专属提示词',c.sys||'',v=>{c.sys=v.trim();wsave();if(ST.tab==5)rSet(1);gtoast(c.sys?'已保存':'已清除，使用全局提示词')},'留空则使用全局提示词')}});
+$('#st').addEventListener('input',e=>{if(e.target.id!='pg_sys')return;const v=e.target.value;CFG.persona=v.trim()&&v.trim()!==HUMAN.trim()?v:'';clearTimeout(ST.pt);const g=GEN;ST.pt=setTimeout(()=>{if(g==GEN)savePrefs()},300)});
 regApp('app:calc','计算器',()=>{const s=rd('app:calc');Object.assign(CA,{d:'0',acc:null,op:null,fresh:1,hist:[]});if(isObj(s)){CA.d=typeof s.d=='string'?s.d:'0';CA.acc=s.acc!==null&&isFinite(s.acc)?+s.acc:null;CA.op=['+','-','*','/'].includes(s.op)?s.op:null;CA.fresh=s.fresh?1:0;CA.hist=Array.isArray(s.hist)?s.hist.filter(x=>isObj(x)&&typeof x.e=='string'&&typeof x.r=='string').slice(-30):[]}});
 regApp('app:clock','时钟、计时与秒表',()=>{const s=rd('app:clock');clkStop();Object.assign(CK,{tab:0,run:0,t0:0,acc:0,laps:[],end:0,left:0,dur:300000,wc:WC0()});
  if(isObj(s)){CK.tab=Math.max(0,Math.min(3,+s.tab||0));CK.run=s.run?1:0;CK.t0=+s.t0||0;CK.acc=+s.acc||0;CK.laps=Array.isArray(s.laps)?s.laps.filter(x=>isFinite(x)):[];CK.end=+s.end||0;CK.left=+s.left||0;CK.dur=Math.max(6e4,Math.min(5940000,+s.dur||3e5));if(Array.isArray(s.wc))CK.wc=s.wc.filter(i=>WCITY[i]).slice(0,WCITY.length)}});
@@ -1395,14 +1572,17 @@ function saveFile(name,text,isUrl){
    return d.save({filename:name,data}).catch(e=>{if(!e||e.code!='declined')anchor()})}).catch(()=>{anchor()});return true}}catch(e){}
  return anchor()}
 function infoSheet(t,s){actSheet(t,[],s,'好')}
+function shrinkUrl(u){return new Promise(res=>{if(typeof u!='string'||!/^data:image\/(png|jpe?g|webp|gif|bmp)/i.test(u)||u.length<3000)return res(u);const im=new Image();im.onload=()=>{try{const k=Math.min(1,600/Math.max(im.naturalWidth,im.naturalHeight)),w=Math.max(1,Math.round(im.naturalWidth*k)),h=Math.max(1,Math.round(im.naturalHeight*k)),c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(im,0,0,w,h);const o=c.toDataURL('image/jpeg',.7);res(o.length<u.length?o:u)}catch(e){res(u)}};im.onerror=()=>res(u);im.src=u})}
+async function shrinkDeep(v){if(typeof v=='string')return v.startsWith('data:image/')?shrinkUrl(v):v;if(Array.isArray(v)){const o=[];for(const x of v)o.push(await shrinkDeep(x));return o}if(v&&typeof v=='object'){const o={};for(const k in v)o[k]=await shrinkDeep(v[k]);return o}return v}
 function startExport(ids,partial){ids=ids.filter(id=>{const c=cat(id);return c&&catSize(c)>0});if(!ids.length)return gtoast('所选类别没有可导出的数据');
  const total=ids.reduce((a,id)=>a+catSize(cat(id)),0);
- actSheet('导出备份',[{t:'生成并下载',f:()=>doExport(ids,partial)}],`将导出 ${ids.length} 个类别，合计约 ${fmtB(total)}。\n头像、壁纸、相册等图片会以内嵌数据的形式一并写入，文件可能较大。\n接口密钥也会明文包含在文件中，请妥善保管。`)}
-function doExport(ids,partial){const text=JSON.stringify(buildExport(ids)),d=new Date(),p=n=>String(n).padStart(2,'0'),
- name=`小手机-备份${partial&&ids.length<DATA.length?'（部分）':''}-${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.json`;
+ actSheet('导出备份',[{t:'生成并下载（原图）',f:()=>doExport(ids,partial,0)},{t:'生成并下载（压缩图片）',f:()=>doExport(ids,partial,1)}],`将导出 ${ids.length} 个类别，合计约 ${fmtB(total)}。\n「原图」完整保留所有图片，文件可能很大；「压缩图片」会把头像、壁纸、相册等图片转成 JPEG 并缩到 600 像素以内，备份明显更小，但画质会有损失，导入后依然可以正常使用。\n接口密钥也会明文包含在文件中，请妥善保管。`)}
+async function doExport(ids,partial,cmp){gtoast(cmp?'正在压缩图片…':'正在生成…');const obj=buildExport(ids);if(cmp){obj.cats=await shrinkDeep(obj.cats);for(const id in obj.cats)obj.sizes[id]=JSON.stringify(obj.cats[id]).length;obj.compressed=1}
+ const text=JSON.stringify(obj),d=new Date(),p=n=>String(n).padStart(2,'0'),
+ name=`小手机-备份${partial&&ids.length<DATA.length?'（部分）':''}${cmp?'-压缩':''}-${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}.json`;
  const ok=saveFile(name,text),items=[{t:'再次下载',f:()=>{saveFile(name,text);gtoast('已再次触发下载')}},{t:'复制备份内容',f:()=>copy(text)}];
  try{const file=new File([text],name,{type:'application/json'});if(navigator.canShare&&navigator.canShare({files:[file]}))items.push({t:'分享…',f:()=>navigator.share({files:[file]}).catch(()=>{})})}catch(e){}
- actSheet(ok?'已生成备份':'没能自动下载',items,`${name}\n约 ${fmtB(text.length)}。${ok?'已请求浏览器下载；':'浏览器没有允许自动下载；'}如果没有看到文件，可以用下面的方式保存：复制内容后粘贴到文本文件，或使用分享。`,'完成')}
+ actSheet(ok?'已生成备份':'没能自动下载',items,`${name}\n约 ${fmtB(text.length)}${cmp?'（已压缩图片）':''}。${ok?'已请求浏览器下载；':'浏览器没有允许自动下载；'}如果没有看到文件，可以用下面的方式保存：复制内容后粘贴到文本文件，或使用分享。`,'完成')}
 
 // ----- import -----
 let IM=null;
@@ -1487,6 +1667,7 @@ $('#st').addEventListener('change',e=>{const t=e.target,d=t.dataset||{};
 DATA.forEach(c=>{try{c.hydrate()}catch(e){console.error(c.id,e)}});
 
 applyDisp();
+updBadges();
 </script>
 </body></html>
 
