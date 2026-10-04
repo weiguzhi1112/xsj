@@ -316,7 +316,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none}
 .pmn button{display:flex;align-items:center;gap:12px;border:0;background:none;color:var(--ink);font:inherit;font-size:15px;padding:12px 14px;border-radius:16px;cursor:pointer;text-align:left}.pmn button:active{background:var(--soft)}.pmn .ico{width:19px;height:19px}
 @keyframes fpop{from{opacity:0;transform:scale(.94) translateY(6px)}to{opacity:1;transform:none}}
 #mpop{position:absolute;inset:0;z-index:40}
-.mbg{position:absolute;inset:0;background:rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transition:opacity .2s}#mpop.on .mbg{opacity:1}
+.mbg{position:absolute;inset:0;background:rgba(0,0,0,.06);opacity:0;transition:opacity .2s}#mpop.on .mbg{opacity:1}
 .mcl{position:absolute;z-index:1;pointer-events:none;transform:scale(1);transition:transform .2s cubic-bezier(.3,1.3,.5,1)}#mpop.on .mcl{transform:scale(1.03)}
 .mcl .bb{width:100%;height:100%;box-sizing:border-box;max-width:none}.mcl .rx{display:none}
 .rxb{position:absolute;z-index:2;display:flex;gap:2px;padding:6px;border-radius:26px;opacity:0;transform:scale(.85) translateY(8px);transform-origin:bottom;transition:.22s cubic-bezier(.3,1.3,.5,1)}#mpop.on .rxb{opacity:1;transform:none}
@@ -425,7 +425,7 @@ textarea.wbi{height:auto;padding:10px 14px;line-height:1.6;resize:none;display:b
 
 /* ---- prompts / worldbook test / search / badges ---- */
 .pgt{width:100%;box-sizing:border-box;font:inherit;font-size:13px!important;line-height:1.65;min-height:220px;resize:vertical;border:1px solid var(--line)!important;border-radius:14px;padding:12px!important;background:none;color:var(--ink);margin-top:10px}
-pre.pv{margin:0 0 12px;max-height:46vh;overflow:auto;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:12.5px;line-height:1.65;color:var(--ink);background:var(--card);border-radius:14px;padding:12px 14px;-webkit-user-select:text;user-select:text}
+pre.pv{margin:0 0 12px;flex:0 1 auto;min-height:90px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:12.5px;line-height:1.65;color:var(--ink);background:var(--card);border-radius:14px;padding:12px 14px;-webkit-user-select:text;user-select:text}
 .lr.col{flex-direction:column;align-items:stretch;gap:10px}
 .wbi{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:14px;line-height:1.6;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:none;color:var(--ink);resize:vertical;outline:0}
 .wtx{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--card);font-size:14px;line-height:1.7;white-space:pre-wrap;word-break:break-word;-webkit-user-select:text;user-select:text}
@@ -445,7 +445,7 @@ mark.p{background:rgba(255,204,0,.55)}mark.s{background:rgba(52,199,89,.45)}
 
 /* ---- quote pill: iMessage skin (tail-shaped pill + curved connector) ---- */
 .mr.hq{margin-top:50px}.mr.hq.gf{margin-top:50px}
-.mr.hq .bb{max-width:58%}
+.mr.hq .mc{max-width:62%}
 .qp{position:absolute;bottom:100%;margin:0;box-sizing:border-box;width:96px;height:38px;max-width:96px;padding:9px 14px 8px;line-height:18px;font-size:12px;border-radius:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 467.54 151.08'%3E%3Cpath fill='black' d='M417.2 259.23c13.29 0 26.62 0 39.86 1 26.1 2 45.94 14 57.1 38.46 3.67 8 4.81 16.59 4.92 25.35.27 21-8 38.13-23.94 51.4a52.51 52.51 0 0 1-28.43 12.36c-13.08 1.29-26.26 2.19-39.4 2.23-61.75.22-123.5.12-185.24.08q-55.95 0-111.88-.33c-7-.05-12.64 2.06-18.41 6-7.63 5.26-16.14 9.24-24.3 13.72a4.29 4.29 0 0 1-2.57.69c-2.07-.44-5.17-.65-5.84-2-.92-1.81-.41-4.71.29-6.89.81-2.5 2.79-4.62 3.76-7.09 2.5-6.38 1-12.72-4.24-17.15C71.6 371 64.7 364.57 60.28 356c-5.37-10.39-9.63-21.2-8.58-33.2 2.07-23.47 11.62-42.44 33-54.33 10.54-5.87 22-8.18 33.73-8.32 55.97-.64 255.17-.94 298.77-.82Z' transform='translate(-51.54 -259.21)'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 467.54 151.08'%3E%3Cpath fill='black' d='M417.2 259.23c13.29 0 26.62 0 39.86 1 26.1 2 45.94 14 57.1 38.46 3.67 8 4.81 16.59 4.92 25.35.27 21-8 38.13-23.94 51.4a52.51 52.51 0 0 1-28.43 12.36c-13.08 1.29-26.26 2.19-39.4 2.23-61.75.22-123.5.12-185.24.08q-55.95 0-111.88-.33c-7-.05-12.64 2.06-18.41 6-7.63 5.26-16.14 9.24-24.3 13.72a4.29 4.29 0 0 1-2.57.69c-2.07-.44-5.17-.65-5.84-2-.92-1.81-.41-4.71.29-6.89.81-2.5 2.79-4.62 3.76-7.09 2.5-6.38 1-12.72-4.24-17.15C71.6 371 64.7 364.57 60.28 356c-5.37-10.39-9.63-21.2-8.58-33.2 2.07-23.47 11.62-42.44 33-54.33 10.54-5.87 22-8.18 33.73-8.32 55.97-.64 255.17-.94 298.77-.82Z' transform='translate(-51.54 -259.21)'/%3E%3C/svg%3E");-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .qp.qm{background:var(--bub-me);color:var(--bub-me-t)}.qp.qo{background:var(--bub-ot);color:var(--bub-ot-t)}
 .mr.me .qp{right:100%;margin-right:26px;left:auto}.mr:not(.me) .qp{left:100%;margin-left:26px;right:auto}
@@ -473,6 +473,18 @@ mark.p{background:rgba(255,204,0,.55)}mark.s{background:rgba(52,199,89,.45)}
 .phk.go{background:#34c759;color:#fff}.phk.go .ico{width:30px;height:30px}.phk.bk{background:none}.phk.bk .ico{width:28px;height:28px}.phk:disabled{opacity:.3}
 .pnx{padding-top:22px;display:flex;flex-direction:column;align-items:center;text-align:center}.pnx h2{margin:14px 0 0;font-weight:400;font-size:24px}.pnx .ls{width:100%;box-sizing:border-box;text-align:left}
 .pna{display:flex;gap:18px;margin:22px 0 4px}.pna button{width:76px;height:64px;border-radius:18px;border:0;background:var(--card);box-shadow:0 0 0 .5px rgba(0,0,0,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:11px;color:var(--ink);cursor:pointer}.pna .ico{width:22px;height:22px}
+.mr.msel .bb{box-shadow:0 0 0 3px rgba(128,128,128,.45);transition:box-shadow .15s}
+
+/* ---- offline long-take / regex / pwa ---- */
+.mr.off{justify-content:stretch}.mr.off .mc{max-width:100%;width:100%}.mr.off .bb.offb{max-width:100%;width:100%;box-sizing:border-box;padding:14px 18px 16px;border-radius:20px;background:var(--card);color:var(--ink);box-shadow:0 0 0 .5px rgba(0,0,0,.07)}
+.bb.offb::before,.bb.offb::after{display:none!important}
+.offb .oh{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;color:var(--t4);margin-bottom:10px;cursor:pointer}.offb .oh span{padding:2px 10px;border-radius:10px;background:var(--soft)}
+.offb .ot{font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",serif;font-size:15px;line-height:1.95;-webkit-user-select:text;user-select:text}.offb .ot p{margin:0 0 .8em;white-space:pre-wrap}.offb .ot p:last-child{margin-bottom:0}
+.offb .ot.cl{max-height:5.8em;overflow:hidden;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.offb .oa{font-style:italic;color:var(--t3)}
+.rxs{margin-top:16px;padding:6px 16px 16px;border-radius:18px;background:var(--soft)}.rxh{display:flex;align-items:center;gap:12px;margin-top:10px}.rxn{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:15px;font-weight:500;color:var(--ink);outline:0;padding:6px 0}
+.pwi{display:flex;align-items:center;gap:14px;margin-top:16px}.pwv{width:56px;height:56px;border-radius:13px;overflow:hidden;flex:none;box-shadow:0 0 0 .5px rgba(0,0,0,.15)}.pwi b{display:block;font-weight:500;font-size:15px}.pwi small{display:block;font-size:12px;color:var(--t4);margin-top:3px;line-height:1.5}
+#sh .b{display:flex;flex-direction:column;min-height:0;flex:1 1 auto}pre.pv+.l{flex:none}
 </style></head>
 <body>
 <div id="phone">
@@ -594,7 +606,7 @@ $('#bn').onclick=e=>{const b=$('#bn');if(b.moved)return;const id=+b.dataset.id,n
 $('#lk').innerHTML=ic('lock');
 function unlock(cb){if(!locked){cb&&cb();return}$('#lk').classList.add('scan');
  setTimeout(()=>{$('#lk').classList.remove('scan');$('#lock').classList.add('up');locked=0;sbr();
-  if(cb)setTimeout(cb,300);if(!seen){seen=1;setTimeout(()=>smsRecv('小林','晚上有空吗？一起吃饭'),3000)}},700)}
+  if(cb)setTimeout(cb,300);seen=1},700)}
 function lockNow(){cancelDrag();shClose();closeApp();cc(0);setEdit(0);locked=1;$('#lock').classList.remove('up');N.length||0}
 let ly=null;const lk=$('#lock');
 lk.addEventListener('pointerdown',e=>ly=e.clientY);
@@ -755,6 +767,8 @@ const parseLine=t=>{const m=String(t).match(/^[\[【]语音[\]】]\s*(.*)$/);ret
 const lineOf=m=>m.v?'[语音]'+m.t:m.t;
 const mmss=n=>String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');
 const msgLabel=m=>m.img?'[图片]':m.v?'[语音]':m.call!==undefined?'[语音通话]':m.t;
+
+const offHtml=m=>{const t=rxRun(m.t,'ai','show'),ps=t.split(/\n+/).map(x=>x.trim()).filter(Boolean).map(p=>'<p>'+esc(p).replace(/\*([^*\n]+)\*/g,'<i class="oa">$1</i>')+'</p>').join('');return `<div class="oh" data-a="otog" role="button" tabindex="0">线下剧情 · ${[...String(m.t)].length} 字<span>${m.oc?'展开':'收起'}</span></div><div class="ot${m.oc?' cl':''}">${ps}</div>`};
 const histOf=m=>(m.q?'（回复「'+m.q.t+'」）':'')+(m.img?'[图片]':m.v?'[语音]'+m.t:m.call!==undefined?'[语音通话'+(m.call?' '+mmss(m.call):'：'+m.t)+']'+((m.log||[]).length?'\n'+m.log.map(l=>(l.me?'我':'对方')+'：'+l.t).join('\n'):''):m.t);
 const qpHtml=q=>`<div class="qp ${q.me?'qm':'qo'}">${esc(q.t)}</div>`;
 const splitLines=t=>String(t||'').split(/\n+/).map(x=>x.trim()).filter(Boolean);
@@ -782,8 +796,8 @@ function ml(){const c=WX.cons.find(x=>x.id==WX.cur),e=$('#ml');if(!c||!e)return;
   if(m.s)return tm+`<div class="sy" data-i="${i}" role="button" tabindex="0">${esc(m.t)}</div>`;
   if(m.p)return tm+`<div class="mr"><div class="mc"><div class="bb gf ge typ"><i></i><i></i><i></i></div></div></div>`;
   const g=grpCls(L,i),rx=m.rx?`<i class="rx" aria-label="已回应">${rxh(m.rx)}</i>`:'';
-  const body=(m.img?`<img src="${m.img}" alt="图片">`:m.v?voiceHtml(m,i):m.call!==undefined?callHtml(m,i):esc(m.t));
-  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}${!m.me&&g.includes('gf')?`<div class="nl">${esc(nm(c))}</div>`:''}<div class="bb${g}${m.img?' im':m.v?' vo':m.call!==undefined?' ca':''}">${body}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('');fitIb('#vk')})}
+  const body=(m.img?`<img src="${m.img}" alt="图片">`:m.v?voiceHtml(m,i):m.call!==undefined?callHtml(m,i):m.off?offHtml(m):esc(rxRun(m.t,m.me?'user':'ai','show')));
+  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}${m.off?' off':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}${!m.me&&g.includes('gf')?`<div class="nl">${esc(nm(c))}</div>`:''}<div class="bb${g}${m.img?' im':m.v?' vo':m.call!==undefined?' ca':''}${m.off?' offb':''}">${body}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('');fitIb('#vk')})}
 function copy(t){const done=()=>gtoast('已复制');const fb=()=>{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;left:-99px;opacity:0;user-select:text;-webkit-user-select:text';document.body.appendChild(a);a.select();try{document.execCommand('copy')?done():gtoast('复制失败，请手动选择')}catch(e){gtoast('复制失败，请手动选择')}a.remove()};
  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(done,fb);else fb()}
 function wxDelConv(id){const c=WX.cons.find(x=>x.id==id);delete WX.msgs[id];if(c){c.chat=0;c.unread=0}wsave();WX.tab=0;rMain();view('m');gtoast('已删除会话')}
@@ -798,6 +812,7 @@ function rCS(id){const c=WX.cons.find(x=>x.id==id);if(!c)return;
  $('#vc').innerHTML=gh('聊天设置','chat',null,id)+`<div class="sc"><div class="cp">${av(c,76)}<b>${esc(nm(c))}</b><s>微信号：${esc(c.wid||'未设置')}</s></div>
 <div class="ls">${rw('cprof','查看资料与人设')}</div>
 <div class="ls">${swA}</div>
+<div class="ls">${sw('off','线下剧情模式','开启后，对方会用第三人称写成一段长镜头剧情，不再拆成多条聊天气泡')}${sg('olen','剧情篇幅','每次回复的大致字数',[['s','约 400 字'],['m','约 800 字'],['l','约 1500 字']],'m')}</div>
 <div class="ls">${sw('pin','置顶聊天')}${sw('mute','消息免打扰','对方回复时不弹出通知横幅')}</div>
 <div class="ls">${sg('sty','回复风格','影响对方每次回复的长短',[['short','简短'],['norm','自然'],['long','详细']],'norm')}${cxh}</div>
 <div class="ls">${rw('csys','专属提示词'+(c.sys&&c.sys.trim()?'（已设置）':'（使用全局）'))}${rw('cprev','预览提示词')}</div>
@@ -815,7 +830,7 @@ function csDo(a,el){const id=WX.cur,c=WX.cons.find(x=>x.id==id);if(!c)return;con
  else if(a=='cclr')confirmSheet('清空聊天记录？','清空',()=>{WX.msgs[id]=[];c.unread=0;wsave();gtoast('已清空聊天记录')},'将删除与「'+nm(c)+'」的全部消息和系统提示，无法恢复。');
  else if(a=='cdelconv')confirmSheet('删除会话？','删除会话',()=>wxDelConv(id),'会话和聊天记录会被删除，好友会保留在通讯录。');
  else if(a=='cdelfr')confirmSheet('删除好友「'+nm(c)+'」？','删除好友',()=>{WX.cons=WX.cons.filter(x=>x.id!=id);delete WX.msgs[id];wsave();WX.cur=null;WX.tab=1;rMain();view('m');gtoast('已删除好友')},'好友及全部聊天记录会被删除，无法恢复。')}
-function mpClose(){const o=$('#mpop');if(o)o.remove()}
+function mpClose(){const o=$('#mpop');if(o)o.remove();document.querySelectorAll('.mr.msel').forEach(r=>r.classList.remove('msel'))}
 function wxMsg(i){const id=WX.cur,L=WX.msgs[id]||[],m=L[i];if(!m||m.p)return;
  if(m.s){actSheet('系统提示',[{t:'编辑',f:()=>editSheet('编辑系统提示',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;wsave();ml()})},{t:'复制',f:()=>copy(m.t)},{t:'在这条后面插入提示',f:()=>editSheet('插入系统提示','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');L.splice(i+1,0,{s:1,t:v,h:hm(),ts:(m.ts||Date.now())});wsave();ml()},'例如：三天后')},{t:'删除',dg:1,f:()=>{L.splice(i,1);wsave();ml()}}]);return}
  msgPop(i,{L,root:'#wx',sel:'#ml',sv:wsave,paint:ml,regen:()=>wxReply(id),setq:q=>{WX.rq=q;qbarRender();const t=$('#mi');if(t)t.focus()},qn:nm(WX.cons.find(x=>x.id==id)||{})})}
@@ -825,31 +840,31 @@ function msgPop(i,c){const L=c.L,m=L[i],row=document.querySelector(`${c.sel} .mr
  if(!m.img&&m.call===undefined)items.push({k:'copy',t:'复制',i:'copy',f:()=>copy(m.t)});
  else if(m.call!==undefined&&(m.log||[]).length)items.push({k:'copy',t:'复制',i:'copy',f:()=>copy(callText(m))});
  if(m.call!==undefined)items.push({k:'edit',t:'编辑',i:'edit',f:()=>callEdit(m,()=>{c.sv();c.paint()})});
- if(!m.img&&!m.code&&m.call===undefined)items.push({k:'edit',t:'编辑',i:'edit',f:()=>{if(m.me)editSheet(m.v?'编辑语音文字':'编辑消息',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;if(m.v)m.v=vSecs(v);c.sv();c.paint()});else grpEdit(L,i,()=>{c.sv();c.paint()})}});
+ if(!m.img&&!m.code&&m.call===undefined)items.push({k:'edit',t:'编辑',i:'edit',f:()=>{if(m.me)editSheet(m.v?'编辑语音文字':'编辑消息',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;if(m.v)m.v=vSecs(v);c.sv();c.paint()});else if(m.off)editSheet('编辑剧情',m.t,v=>{v=v.trim();if(!v)return gtoast('内容不能为空');m.t=v;c.sv();c.paint()});else grpEdit(L,i,()=>{c.sv();c.paint()})}});
  if(m.me&&c.recall!==0)items.push({k:'undo',t:'撤回',i:'undo',f:()=>{L[i]={s:1,t:'你撤回了一条消息',h:m.h,ts:m.ts};c.sv();c.paint()}});
  else if(!m.me&&c.regen)items.push({k:'redo',t:'重新生成',i:'redo',f:()=>{L.splice(grpOf(L,i)[0]);c.sv();c.paint();c.regen()}});
  if(m.me&&c.regen&&i==L.map((x,n)=>x.s||x.p?-1:n).reduce((a,b)=>Math.max(a,b),-1))items.push({k:'redo',t:'让对方回复',i:'redo',f:()=>{STK=1;c.regen()}});
  items.push({k:'del',t:'删除',i:'trash',dg:1,f:()=>{L.splice(i,1);c.sv();c.paint()}});
- MP.items=items;MP.i=i;MP.L=L;MP.sv=c.sv;MP.paint=c.paint;const mine=!!m.me,mh=items.length*40+64,top=Math.max(110,Math.min(y,760-h));
+ MP.items=items;MP.i=i;MP.L=L;MP.sv=c.sv;MP.paint=c.paint;const mine=!!m.me,mh=items.length*40+64+44,below=y+h+10,mtop=below+mh<=830?below:Math.max(110,y-mh-10);
  const o=document.createElement('div');o.id='mpop';
- o.innerHTML=`<div class="mbg" data-a="mpx"></div><div class="mcl${mine?' me':''}" style="left:${x}px;top:${top}px;width:${w}px;height:${h}px">${row.outerHTML}</div>
-<div class="mmn gz" style="${mine?'right:'+(PW-x-w)+'px':'left:'+x+'px'};top:${Math.min(top+h+10,844-mh-30)}px"><div class="rxq">${RXE.map(k=>`<button data-a="rxk" data-k="${k}" class="${m.rx==k?'on':''}" aria-label="表情回应">${k}</button>`).join('')}<button data-a="rxmo" aria-label="更多表情">${ic('plus')}</button></div><div class="rxall">${EMO.map(k=>`<button data-a="rxk" data-k="${k}" class="${m.rx==k?'on':''}" aria-label="表情回应">${k}</button>`).join('')}</div><div class="mi">${items.map((it,n)=>`<button data-a="mit" data-n="${n}" class="${it.dg?'dg':''}">${ic(it.i)}<span>${it.t}</span></button>`).join('')}</div></div>`;
- $(c.root).appendChild(o);requestAnimationFrame(()=>o.classList.add('on'))}
+ o.innerHTML=`<div class="mbg" data-a="mpx"></div>
+<div class="mmn gz" style="${mine?'right:'+(PW-x-w)+'px':'left:'+x+'px'};top:${mtop}px"><div class="rxq">${RXE.map(k=>`<button data-a="rxk" data-k="${k}" class="${m.rx==k?'on':''}" aria-label="表情回应">${k}</button>`).join('')}<button data-a="rxmo" aria-label="更多表情">${ic('plus')}</button></div><div class="rxall">${EMO.map(k=>`<button data-a="rxk" data-k="${k}" class="${m.rx==k?'on':''}" aria-label="表情回应">${k}</button>`).join('')}</div><div class="mi">${items.map((it,n)=>`<button data-a="mit" data-n="${n}" class="${it.dg?'dg':''}">${ic(it.i)}<span>${it.t}</span></button>`).join('')}</div></div>`;
+ {const mr=row.closest('.mr');if(mr)mr.classList.add('msel')}$(c.root).appendChild(o);requestAnimationFrame(()=>o.classList.add('on'))}
 const MP={items:[],i:-1,L:null,sv:null,paint:null};
 function mpRx(k){const m=MP.L&&MP.L[MP.i];if(!m)return;m.rx=m.rx==k?'':k;if(!m.rx)delete m.rx;MP.sv();mpClose();MP.paint()}
 function mpItem(n){const it=MP.items[n];mpClose();if(it)setTimeout(it.f,0)}
 function plusDo(k){$('#pmn').classList.remove('on');if(k=='img')$('#mf').click();else if(k=='vc')callOpen(WX.cur,'out');else if(k=='vm')editSheet('语音条','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');const L=WX.msgs[WX.cur]??=[];L.push({me:1,v:vSecs(v),t:v,h:hm(),ts:Date.now()});wsave();ml();wxTouch();wxReply(WX.cur)},'输入你想说的话，会作为语音条发出去');else if(k=='sys')editSheet('插入系统提示','',v=>{v=v.trim();if(!v)return gtoast('内容不能为空');(WX.msgs[WX.cur]??=[]).push({s:1,t:v,h:hm()});wsave();ml()},'例如：三天后');else rCS(WX.cur)}
 $('#wx').addEventListener('click',e=>{const pm=$('#pmn');if(pm&&pm.classList.contains('on')&&!e.target.closest('#pmn,.pl'))pm.classList.remove('on');{const ep=document.querySelector('#vk .emp.on');if(ep&&!e.target.closest('.emp,.emb'))ep.classList.remove('on')}const a=e.target.closest('[data-a]');if(!a)return;const id=a.dataset.id,P=()=>$('#wpop').classList.remove('on');
- ({code:()=>sendCode(a.dataset.k),sub:regSub,tab:()=>showTab(+a.dataset.n),menu:()=>$('#wpop').classList.add('on'),pclose:P,add:()=>{P();rEdit()},soon:()=>{P();toast('该功能即将开放')},ct:()=>rEdit(id),chat:()=>rChat(id),home:()=>{rMain();view('m')},csave,send,cmore:wxMore,mpx:mpClose,rxk:()=>mpRx(a.dataset.k),rxmo:()=>a.closest('.mmn').classList.add('big'),emt:()=>{const b=a.closest('.ib');b.querySelector('.emp').classList.toggle('on');$('#pmn').classList.remove('on')},emi:()=>emoIns(a.closest('.ib'),a.dataset.e),mit:()=>mpItem(+a.dataset.n),plus:()=>{$('#pmn').classList.toggle('on');const p=a.closest('.ib').querySelector('.emp');if(p)p.classList.remove('on')},pi:()=>plusDo(a.dataset.k),qx:()=>{WX.rq=null;qbarRender()},csw:()=>csDo('csw',a),cseg:()=>csDo('cseg',a),cprof:()=>csDo('cprof',a),cins:()=>csDo('cins',a),ccall:()=>csDo('ccall',a),csys:()=>csDo('csys',a),cprev:()=>csDo('cprev',a),msgjump:()=>{WX.jump=+a.dataset.i;rChat(a.dataset.id)},vplay:()=>vPlay(+a.closest('.mr').dataset.i,a),vtxt:()=>vTxt(+a.closest('.mr').dataset.i),ctog:()=>vTxt(+a.closest('.mr').dataset.i),cend:callEnd,cmute:()=>{CALL.mute^=1;callPaint()},cspk:()=>{CALL.spk^=1;if(!CALL.spk)try{speechSynthesis.cancel()}catch(e){}callPaint()},csnd:callSendUi,cacc:callConnect,cdec:()=>callEnd('已拒绝'),cclr:()=>csDo('cclr',a),cdelconv:()=>csDo('cdelconv',a),cdelfr:()=>csDo('cdelfr',a),idx:()=>{const e=$('#ci_'+(a.dataset.l=='#'?'hash':a.dataset.l));if(e)e.scrollIntoView({block:'start'})},gocar:()=>{closeApp();setTimeout(()=>openApp('car'),420)}}[a.dataset.a]||(()=>{}))()});
+ ({code:()=>sendCode(a.dataset.k),sub:regSub,tab:()=>showTab(+a.dataset.n),menu:()=>$('#wpop').classList.add('on'),pclose:P,add:()=>{P();rEdit()},soon:()=>{P();toast('该功能即将开放')},ct:()=>rEdit(id),chat:()=>rChat(id),home:()=>{rMain();view('m')},csave,send,cmore:wxMore,mpx:mpClose,rxk:()=>mpRx(a.dataset.k),rxmo:()=>a.closest('.mmn').classList.add('big'),emt:()=>{const b=a.closest('.ib');b.querySelector('.emp').classList.toggle('on');$('#pmn').classList.remove('on')},emi:()=>emoIns(a.closest('.ib'),a.dataset.e),mit:()=>mpItem(+a.dataset.n),plus:()=>{$('#pmn').classList.toggle('on');const p=a.closest('.ib').querySelector('.emp');if(p)p.classList.remove('on')},pi:()=>plusDo(a.dataset.k),qx:()=>{WX.rq=null;qbarRender()},csw:()=>csDo('csw',a),cseg:()=>csDo('cseg',a),cprof:()=>csDo('cprof',a),cins:()=>csDo('cins',a),ccall:()=>csDo('ccall',a),csys:()=>csDo('csys',a),cprev:()=>csDo('cprev',a),msgjump:()=>{WX.jump=+a.dataset.i;rChat(a.dataset.id)},vplay:()=>vPlay(+a.closest('.mr').dataset.i,a),vtxt:()=>vTxt(+a.closest('.mr').dataset.i),ctog:()=>vTxt(+a.closest('.mr').dataset.i),otog:()=>{const m=(WX.msgs[WX.cur]||[])[+a.closest('.mr').dataset.i];if(m){m.oc=m.oc?0:1;wsave();ml()}},cend:callEnd,cmute:()=>{CALL.mute^=1;callPaint()},cspk:()=>{CALL.spk^=1;if(!CALL.spk)try{speechSynthesis.cancel()}catch(e){}callPaint()},csnd:callSendUi,cacc:callConnect,cdec:()=>callEnd('已拒绝'),cclr:()=>csDo('cclr',a),cdelconv:()=>csDo('cdelconv',a),cdelfr:()=>csDo('cdelfr',a),idx:()=>{const e=$('#ci_'+(a.dataset.l=='#'?'hash':a.dataset.l));if(e)e.scrollIntoView({block:'start'})},gocar:()=>{closeApp();setTimeout(()=>openApp('car'),420)}}[a.dataset.a]||(()=>{}))()});
 $('#wx').addEventListener('change',async e=>{const t=e.target;if(t.id=='mf'){const f=t.files[0];t.value='';if(!f||WX.cur==null)return;try{const u=await imgData(f,800,.75);const id=WX.cur,L=WX.msgs[id]??=[];L.push({me:1,img:u,h:hm()});if(!wsave()){L.pop();gtoast('空间不足，图片未发送');return}ml();wxTouch();wxReply(id)}catch(x){gtoast('这张图片无法读取，请换一张')}return}if(t.type!='file'||!t.files[0])return;const f=t.files[0],l=t.closest('.ava');t.value='';
  try{WX.tmp=await imgData(f,256,.82,true)}catch(x){return gtoast('这张图片无法读取，请换一张')}
  if(!l)return;const v=l.querySelector('.av');v.style.backgroundImage=`url('${WX.tmp}')`;v.textContent='';l.querySelector('span').textContent='更换头像'});
 
 // ---------- Settings & API ----------
-const PREF_KEYS=['shell','sbar','isl','hbar','persona','ui','rad','hap','snd','theme'];
+const PREF_KEYS=['shell','sbar','isl','hbar','persona','rx','ui','rad','hap','snd','theme'];
 const nx=()=>({type:'openai',url:'',key:'',model:''});
 const apiDef=()=>({a:nx(),b:nx(),presets:[],pi:-1,stream:'auto',temp:.8,reason:'off',bare:0,fb:1,black:[],tok:0,ml:{a:{sig:'',list:[]},b:{sig:'',list:[]}}});
-const prefDef=()=>({shell:1,sbar:1,isl:1,hbar:1,persona:'',ui:100,rad:19,hap:1,snd:1,theme:'auto'});
+const prefDef=()=>({shell:1,sbar:1,isl:1,hbar:1,persona:'',rx:[{id:1,name:'隐藏思考内容',find:'<think>[\\s\\S]*?</think>',flags:'gi',rep:'',scope:'ai',where:'both',on:1}],ui:100,rad:19,hap:1,snd:1,theme:'auto'});
 let CFG=Object.assign(apiDef(),prefDef());
 function fixCfg(){for(const x of['a','b'])CFG[x]=Object.assign(nx(),isObj(CFG[x])?CFG[x]:{});
  if(!Array.isArray(CFG.presets))CFG.presets=[];CFG.presets=CFG.presets.filter(isObj);if(!Array.isArray(CFG.black))CFG.black=[];
@@ -950,6 +965,7 @@ function rSet(keep){const t=ST.tab,sc0=keep&&$('#st .sc'),y0=sc0?sc0.scrollTop:0
 
  if(t==3)h+=`<div class="card"><h3>显示</h3><div class="fd"><small>外观模式</small>${sel('data-b="theme"',[['auto','跟随系统'],['light','浅色'],['dark','深色']],CFG.theme)}</div><div class="fd"><small>手机外壳</small>${sel('data-d="shell"',[[1,'显示'],[0,'关闭（全屏）']],CFG.shell)}</div><div class="fd"><small>模拟状态栏</small>${sel('data-d="sbar"',[[1,'显示'],[0,'隐藏']],CFG.sbar)}</div><div class="fd"><small>灵动岛</small>${sel('data-d="isl"',[[1,'显示'],[0,'隐藏']],CFG.isl)}</div><div class="fd"><small>底部小横条</small>${sel('data-d="hbar"',[[1,'显示'],[0,'隐藏']],CFG.hbar)}</div><div class="fd"><small>界面大小 <span id="uv">${CFG.ui}</span>%</small><input type="range" data-d="ui" min="80" max="120" step="5" value="${CFG.ui}"></div><div class="fd"><small>图标圆角 <span id="rv">${CFG.rad}</span></small><input type="range" data-d="rad" min="10" max="30" value="${CFG.rad}"></div><div class="r2"><button class="cb" data-a="fs">进入全屏</button></div><p class="stt">安卓和电脑浏览器可直接进入全屏。iOS：用 Safari 打开，点分享，选「添加到主屏幕」，之后从主屏幕图标打开即为全屏。隐藏状态栏后，从屏幕顶部向下滑可打开控制中心。</p></div>
 <div class="card"><h3>字体与反馈</h3><div class="r2"><label class="cb" style="display:flex;align-items:center;justify-content:center;cursor:pointer">上传字体<input type="file" id="ff" accept=".ttf,.otf,.woff,.woff2" hidden></label><button class="cb" data-a="fr">恢复默认</button></div><div class="fd"><small>触感反馈</small>${sel('data-d="hap"',[[1,'开启'],[0,'关闭']],CFG.hap)}</div><div class="fd"><small>提示音</small>${sel('data-d="snd"',[[1,'开启'],[0,'关闭']],CFG.snd)}</div></div>`;
+ if(t==3)h+=pwaCard();
  if(t==4)h+=body;
  $('#st').innerHTML=h+'</div>';if(t==0){mhint('a');mhint('b')}if(t==4)updXT();if(keep){const s=$('#st .sc');if(s)s.scrollTop=y0}}
 $('#st').addEventListener('click',e=>{const pk=e.target.closest('[data-pick]');if(pk){openPicker(pk.dataset.pick);return}const b=e.target.closest('button');if(!b)return;const d=b.dataset;
@@ -974,20 +990,38 @@ const HUMAN=`【总原则】你是一个活生生的普通人，和对方是完�
 - 只输出你要发出去的话，不写旁白、动作、心理描写和括号注释；不暴露自己是模型，也不说自己在扮演。
 - 偶尔可以像真人一样随手用 emoji 或颜文字，不堆砌，不要每条都带。
 - 每条消息单独占一行（用换行分隔），一次发 1 到 4 条。`;
+
+// ---------- time awareness / reactions / regex ----------
+const fmtGap=ms=>{const m=Math.round(ms/6e4);if(m<1)return'不到一分钟';if(m<60)return m+' 分钟';const h=Math.floor(m/60);if(h<24)return h+' 小时'+(m%60?' '+(m%60)+' 分钟':'');const d=Math.floor(h/24);return d+' 天'+(h%24?' '+(h%24)+' 小时':'')};
+const fmtT=ts=>{const d=new Date(ts),p=x=>String(x).padStart(2,'0');return(d.getMonth()+1)+'月'+d.getDate()+'日 '+p(d.getHours())+':'+p(d.getMinutes())};
+function gapCtx(L){L=(L||[]).filter(m=>!m.s&&!m.p&&m.ts);if(!L.length)return'';const now=Date.now(),i=L.length-1;let j=i;while(j>=0&&L[j].me)j--;let t='';
+ if(L[i].me){const st=L[j+1];if(j>=0)t+='你上一次说话是 '+fmtGap(now-L[j].ts)+'前；你说完之后，对方隔了 '+fmtGap(Math.max(0,st.ts-L[j].ts))+'才回你。';else t+='这是你们聊天记录的开头。';t+='对方最新一条消息发出于 '+fmtGap(now-L[i].ts)+'前。'}
+ else t+='你上一次说话是 '+fmtGap(now-L[i].ts)+'前，之后对方一直没有回复。';return t}
+const TIMERULE='\n【时间感】\n- 现实里做任何事都要花时间：洗澡、做饭、通勤、开会、写东西、逛街、睡觉、修东西、等人……都不是几分钟就能做完的，你自己说在做什么时，耗时要符合常识；不要瞬间完成，也不要上一句刚说去做，下一句就已经做完。\n- 对方说去做某件事时，按这条消息与上一条的真实时间差判断：时间不够就是还没做完/还在路上；够了才算做完。\n- 你要知道对方离开了多久、多久没回你、什么时候回来的，自然地带出来（久了会好奇、担心，或者按性格不放在心上），不要假装一直在聊。历史里（括号里的时间）只是给你看的时间标记，你的回复里不要写这类时间标记。';
+const RXRULE='\n- 偶尔可以对对方的最后一条消息做表情回应：单独写一行「[回应:❤️]」，表情只能从 ❤️ 👍 👎 😂 ‼️ ❓ 里选一个。可以只回应不说话，也可以回应之后再说话；不要每次都回应。';
+const timeBlock=(L)=>{const g=gapCtx(L);return TIMERULE+(g?'\n【当前时间差】'+g:'')};
+const isReact=l=>/^[\[【]\s*(?:表情)?回应\s*[:：]\s*\S+?\s*[\]】]$/.test(l);
+function takeReact(ls,L){let react='';const out=ls.filter(l=>{const m=/^[\[【]\s*(?:表情)?回应\s*[:：]\s*(\S+?)\s*[\]】]$/.exec(l);if(m){react=m[1];return false}return true});
+ if(react&&(RXE.includes(react)||EMO.includes(react))){for(let i=L.length-1;i>=0;i--){if(L[i].me&&!L[i].s&&!L[i].p){L[i].rx=react;break}}}else react='';
+ return{ls:out,react}}
+const stripReact=t=>String(t||'').split(/\n+/).filter(l=>!isReact(l.trim())).join('\n').trim();
+const rxList=()=>Array.isArray(CFG.rx)?CFG.rx.filter(r=>r&&typeof r=='object'):[];
+function rxRun(t,role,phase){t=String(t==null?'':t);for(const r of rxList()){if(!r.on||!r.find)continue;if(r.scope&&r.scope!='both'&&r.scope!=role)continue;if(r.where&&r.where!='both'&&r.where!=phase)continue;try{t=t.replace(new RegExp(r.find,String(r.flags||'').replace(/[^dgimsuy]/g,'')),String(r.rep||'').replace(/\\n/g,'\n'))}catch(e){}}return t}
+const offSys=c=>`你是「${c.name}」，人设：${c.persona||'普通朋友'}。\n现在进入【线下剧情】：你和对方（user）此刻处在同一个现实场景里，这不是手机聊天。现实时间参考：${nowStr()}（剧情里的时间由场景自行推进）。\n写作要求：\n- 用第三人称细腻描写你的动作、神态、语气、环境与感官细节，对白用「」；写成一个连续的长镜头：在同一个场景里慢慢推进，不跳切、不省略过程、不概括、不总结陈词。\n- 篇幅约 ${({s:400,m:800,l:1500})[c.olen||'m']} 字，分自然段，段落之间空一行。\n- 只写你自己的言行和环境变化，绝不替对方（user）说话、行动，也不写对方的心理和反应；写到对方可以接话的地方自然停下，不替对方做决定。\n- 事情有真实耗时，场景里的时间要合理流逝，不一蹴而就、不直接跳到结果。\n- 保持人设和世界观，不出戏，不提自己是模型，不写“以下是回复”这类元话语。特别的动作或心理旁白可以用 *星号* 包起来。`+timeBlock(WX.msgs[c.id]);
 const humanOf=c=>((c&&c.sys&&String(c.sys).trim())||(CFG.persona&&String(CFG.persona).trim())||HUMAN);
-const smsSys=c=>`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在在和对方发手机短信，现在是${nowStr()}。短信比微信更克制简短。\n`+humanOf(c);
-const wxHist=c=>mergeH((WX.msgs[c.id]||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500)).map(m=>({role:m.me?'user':'assistant',content:histOf(m)})));
+const smsSys=c=>`你是「${c.name}」，人设：${c.persona||'普通朋友'}。现在在和对方发手机短信，现在是${nowStr()}。短信比微信更克制简短。\n`+humanOf(c)+RXRULE+timeBlock(SMS.t[smsThread(c)]);
+const wxHist=c=>{const L=(WX.msgs[c.id]||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500));let last=0;return mergeH(L.map(m=>{let pre='';if(m.me&&m.ts&&(!last||m.ts-last>=6e5))pre='（'+fmtT(m.ts)+'）';if(m.ts)last=m.ts;const role=m.me?'user':'assistant';return{role,content:rxRun(pre+histOf(m),m.me?'user':'ai','prompt')}}))};
 const smsThread=c=>Object.keys(SMS.t).find(k=>smsContact(k)===c);
-const smsHist=(k,c)=>mergeH(((SMS.t[k])||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500)).map(m=>({role:m.me?'user':'assistant',content:(m.q?'（回复「'+m.q.t+'」）':'')+m.t})));
+const smsHist=(k,c)=>{const L=((SMS.t[k])||[]).filter(m=>!m.s&&!m.p).slice(-(+c.ctx||500));let last=0;return mergeH(L.map(m=>{let pre='';if(m.me&&m.ts&&(!last||m.ts-last>=6e5))pre='（'+fmtT(m.ts)+'）';if(m.ts)last=m.ts;return{role:m.me?'user':'assistant',content:rxRun(pre+(m.q?'（回复「'+m.q.t+'」）':'')+m.t,m.me?'user':'ai','prompt')}}))};
 const nowStr=()=>new Date().toLocaleString('zh-CN',{hour12:false,weekday:'long',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'});
-const wxSys=c=>`你是「${c.name}」，正在和对方用微信聊天。人设：${c.persona||'普通朋友'}。现在是${nowStr()}，请按这个时间点该有的状态说话（比如深夜会困、饭点会提吃的）。\n`+humanOf(c)+'\n- 偶尔（不要频繁，大多数时候还是打字）可以发语音：把那一条单独写一行，以「[语音]」开头，后面是你说的话，口语化。'+({short:'\n这次尽量简短，每条不超过 20 个字。',long:'\n可以多说一些，分几条把话说清楚，但仍然是口语。'}[c.sty]||'');
+const wxSys=c=>`你是「${c.name}」，正在和对方用微信聊天。人设：${c.persona||'普通朋友'}。现在是${nowStr()}，请按这个时间点该有的状态说话（比如深夜会困、饭点会提吃的）。\n`+humanOf(c)+RXRULE+timeBlock(WX.msgs[c.id])+'\n- 偶尔（不要频繁，大多数时候还是打字）可以发语音：把那一条单独写一行，以「[语音]」开头，后面是你说的话，口语化。'+({short:'\n这次尽量简短，每条不超过 20 个字。',long:'\n可以多说一些，分几条把话说清楚，但仍然是口语。'}[c.sty]||'');
 async function wxReply(id){const c=WX.cons.find(x=>x.id==id),L=WX.msgs[id]??=[];if(!c)return;
  if(!CFG.a.url||!CFG.a.model){if(!WX.hint[id]){WX.hint[id]=1;L.push({s:1,t:'请先在「设置」中配置接口与模型'});wsave();if(WX.cur==id)ml();wxTouch()}return}
  const hist=wxHist(c);if(!hist.some(h=>h.role=='user'))return;
- const r={t:'…',h:hm(),p:1};L.push(r);if(WX.cur==id)ml();wxTouch();let out='';const W=wbApply(c.id,hist,wxSys(c));
- try{out=await chat(W.hist,W.sys,t=>{r.t=t;if(WX.cur==id)ml()});{const ls=splitLines(out),g=newGid(),i0=L.indexOf(r);if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>Object.assign({t,h:hm(),ts:Date.now(),g},parseLine(t))))}}
+ const r={t:'…',h:hm(),p:1};L.push(r);if(WX.cur==id)ml();wxTouch();let out='';const W=wbApply(c.id,hist,c.off==1?offSys(c):wxSys(c));
+ try{out=await chat(W.hist,W.sys,t=>{r.t=t;if(WX.cur==id)ml()});{const g=newGid(),i0=L.indexOf(r);if(c.off==1&&out.trim()){const tx=out.trim(),nm1={t:tx,h:hm(),ts:Date.now(),g,off:1};if(i0<0)L.push(nm1);else L.splice(i0,1,nm1)}else{const x=takeReact(splitLines(out),L),ls=x.ls;if(!ls.length&&x.react&&i0>=0)L.splice(i0,1);else if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>Object.assign({t,h:hm(),ts:Date.now(),g},parseLine(t))))}}}
  catch(e){const i=L.indexOf(r);if(i>=0)L.splice(i,1);L.push({s:1,t:'发送失败：'+em(e)})}
- const seen=cur=='chat'&&WX.cur==id&&$('#wx').classList.contains('open');if(out&&!seen){c.unread=(c.unread||0)+Math.max(1,splitLines(out).length);if(!c.mute)notify('chat',nm(c),out)}
+ const seen=cur=='chat'&&WX.cur==id&&$('#wx').classList.contains('open');if(out&&!seen){c.unread=(c.unread||0)+(c.off==1?1:Math.max(1,splitLines(stripReact(out)).length));if(!c.mute)notify('chat',nm(c),rxRun(c.off==1?out.trim().slice(0,60):stripReact(out),'ai','show')||'回应了你的消息')}
  wsave();if(WX.cur==id)ml();wxTouch()}
 function send(){const i=$('#mi');if(!i)return;const t=i.value.trim();if(!t){const c0=WX.cons.find(x=>x.id==WX.cur);if(c0&&c0.auto===0){STK=1;wxReply(WX.cur)}return}STK=1;const id=WX.cur,L=WX.msgs[id]??=[];const mm={me:1,t,h:hm()};if(WX.rq){mm.q={t:WX.rq.t.slice(0,60),me:WX.rq.me,n:WX.rq.n};WX.rq=null;qbarRender()}mm.ts=Date.now();L.push(mm);i.value='';i.style.height='';{const b=i.closest('.ib');if(b)b.classList.remove('has')}wsave();ml();wxTouch();{const c1=WX.cons.find(x=>x.id==id);if(!c1||c1.auto!==0)wxReply(id)}}
 // banner swipe-up dismiss + lock opacity
@@ -1029,7 +1063,7 @@ const smBody=L=>{let prev=0,li=-1,late=false;L.forEach((m,i)=>{if(m.me&&!m.s&&!m
   if(m.s)return tm+`<div class="sy" data-i="${i}" role="button" tabindex="0">${esc(m.t)}</div>`;
   if(m.p)return tm+`<div class="mr"><div class="mc"><div class="bb gf ge typ"><i></i><i></i><i></i></div></div></div>`;
   const g=grpCls(L,i),rx=m.rx?`<i class="rx" aria-label="已回应">${rxh(m.rx)}</i>`:'';
-  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}<div class="bb${g}${m.old?' old':''}">${esc(m.t)}${m.old?'<br><small>验证码已失效</small>':''}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('')};
+  return tm+`<div class="mr${m.me?' me':''}${g}${m.q?' hq':''}" data-i="${i}"><div class="mc">${m.q?qpHtml(m.q):''}<div class="bb${g}${m.old?' old':''}">${esc(rxRun(m.t,m.me?'user':'ai','show'))}${m.old?'<br><small>验证码已失效</small>':''}${rx}</div>${m.me&&i==li?`<div class="dl">${late?'已读':'已送达'}</div>`:''}</div></div>`}).join('')};
 function smPaint(){const el=$('#sml');if(el)keepScroll(el,()=>{el.innerHTML=smBody(SMS.t[SO.k]||[]);fitIb('#sm')})}
 const smsContact=k=>WX.cons.find(x=>x.ph==k||x.name==k||nm(x)==k);
 function rSms(){const e=$('#sm');e.classList.toggle('th',SO.v=='t');
@@ -1048,7 +1082,7 @@ async function smsReply(k){const L=SMS.t[k],c=smsContact(k);if(!L||!c)return;con
  if(!CFG.a.url||!CFG.a.model){if(!SO.h[k]){SO.h[k]=1;L.push({s:1,t:'请先在「设置」中配置接口与模型，对方才能回复'});sv();paint()}return}
  const hist=smsHist(k,c);if(!hist.some(h=>h.role=='user'))return;
  const t0=Date.now(),r={t:'…',h:hm(),p:1};L.push(r);paint();const W=wbApply(c.id,hist,smsSys(c));
- try{const out=await chat(W.hist,W.sys,t=>{r.t=t;paint()});{const ls=splitLines(out),g=newGid(),i0=L.indexOf(r);if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>({t,h:hm(),ts:Date.now(),g})))}}
+ try{const out=await chat(W.hist,W.sys,t=>{r.t=t;paint()});{const g=newGid(),i0=L.indexOf(r),x=takeReact(splitLines(out),L),ls=x.ls;if(!ls.length&&x.react&&i0>=0)L.splice(i0,1);else if(!ls.length||i0<0){r.t='…';r.h=hm();r.ts=Date.now();delete r.p}else L.splice(i0,1,...ls.map(t=>({t,h:hm(),ts:Date.now(),g})))}}
  catch(e){const i=L.indexOf(r);if(i>=0)L.splice(i,1);L.push({s:1,t:'发送失败：'+em(e)})}
  if(L.some(m=>m.g&&m.ts>=t0)){smsBump(k,L.filter(m=>m.g&&m.ts>=t0&&!m.me).length)}
  sv();paint()}
@@ -1468,8 +1502,8 @@ function pnRec(){const l=[...PH.log].reverse();return `<div class="sc">${l.lengt
 const PNK=[['1',''],['2','ABC'],['3','DEF'],['4','GHI'],['5','JKL'],['6','MNO'],['7','PQRS'],['8','TUV'],['9','WXYZ'],['*',''],['0','+'],['#','']];
 function pnPad(){const c=pnFind(PH.num);return `<div class="pnp"><div class="pnn" id="pn_n">${esc(PH.num)||'&nbsp;'}</div><div class="pnh" id="pn_h">${c?esc(nm(c)):PH.num?'<button data-pn="save">添加到通讯录</button>':'&nbsp;'}</div><div class="pnk">${PNK.map(k=>`<button class="phk" data-pn="key" data-k="${k[0]}" aria-label="${k[0]}"><b>${k[0]}</b><small>${k[1]}</small></button>`).join('')}<span></span><button class="phk go" data-pn="dial" aria-label="拨打">${ic('phone')}</button><button class="phk bk" data-pn="del" aria-label="删除"${PH.num?'':' disabled'}>${ic('bks')}</button></div></div>`}
 function pnDetail(){const c=WX.cons.find(x=>x.id==PH.id);if(!c){PH.v='l';return pnRender()}
- return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>联系人</b><span></span></div><div class="sc pnx">${av(c,96)}<h2>${esc(nm(c))}</h2><p class="pns">${esc(c.ph||'未设置号码')}</p><div class="pna"><button data-pn="sms" aria-label="发信息">${ic('sms')}<span>信息</span></button><button data-pn="call" aria-label="通话">${ic('phone')}<span>通话</span></button><button data-pn="wx" aria-label="微信">${ic('chat')}<span>微信</span></button></div>${c.persona?`<div class="ls"><div class="lr col"><div><b>人设</b><small>${esc(c.persona)}</small></div></div></div>`:''}<div class="ls"><div class="lr btn dg" role="button" tabindex="0" data-pn="del2"><div><b>删除联系人</b></div></div></div></div>`}
-function pnAdd(){return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>新建联系人</b><span></span></div><div class="sc"><div class="fd"><small>昵称</small><input id="pn_nm" value="${esc(PH.d.name||'')}" autocomplete="off"></div><div class="fd"><small>手机号</small><input id="pn_ph" inputmode="tel" value="${esc(PH.d.ph||'')}" autocomplete="off"></div><div class="fd"><small>人设（可选）</small><textarea id="pn_ps" rows="3">${esc(PH.d.persona||'')}</textarea></div><div class="r2" style="margin-top:28px"><button class="cb" data-pn="back">取消</button><button class="cb pri" data-pn="saveC">保存</button></div></div>`}
+ return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>联系人</b><button class="tbn pnc" data-pn="edit" aria-label="编辑">编辑</button></div><div class="sc pnx">${av(c,96)}<h2>${esc(nm(c))}</h2><p class="pns">${esc(c.ph||'未设置号码')}</p><div class="pna"><button data-pn="sms" aria-label="发信息">${ic('sms')}<span>信息</span></button><button data-pn="call" aria-label="通话">${ic('phone')}<span>通话</span></button><button data-pn="wx" aria-label="微信">${ic('chat')}<span>微信</span></button></div>${c.persona?`<div class="ls"><div class="lr col"><div><b>人设</b><small>${esc(c.persona)}</small></div></div></div>`:''}<div class="ls"><div class="lr btn dg" role="button" tabindex="0" data-pn="del2"><div><b>删除联系人</b></div></div></div></div>`}
+function pnAdd(){return `<div class="tb"><button class="tbn" data-pn="back" aria-label="返回">${ic('back')}</button><b>${PH.edit?'编辑联系人':'新建联系人'}</b><span></span></div><div class="sc"><div class="fd"><small>昵称</small><input id="pn_nm" value="${esc(PH.d.name||'')}" autocomplete="off"></div><div class="fd"><small>手机号</small><input id="pn_ph" inputmode="tel" value="${esc(PH.d.ph||'')}" autocomplete="off"></div><div class="fd"><small>备注（可选）</small><input id="pn_rm" value="${esc(PH.d.remark||'')}" autocomplete="off"></div><div class="fd"><small>人设（可选）</small><textarea id="pn_ps" rows="3">${esc(PH.d.persona||'')}</textarea></div><div class="r2" style="margin-top:28px"><button class="cb" data-pn="back">取消</button><button class="cb pri" data-pn="saveC">保存</button></div></div>`}
 function pnRender(){const e=$('#app'),con=PH.mode=='con';let h;
  if(PH.v=='d'){e.innerHTML=pnDetail();a11y();return}if(PH.v=='a'){e.innerHTML=pnAdd();return}
  const tt=con?'通讯录':['最近通话','通讯录','拨号键盘'][PH.tab];
@@ -1483,13 +1517,14 @@ function pnDo(a,d){const c=WX.cons.find(x=>x.id==d.id)||WX.cons.find(x=>x.id==PH
  else if(a=='key'){if(PH.num.length<20){PH.num+=d.k;pnRender()}}
  else if(a=='del'){PH.num=PH.num.slice(0,-1);pnRender()}
  else if(a=='dial'){if(!PH.num)return;const m=pnFind(PH.num);if(m){PH.num='';pnCall(m)}else{pnLog(null,'out',0,PH.num);gtoast('该号码暂时无人接听');PH.num='';pnRender()}}
- else if(a=='save'){PH.d={ph:PH.num};PH.v='a';pnRender()}
+ else if(a=='save'){PH.d={ph:PH.num};PH.edit=0;PH.v='a';pnRender()}
  else if(a=='redial'){const x=PH.log[+d.i];if(!x)return;const m=x.id&&WX.cons.find(c=>c.id==x.id);if(m)pnCall(m);else{PH.tab=2;PH.num=x.ph||'';PH.v='l';pnRender()}}
  else if(a=='clr')confirmSheet('清空全部通话记录？','清空',()=>{PH.log=[];pnSave();pnRender()});
- else if(a=='new'){PH.d={};PH.v='a';pnRender()}
+ else if(a=='new'){PH.d={};PH.edit=0;PH.v='a';pnRender()}
+ else if(a=='edit'&&c){PH.d={name:c.name,ph:c.ph,remark:c.remark,persona:c.persona};PH.edit=c.id;PH.v='a';pnRender()}
  else if(a=='open'){PH.id=+d.id;PH.v='d';pnRender()}
- else if(a=='back'){PH.v='l';pnRender()}
- else if(a=='saveC'){const name=($('#pn_nm').value||'').trim();if(!name)return gtoast('请输入昵称');const nid=Date.now();WX.cons.push({id:nid,wid:'wxid_'+nid.toString(36),name,remark:'',ph:($('#pn_ph').value||'').trim(),grp:'我的好友',persona:($('#pn_ps').value||'').trim(),av:''});wsave();PH.v='l';if(PH.mode=='phone')PH.tab=1;pnRender();gtoast('已添加联系人')}
+ else if(a=='back'){PH.v=PH.edit?'d':'l';PH.edit=0;pnRender()}
+ else if(a=='saveC'){const name=($('#pn_nm').value||'').trim();if(!name)return gtoast('请输入昵称');const f={name,remark:($('#pn_rm').value||'').trim(),ph:($('#pn_ph').value||'').trim(),persona:($('#pn_ps').value||'').trim()};if(PH.edit){const t=WX.cons.find(x=>x.id==PH.edit);if(t)Object.assign(t,f);wsave();PH.v='d';PH.id=PH.edit;PH.edit=0;pnRender();gtoast('已保存');return}const nid=Date.now();WX.cons.push({id:nid,wid:'wxid_'+nid.toString(36),...f,grp:'我的好友',av:''});wsave();PH.v='l';if(PH.mode=='phone')PH.tab=1;pnRender();gtoast('已添加联系人')}
  else if(a=='del2'&&c)confirmSheet('删除联系人「'+nm(c)+'」？','删除',()=>{WX.cons=WX.cons.filter(x=>x.id!=c.id);delete WX.msgs[c.id];wsave();PH.v='l';pnRender()},'同时会删除与对方的微信聊天记录');
  else if(a=='call'&&c)pnCall(c);
  else if(a=='wx'&&c){closeApp(true);openApp('chat');setTimeout(()=>rChat(c.id),450)}
@@ -1508,7 +1543,8 @@ function promptPreview(c,kind){const sample=!c||!c.id;c=c||{id:0,name:'示例角
  else{sys=wxSys(c);hist=sample?[{role:'user',content:'在吗？今晚想吃点什么'}]:wxHist(c)}
  const W=wbApply(sample?null:c.id,hist,sys),h=W.hist,last=h.slice(-6);
  return '【System 提示词】\n'+W.sys+'\n\n【对话历史】共 '+h.length+' 条'+(h.length>6?'，以下是最后 6 条':'')+'\n'+(last.length?last.map(x=>'['+x.role+'] '+x.content).join('\n'):'（还没有对话）')+'\n\n※ 世界书里设有触发概率的条目，每次发送时命中情况可能不同。'+(sample?'\n※ 这是示例角色的预览，选择具体联系人可以看到真实内容。':'')}
-function persTab(){const cs=WX.cons;return `<div class="card"><h3>全局提示词</h3><p class="stt">所有微信、短信和语音通话里的角色，会先读这段基准设定，再读各自的人设。清空会恢复默认内容。</p><div class="fd"><textarea id="pg_sys" class="pgt" rows="14" aria-label="全局提示词">${esc(CFG.persona&&CFG.persona.trim()?CFG.persona:HUMAN)}</textarea></div><div class="r2"><button class="cb" data-pr="reset">恢复默认</button></div></div>
+function persTab(){return persTab0()+rxTab()}
+function persTab0(){const cs=WX.cons;return `<div class="card"><h3>全局提示词</h3><p class="stt">所有微信、短信和语音通话里的角色，会先读这段基准设定，再读各自的人设。清空会恢复默认内容。</p><div class="fd"><textarea id="pg_sys" class="pgt" rows="14" aria-label="全局提示词">${esc(CFG.persona&&CFG.persona.trim()?CFG.persona:HUMAN)}</textarea></div><div class="r2"><button class="cb" data-pr="reset">恢复默认</button></div></div>
 <div class="card"><h3>预览</h3><p class="stt">查看真正会发给模型的完整 system 提示词（含全局或专属提示词、人设、当前时间和世界书命中的内容）。</p><div class="fd"><small>选择角色</small>${sel('id="pg_c"',[['0','示例角色']].concat(cs.map(c=>[c.id,esc(nm(c))])),ST.pc||0)}</div><div class="r2"><button class="cb" data-pr="pv" data-k="wx">微信</button><button class="cb" data-pr="pv" data-k="sms">短信</button><button class="cb" data-pr="pv" data-k="call">通话</button></div></div>
 <div class="card"><h3>联系人专属提示词</h3><p class="stt">给某位联系人单独设置后，会代替全局提示词（微信与短信共用）。留空则使用全局。</p>${cs.length?`<div class="ls" style="margin-top:12px">${cs.map(c=>`<div class="lr btn" role="button" tabindex="0" data-pr="edit" data-id="${c.id}"><div><b>${esc(nm(c))}</b><small>${c.sys&&c.sys.trim()?'已单独设置':'使用全局'}</small></div>${ic('chev').replace('class="ico"','class="ico ch"')}</div>`).join('')}</div>`:'<p class="stt">还没有联系人</p>'}</div>`}
 $('#st').addEventListener('click',e=>{const b=e.target.closest('[data-pr]');if(!b)return;const d=b.dataset;
@@ -1516,6 +1552,35 @@ $('#st').addEventListener('click',e=>{const b=e.target.closest('[data-pr]');if(!
  else if(d.pr=='pv'){const id=+($('#pg_c')||{}).value||0,c=id?WX.cons.find(x=>x.id==id):null;ST.pc=id;previewSheet({wx:'微信提示词',sms:'短信提示词',call:'通话提示词'}[d.k],promptPreview(c,d.k))}
  else if(d.pr=='edit'){const c=WX.cons.find(x=>x.id==d.id);if(!c)return;editSheet('「'+nm(c)+'」的专属提示词',c.sys||'',v=>{c.sys=v.trim();wsave();if(ST.tab==5)rSet(1);gtoast(c.sys?'已保存':'已清除，使用全局提示词')},'留空则使用全局提示词')}});
 $('#st').addEventListener('input',e=>{if(e.target.id!='pg_sys')return;const v=e.target.value;CFG.persona=v.trim()&&v.trim()!==HUMAN.trim()?v:'';clearTimeout(ST.pt);const g=GEN;ST.pt=setTimeout(()=>{if(g==GEN)savePrefs()},300)});
+
+function rxTab(){const l=rxList();return `<div class="card"><h3>正则脚本</h3><p class="stt">仿酒馆的正则：对消息做查找替换。「生效位置」可选只改显示（保存的原文不变）、只改发给模型的内容，或两者都改。默认带一条隐藏 &lt;think&gt; 思考内容的脚本。</p>${l.map((r,i)=>`<div class="rxs"><div class="rxh"><input class="rxn" data-rxf="name" data-i="${i}" value="${esc(r.name||'')}" placeholder="脚本名称" aria-label="脚本名称"><button class="sw${r.on?' on':''}" role="switch" aria-checked="${r.on?'true':'false'}" aria-label="启用" data-rx="tog" data-i="${i}"><i></i></button></div><div class="fd"><small>查找（正则表达式）</small><input data-rxf="find" data-i="${i}" value="${esc(r.find||'')}" autocomplete="off" spellcheck="false"></div><div class="fd"><small>替换为（支持 $1、\\n 换行；留空即删除）</small><input data-rxf="rep" data-i="${i}" value="${esc(r.rep||'')}" autocomplete="off"></div><div class="fd"><small>标志（如 gi）</small><input data-rxf="flags" data-i="${i}" value="${esc(r.flags||'')}" autocomplete="off" spellcheck="false"></div><div class="fd"><small>作用于</small>${sel('data-rxf="scope" data-i="'+i+'"',[['ai','角色消息'],['user','我的消息'],['both','全部']],r.scope||'ai')}</div><div class="fd"><small>生效位置</small>${sel('data-rxf="where" data-i="'+i+'"',[['show','只改显示'],['prompt','只改发给模型的内容'],['both','两者都改']],r.where||'show')}</div><div class="r2"><button class="cb" data-rx="del" data-i="${i}">删除</button></div></div>`).join('')}<div class="r2"><button class="cb" data-rx="add">添加脚本</button></div><div class="fd"><small>测试：输入一段文字，看看替换后的显示效果</small><textarea id="rx_t" rows="2" placeholder="例如：&lt;think&gt;想一想&lt;/think&gt;你好"></textarea></div><p class="stt" id="rx_o"></p></div>`}
+$('#st').addEventListener('click',e=>{const b=e.target.closest('[data-rx]');if(!b)return;const d=b.dataset,l=rxList(),i=+d.i;
+ if(d.rx=='add'){CFG.rx=l.concat([{id:Date.now(),name:'新脚本',find:'',flags:'g',rep:'',scope:'ai',where:'show',on:1}]);savePrefs();rSet(1)}
+ else if(d.rx=='del'){CFG.rx=l.filter((_,k)=>k!=i);savePrefs();rSet(1)}
+ else if(d.rx=='tog'&&l[i]){l[i].on=l[i].on?0:1;b.classList.toggle('on',!!l[i].on);b.setAttribute('aria-checked',l[i].on?'true':'false');savePrefs();rxT()}});
+function rxT(){const t=$('#rx_t'),o=$('#rx_o');if(!t||!o)return;o.textContent=t.value?'显示：'+(rxRun(t.value,'ai','show')||'（空）')+'\n发给模型：'+(rxRun(t.value,'ai','prompt')||'（空）'):'';o.style.whiteSpace='pre-wrap'}
+function rxSet(e){const t=e.target,f=t.dataset&&t.dataset.rxf;if(!f&&t.id!='rx_t')return;if(t.id=='rx_t'){rxT();return}const l=rxList(),r=l[+t.dataset.i];if(!r)return;r[f]=t.value;clearTimeout(rxSet.t);rxSet.t=setTimeout(()=>{savePrefs();rxT()},250)}
+$('#st').addEventListener('input',rxSet);$('#st').addEventListener('change',rxSet);
+
+// ---------- PWA ----------
+const ICON_SVG='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#111"/><rect x="132" y="84" width="248" height="344" rx="46" fill="none" stroke="#fff" stroke-width="22"/><path d="M222 126h68" stroke="#fff" stroke-width="18" stroke-linecap="round"/><path d="M214 330l30-32 28 26 30-44" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="388" r="12" fill="#fff"/></svg>';
+let PWAEV=null;
+const isApp=()=>{try{return matchMedia('(display-mode: standalone)').matches||matchMedia('(display-mode: fullscreen)').matches||navigator.standalone===true}catch(e){return false}};
+function pwaSetup(){const svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(ICON_SVG);
+ const link=(rel,href,extra)=>{let l=document.querySelector(`link[rel="${rel}"]`);if(!l){l=document.createElement('link');l.rel=rel;document.head.appendChild(l)}l.href=href;if(extra)for(const k in extra)l.setAttribute(k,extra[k])};
+ link('icon',svgUrl,{type:'image/svg+xml'});
+ const im=new Image();im.onload=()=>{try{const png=n=>{const c=document.createElement('canvas');c.width=c.height=n;c.getContext('2d').drawImage(im,0,0,n,n);return c.toDataURL('image/png')};
+  const p180=png(180),p192=png(192),p512=png(512);link('apple-touch-icon',p180);
+  let start;try{start=location.href.split('#')[0]}catch(e){start='.'}
+  const mf={name:'小手机',short_name:'小手机',description:'iPhone 风格的手机模拟器',display:'standalone',display_override:['fullscreen','standalone'],orientation:'portrait',background_color:'#000000',theme_color:'#000000',start_url:start,icons:[{src:p192,sizes:'192x192',type:'image/png',purpose:'any'},{src:p512,sizes:'512x512',type:'image/png',purpose:'any'},{src:p512,sizes:'512x512',type:'image/png',purpose:'maskable'},{src:svgUrl,sizes:'any',type:'image/svg+xml'}]};
+  link('manifest','data:application/manifest+json;charset=utf-8,'+encodeURIComponent(JSON.stringify(mf)))}catch(e){}};im.src=svgUrl}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();PWAEV=e;if(cur=='set'&&ST.tab==3)rSet(1)});
+window.addEventListener('appinstalled',()=>{PWAEV=null;gtoast('已安装到主屏幕');if(cur=='set'&&ST.tab==3)rSet(1)});
+function pwaCard(){const ios=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1);
+ return `<div class="card"><h3>安装到主屏幕</h3><p class="stt">${isApp()?'当前已经是以应用方式运行（全屏，没有浏览器地址栏）。':'安装后像普通 app 一样从桌面打开，全屏运行，不显示浏览器的地址栏。'}</p><div class="pwi"><span class="pwv">${'<svg viewBox="0 0 512 512" width="56" height="56" aria-hidden="true">'+ICON_SVG.replace(/^<svg[^>]*>|<\/svg>$/g,'')+'</svg>'}</span><div><b>小手机</b><small>${isApp()?'已安装':PWAEV?'可以直接安装':ios?'iPhone：用 Safari 的「分享」→「添加到主屏幕」':'Android / 电脑：浏览器菜单里选「安装应用」或「添加到主屏幕」'}</small></div></div>${isApp()?'':`<div class="r2"><button class="cb pri" data-pw="go">${PWAEV?'安装':'查看安装方法'}</button></div>`}</div>`}
+$('#st').addEventListener('click',async e=>{const b=e.target.closest('[data-pw]');if(!b)return;if(PWAEV){try{PWAEV.prompt();await PWAEV.userChoice}catch(x){}PWAEV=null;rSet(1);return}
+ const ios=/iP(hone|ad|od)/.test(navigator.userAgent);infoSheet('安装到主屏幕',ios?'1. 用 Safari 打开本页\n2. 点底部的「分享」按钮\n3. 选择「添加到主屏幕」\n4. 点「添加」\n\n之后从桌面图标打开，就是全屏的了。':'1. 在 Chrome / Edge 中打开本页\n2. 打开浏览器菜单（右上角 ⋮）\n3. 选择「安装应用」或「添加到主屏幕」\n\n如果菜单里没有这一项，说明当前浏览器暂时不支持，换用 Chrome 或 Safari 试试。')});
+pwaSetup();
 regApp('app:calc','计算器',()=>{const s=rd('app:calc');Object.assign(CA,{d:'0',acc:null,op:null,fresh:1,hist:[]});if(isObj(s)){CA.d=typeof s.d=='string'?s.d:'0';CA.acc=s.acc!==null&&isFinite(s.acc)?+s.acc:null;CA.op=['+','-','*','/'].includes(s.op)?s.op:null;CA.fresh=s.fresh?1:0;CA.hist=Array.isArray(s.hist)?s.hist.filter(x=>isObj(x)&&typeof x.e=='string'&&typeof x.r=='string').slice(-30):[]}});
 regApp('app:clock','时钟、计时与秒表',()=>{const s=rd('app:clock');clkStop();Object.assign(CK,{tab:0,run:0,t0:0,acc:0,laps:[],end:0,left:0,dur:300000,wc:WC0()});
  if(isObj(s)){CK.tab=Math.max(0,Math.min(3,+s.tab||0));CK.run=s.run?1:0;CK.t0=+s.t0||0;CK.acc=+s.acc||0;CK.laps=Array.isArray(s.laps)?s.laps.filter(x=>isFinite(x)):[];CK.end=+s.end||0;CK.left=+s.left||0;CK.dur=Math.max(6e4,Math.min(5940000,+s.dur||3e5));if(Array.isArray(s.wc))CK.wc=s.wc.filter(i=>WCITY[i]).slice(0,WCITY.length)}});
