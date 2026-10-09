@@ -11810,6 +11810,25 @@ function ringStop() {
   };
 }
 const sysOK = () => "Notification" in window;
+let _swp;
+function swReg() {
+  if (_swp) return _swp;
+  if (!("serviceWorker" in navigator) || !(location.protocol == "https:" || location.hostname == "localhost" || location.hostname == "127.0.0.1")) return _swp = Promise.resolve(null);
+  return _swp = navigator.serviceWorker.register("./sw.js").then(() => Promise.race([navigator.serviceWorker.ready, new Promise((r) => setTimeout(() => r(null), 4e3))])).catch(() => null);
+}
+try {
+  window.addEventListener("load", () => {
+    swReg();
+  });
+  if ("serviceWorker" in navigator) navigator.serviceWorker.addEventListener("message", (e) => {
+    try {
+      const k = e.data && e.data.xsjOpen;
+      if (k && APPS[k]) unlock(() => openApp(k));
+    } catch (_) {
+    }
+  });
+} catch (e) {
+}
 function sysNote(n, force) {
   if (!force && (!CFG.sys || S.dnd || qhOn())) return;
   if (!sysOK() || Notification.permission != "granted") return;
@@ -11823,8 +11842,17 @@ async function sysShow(n) {
     ic0 = document.querySelector("link[rel=apple-touch-icon]").href;
   } catch (e) {
   }
-  const o = { body: n.b, tag: "xsj-" + n.k + "-" + n.id, icon: ic0 || void 0, silent: true };
+  const o = { body: n.b, tag: "xsj-" + n.k + "-" + n.id, icon: ic0 || void 0, silent: true, data: { k: n.k } };
   let err;
+  try {
+    const r = await swReg();
+    if (r && r.showNotification) {
+      await r.showNotification(n.t, o);
+      return "sw";
+    }
+  } catch (e) {
+    err = e;
+  }
   try {
     const x = new Notification(n.t, o);
     x.onclick = () => {
@@ -11837,17 +11865,9 @@ async function sysShow(n) {
     };
     return "n";
   } catch (e) {
-    err = e;
+    err = err || e;
   }
-  try {
-    const r = await navigator.serviceWorker.getRegistration();
-    if (r && r.showNotification) {
-      await r.showNotification(n.t, o);
-      return "sw";
-    }
-  } catch (e) {
-  }
-  throw err || new Error("浏览器不支持");
+  throw new Error("此环境不能发系统通知。iOS 需要：iOS 16.4 以上、用 https 网址打开、并在 Safari 里“添加到主屏幕”后从主屏幕图标打开" + (err && err.message ? "（" + err.message + "）" : ""));
 }
 const inFrame = () => {
   try {
@@ -11857,7 +11877,9 @@ const inFrame = () => {
   }
 };
 function sysStatus() {
-  return !sysOK() ? "当前浏览器不支持系统通知" : inFrame() ? "当前页面被嵌在其它网页里，浏览器通常会禁止它发系统通知。请把文件下载后，在浏览器里直接打开使用" : Notification.permission == "granted" ? "已允许" : Notification.permission == "denied" ? "已被浏览器拒绝，请在浏览器的网站设置里重新允许" : "尚未授权";
+  const ios = /iP(hone|ad|od)/.test(navigator.userAgent) || navigator.platform == "MacIntel" && navigator.maxTouchPoints > 1;
+  const standalone = navigator.standalone || matchMedia("(display-mode: standalone)").matches;
+  return !sysOK() ? ios && !standalone ? "iOS 需先在 Safari 点“分享→添加到主屏幕”，再从主屏幕图标打开才能使用系统通知（需 iOS 16.4+）" : "当前浏览器不支持系统通知" : inFrame() ? "当前页面被嵌在其它网页里，浏览器通常会禁止它发系统通知。请把文件下载后，在浏览器里直接打开使用" : Notification.permission == "granted" ? "已允许" : Notification.permission == "denied" ? "已被浏览器拒绝，请在浏览器的网站设置里重新允许" : "尚未授权";
 }
 function badgeSys() {
   try {
