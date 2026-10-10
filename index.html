@@ -448,7 +448,7 @@ textarea.wbi{height:auto;padding:10px 14px;line-height:1.6;resize:none;display:b
 #vcall{position:absolute;inset:0;z-index:45;background:linear-gradient(180deg,#26262b 0%,#101012 100%);color:#fff;display:flex;flex-direction:column;align-items:center;padding:96px 28px 48px;box-sizing:border-box;opacity:0;pointer-events:none;transform:scale(1.04);transition:opacity .3s,transform .3s}
 #vcall.on{opacity:1;pointer-events:auto;transform:none}
 #vcall .cid{display:flex;flex-direction:column;align-items:center;gap:10px}#vcall .cid .av{border-radius:50%!important}#vcall .cid b{font-size:24px;font-weight:500}#vcall .cid span{font-size:15px;color:rgba(255,255,255,.65);font-variant-numeric:tabular-nums}
-#vcall .clog{flex:1;width:100%;overflow-y:auto;margin:22px 0 12px;display:flex;flex-direction:column;gap:8px;scrollbar-width:none;justify-content:flex-end}
+#vcall .clog{flex:1;min-height:0;width:100%;overflow-y:auto;margin:14px 0 12px;display:flex;flex-direction:column;gap:8px;scrollbar-width:none;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:18px 2px 4px;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 28px,#000 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 28px,#000 100%)}#vcall .clog::-webkit-scrollbar{display:none}#vcall .clog .cspc{flex:1 0 0}#vcall .clog>*{flex-shrink:0}#vcall .cmore{align-self:center;border:0;background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);font:inherit;font-size:12px;padding:5px 14px;border-radius:14px;cursor:pointer}#vcall .cdn{position:relative;z-index:3;align-self:center;width:34px;height:34px;margin:-46px 0 12px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#111;display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3)}#vcall .cdn .ico{width:16px;height:16px}
 .cq{align-self:flex-start;max-width:82%;background:rgba(255,255,255,.14);padding:9px 14px;border-radius:18px;font-size:15px;line-height:1.45;word-break:break-word}.cq.me{align-self:flex-end;background:#f2f2f2;color:#111}
 .cq.typ2{display:flex;gap:4px;padding:12px 14px}.cq.typ2 i{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.6;animation:tpd 1.2s infinite}.cq.typ2 i:nth-child(2){animation-delay:.2s}.cq.typ2 i:nth-child(3){animation-delay:.4s}
 #vcall .cin{display:flex;gap:8px;width:100%;margin-bottom:22px}#vcall .cin input{flex:1;min-width:0;height:44px;border-radius:22px;border:0;background:rgba(255,255,255,.14);color:#fff;padding:0 18px;font:inherit;font-size:16px;outline:0;-webkit-user-select:text;user-select:text}#vcall .cin input::placeholder{color:rgba(255,255,255,.5)}
@@ -581,6 +581,7 @@ mark.p{background:rgba(255,204,0,.55)}mark.s{background:rgba(52,199,89,.45)}
 .xkfl svg{transform:scaleX(-1)}.xks{padding-top:6px}.xkh{display:flex;justify-content:space-between;align-items:center;padding:8px 4px 4px;border-top:1px solid var(--line)}.xkh b{font-size:15px;font-weight:500}
 .xkc{margin:10px 0;padding:16px 18px;border-radius:18px;background:var(--card);box-shadow:0 0 0 1px var(--line2)}.xkc>small,.xkc small{display:block;font-size:12px;color:var(--t4)}.xkc>b{display:block;font-size:34px;font-weight:300;letter-spacing:-.5px;margin:4px 0 2px}.xkc>b em{font-style:normal;font-size:15px;color:var(--t4)}
 .xkm{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--t3);margin-top:6px}.xkb{display:flex;gap:8px;margin:10px 0 0}.xkb button{flex:1;height:36px;border:0;border-radius:18px;background:var(--soft);color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer;display:flex;align-items:center;justify-content:center}.xkb button svg{width:18px;height:18px}.xkb button:disabled{opacity:.5}.xkdg{color:var(--danger)!important}
+.wlex{width:34px;height:34px;border:0;border-radius:50%;background:var(--soft);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer}.wlex .ico{width:16px;height:16px}.wlmn{display:flex;align-items:center;justify-content:center;gap:18px;margin:16px 0 6px;font-size:15px}.wlmn button{width:32px;height:32px;border:0;border-radius:50%;background:var(--soft);color:var(--ink);display:grid;place-items:center;padding:0;cursor:pointer}.wlmn button:last-child .ico{transform:rotate(180deg)}.wlmn button:disabled{opacity:.3}.wlmn .ico{width:15px;height:15px}.wlcb{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:13px}.wlcb>span{width:58px;flex:none}.wlcb>div{flex:1;height:6px;border-radius:3px;background:var(--soft);overflow:hidden}.wlcb i{display:block;height:100%;border-radius:3px;background:var(--ink)}.wlcb em{font-style:normal;color:var(--t3);min-width:56px;text-align:right}.wlfl{display:flex;gap:8px;margin:18px 0 0;flex-wrap:wrap}.wlch{height:30px;padding:0 14px;border:0;border-radius:15px;background:var(--soft);color:var(--t3);font:inherit;font-size:13px;cursor:pointer}.wlch.on{background:var(--ink);color:var(--card)}.wlgh{display:flex!important;justify-content:space-between;margin:18px 4px 2px!important}.wlgh em{font-style:normal;color:var(--t4)}
 .xkv{font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums}.xkv.up{color:var(--c3)}.xkn{font-size:12.5px;color:var(--t4)}
 .xkp{height:6px;border-radius:3px;background:var(--soft);overflow:hidden;margin:10px 0 2px}.xkp i{display:block;height:100%;background:var(--ink);border-radius:3px}.xkp.sm{height:4px;margin:6px 0 0}
 .xkg2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.xkg2 .xkc{margin:10px 0}
@@ -2270,7 +2271,7 @@ function grpCls(L, i) {
 }
 const RXI = { heart: () => ic("heart"), up: () => ic("tup"), down: () => ic("tup").replace("<svg ", '<svg style="transform:rotate(180deg)" '), haha: () => "HA<br>HA", excl: () => "!!", q: () => "?" };
 const vSecs = (t) => Math.max(1, Math.min(60, Math.ceil(String(t).length / 4)));
-const parseLine = (t) => {
+const parseLine0 = (t) => {
   {
     const st = String(t).match(/^[\[【]表情[:：]\s*(.+?)[\]】]\s*$/);
     if (st) {
@@ -2816,7 +2817,7 @@ ${H("回复方式")}<div class="ls">${sg("sty", "回复风格", "影响对方每
 <div class="ls">${sg("pro", "主动联系", "页面开着时，对方会在你很久没说话后主动找你，并想起以前聊过的事", [[0, "关闭"], [2, "2 小时"], [5, "5 小时"], [12, "12 小时"]], 0)}${sg("pcall", "主动来电", "主动联系时，有一定几率直接打电话或视频过来（页面开着时）", [[0, "关闭"], [1, "语音"], [2, "视频"], [3, "都可以"]], 0)}</div>
 <div class="ls">${sg("xs", "心声", "长按任意消息可生成 TA 的内心独白；也可以让 TA 每次回复都自动附上", [["man", "手动"], ["tap", "自动·点开"], ["show", "自动·显示"], ["off", "关闭"]], "man")}${rw("cxsl", "心声记录")}</div>
 ${H("声音与素材")}<div class="ls">${rw("cvoice", "TA 的声音" + (c.tts && (c.tts.vidc || c.tts.vid || c.tts.wv) ? "：" + esc(c.tts.vidc || c.tts.vid || c.tts.wv) : "（跟随全局）"))}${sw("novc", "不让 TA 发语音条", "开启后，TA 只用文字回复")}${rw("csnd2", "专属提示音" + (c.snd ? "（" + sndName(c.snd) + "）" : "（跟随全局）"))}${rw("cvp", "视频通话画面" + (c.vpic ? "（已设置）" : "（使用头像）"))}${rw("cvis", "TA 的识图设置")}</div>
-<div class="ls">${sw("noimg", "不让 TA 用我发的图片换头像/背景", "关闭时，TA 可以自己决定把我发的图片设成头像、聊天背景或通话画面")}${rw("crn", "TA 给我的备注（截图里显示）" + (c.rn ? "：" + esc(c.rn) : ""))}${rw("cbg", "TA 的聊天背景（截图里显示）" + (c.bg ? c.bg.u ? "：相册图片" : "：纯色" : "：默认"))}${rw("cshot", "让 TA 发来聊天截图")}${sw("nomom", "不让 TA 发朋友圈", "开启后，TA 不再发朋友圈，也不会回应我的动态")}</div>
+<div class="ls">${sw("noimg", "不让 TA 用我发的图片换头像/背景", "关闭时，TA 可以自己决定把我发的图片设成头像、聊天背景或通话画面")}${rw("crn", "TA 给我的备注（截图里显示）" + (c.rn ? "：" + esc(c.rn) : ""))}${rw("cbg", "聊天背景（聊天界面和截图都会用）" + (c.bg ? c.bg.u ? "：相册图片" : "：纯色" : "：默认"))}${rw("cshot", "让 TA 发来聊天截图")}${sw("nomom", "不让 TA 发朋友圈", "开启后，TA 不再发朋友圈，也不会回应我的动态")}</div>
 ${H("记忆与剧情")}<div class="ls">${sw("nomem", "不使用记忆库", "开启后，这位角色不会再回忆过往的经历")}${rw("cof", "进入线下剧情")}${rw("cos", "线下剧情设置")}</div>
 ${H("工具")}<div class="ls">${rw("cmcp2", "工具调用（MCP）" + (c.mcp === 0 ? "：已关闭" : ""))}${mxs ? `<p class="stt" style="margin:0 0 6px">${mxs}</p>` : ""}</div>
 ${H("提示词")}<div class="ls">${rw("csys", "专属提示词" + (c.sys && c.sys.trim() ? "（已设置）" : "（使用全局）"))}${rw("cprev", "预览提示词")}</div>
@@ -6236,12 +6237,40 @@ function callPaint() {
   } else o.innerHTML = `${minb}<div class="cid">${av(c, 96)}<b>${esc(nm(c))}</b><span id="cst">${stat}</span></div>${live ? '<div class="clog" id="clog"></div>' + input : '<div class="clog"></div>'}<div class="cbt">${btns}</div>`;
   if (live) callLog();
 }
-function callLog() {
+function callLog(force) {
   const e = $("#clog");
   if (!e) return;
-  e.innerHTML = CALL.log.slice(-8).map((l) => (CALL.vid && l.n ? `<div class="cq nar">（${esc(l.n)}）</div>` : "") + `<div class="cq${l.me ? " me" : ""}">${esc(l.t)}</div>`).join("") + (CALL.busy ? '<div class="cq typ2"><i></i><i></i><i></i></div>' : "");
-  e.scrollTop = 1e9;
+  const near = force || e.scrollHeight - e.scrollTop - e.clientHeight < 80 || !e.dataset.i;
+  const lim = CALL.lim || 40, n = CALL.log.length, from = Math.max(0, n - lim);
+  const rows = CALL.log.slice(from).map((l, k) => (CALL.vid && l.n ? `<div class="cq nar">（${esc(l.n)}）</div>` : "") + `<div class="cq${l.me ? " me" : ""}" data-i="${from + k}">${esc(l.t)}</div>`).join("");
+  const more = from > 0 ? `<button class="cmore" data-cv="more">查看更早的 ${from} 条</button>` : "";
+  e.dataset.i = 1;
+  const oh = e.scrollHeight, ot = e.scrollTop;
+  e.innerHTML = '<div class="cspc"></div>' + more + rows + (CALL.busy ? '<div class="cq typ2"><i></i><i></i><i></i></div>' : "");
+  if (near) e.scrollTop = 1e9;
+  else e.scrollTop = ot + (e.scrollHeight - oh);
+  callFab();
 }
+function callFab() {
+  const e = $("#clog");
+  if (!e) return;
+  let b = $("#cdn");
+  const far = e.scrollHeight - e.scrollTop - e.clientHeight > 120;
+  if (far && !b) {
+    b = document.createElement("button");
+    b.id = "cdn";
+    b.className = "cdn";
+    b.setAttribute("aria-label", "回到最新");
+    b.innerHTML = ic("down");
+    b.onclick = () => { e.scrollTo({ top: 1e9, behavior: "smooth" }); };
+    e.parentNode.insertBefore(b, e.nextSibling);
+  } else if (!far && b) b.remove();
+}
+document.addEventListener("scroll", (ev) => { if (ev.target && ev.target.id == "clog") callFab(); }, true);
+document.addEventListener("click", (ev) => {
+  const m = ev.target.closest && ev.target.closest("#clog .cmore");
+  if (m) { CALL.lim = (CALL.lim || 40) + 40; const e = $("#clog"), oh = e.scrollHeight, ot = e.scrollTop; callLog(); e.scrollTop = ot + (e.scrollHeight - oh); }
+});
 function callTick() {
   const t = mmss(Math.floor((Date.now() - CALL.t0) / 1e3));
   const e = $("#cst");
@@ -6252,7 +6281,7 @@ function callTick() {
 function callOpen(id, dir, vid) {
   const c = WX.cons.find((x) => x.id == id);
   if (!c || CALL.on) return;
-  Object.assign(CALL, { on: 1, id, st: dir == "in" ? "ring-in" : "ring-out", t0: 0, mute: 0, spk: ttsCfg().callspk !== 0 && ttsCfg().prov != "web" ? 1 : 0, log: [], busy: 0, dir, vid: vid ? 1 : 0, min: 0, cam: 0, face: "user", stream: null, note: "" });
+  Object.assign(CALL, { on: 1, id, st: dir == "in" ? "ring-in" : "ring-out", t0: 0, mute: 0, spk: ttsCfg().callspk !== 0 && ttsCfg().prov != "web" ? 1 : 0, log: [], lim: 40, busy: 0, dir, vid: vid ? 1 : 0, min: 0, cam: 0, face: "user", stream: null, note: "" });
   let o = $("#vcall");
   if (!o) {
     o = document.createElement("div");
@@ -6651,13 +6680,13 @@ function callEdit(m, done) {
 document.addEventListener("click", (e) => {
   const q = e.target.closest && e.target.closest("#clog .cq:not(.typ2):not(.nar)");
   if (!q || !CALL.on) return;
-  const all = [...document.querySelectorAll("#clog .cq:not(.typ2):not(.nar)")], n = all.indexOf(q), off = Math.max(0, CALL.log.length - 8), l = CALL.log[off + n];
+  const n = +q.dataset.i, off = 0, l = CALL.log[n];
   if (!l) return;
   editSheet("编辑这句话", l.t, (v) => {
     v = v.trim();
     if (v) {
       l.t = v;
-    } else CALL.log.splice(off + n, 1);
+    } else CALL.log.splice(n, 1);
     callLog();
   }, "清空则删除这句");
 });
@@ -6951,18 +6980,55 @@ regApp("app:wal", "钱包", () => {
 });
 const wlSave = () => store("app:wal", WL.tx);
 const money = (v) => (v < 0 ? "-" : "") + "¥" + Math.abs(v).toFixed(2);
+const WLC = [["餐饮", /餐|饭|吃|奶茶|咖啡|外卖|早餐|午饭|晚饭|零食|火锅|烧烤/], ["交通", /打车|地铁|公交|滴滴|油费|停车|高铁|机票|车票|出行/], ["购物", /购|买|淘宝|京东|超市|衣|鞋|快递/], ["话费", /话费|充值|营业厅|流量|套餐/], ["红包转账", /微信|红包|转账|退还|过期退回/], ["娱乐", /电影|游戏|会员|音乐|旅游|门票|KTV/], ["居家", /房租|水电|燃气|物业|宽带|日用/], ["医疗", /医|药|挂号|体检/]];
+const wlCat = (x) => x.c || (x.a > 0 ? "收入" : (WLC.find((r) => r[1].test(x.n || "")) || ["其他"])[0]);
+WL.m = 0; WL.f = ""; WL.q = ""; WL.b = 0;
+regApp("app:walb", "钱包预算", () => { const s = rd("app:walb"); WL.b = isObj(s) && +s.b > 0 ? +s.b : 0; });
+const wlBSave = () => store("app:walb", { b: WL.b });
+const wlRound = (v) => Math.round(v * 100) / 100;
 function wlR() {
-  const T = WL.tx, sum = (a) => Math.round(a.reduce((s, x) => s + x.a, 0) * 100) / 100, n = /* @__PURE__ */ new Date(), mt = T.filter((x) => {
-    const d = new Date(x.ts);
-    return d.getFullYear() == n.getFullYear() && d.getMonth() == n.getMonth();
-  }), inc = sum(mt.filter((x) => x.a > 0)), out = sum(mt.filter((x) => x.a < 0)), G = {};
-  [...T].sort((a, b) => b.ts - a.ts).forEach((x) => {
-    var _a2, _b;
-    ((_b = G[_a2 = ymd(new Date(x.ts))]) != null ? _b : G[_a2] = []).push(x);
-  });
-  $("#app").innerHTML = xkHead("钱包") + `<div class="sc"><div class="xkc"><small>余额</small><b>${money(sum(T))}</b><div class="xkm"><span>本月收入 ${money(inc)}</span><span>本月支出 ${money(Math.abs(out))}</span></div></div><div class="xkb"><button data-xa="wi">记收入</button><button data-xa="wo">记支出</button></div>${T.length ? Object.keys(G).map((k) => `<span class="gh" style="margin:16px 4px 2px;display:block">${k.slice(5).replace("-", "月")}日</span>` + G[k].map((x) => `<div class="rw" data-xa="wt" data-id="${x.id}" role="button" tabindex="0"><div><b>${esc(x.n || "无备注")}</b><s>${f2(new Date(x.ts).getHours())}:${f2(new Date(x.ts).getMinutes())}</s></div><span class="xkv${x.a > 0 ? " up" : ""}">${x.a > 0 ? "+" : "-"}${Math.abs(x.a).toFixed(2)}</span></div>`).join("")).join("") : '<p class="em" style="margin-top:36px">还没有账目<br>点上面的按钮记一笔</p>'}</div>`;
+  const T = WL.tx, sum = (a) => wlRound(a.reduce((s, x) => s + x.a, 0)), now = new Date();
+  const bd = new Date(now.getFullYear(), now.getMonth() + WL.m, 1), by = bd.getFullYear(), bm = bd.getMonth();
+  const inM = (x) => { const d = new Date(x.ts); return d.getFullYear() == by && d.getMonth() == bm; };
+  const mt = T.filter(inM), inc = sum(mt.filter((x) => x.a > 0)), out = Math.abs(sum(mt.filter((x) => x.a < 0)));
+  const q = WL.q.trim().toLowerCase();
+  let L = mt.filter((x) => (!WL.f || (WL.f == "in" ? x.a > 0 : x.a < 0)) && (!q || ((x.n || "") + wlCat(x)).toLowerCase().includes(q)));
+  const G = {};
+  [...L].sort((a, b) => b.ts - a.ts).forEach((x) => { (G[ymd(new Date(x.ts))] || (G[ymd(new Date(x.ts))] = [])).push(x); });
+  const C = {};
+  mt.filter((x) => x.a < 0).forEach((x) => { const k = wlCat(x); C[k] = (C[k] || 0) + Math.abs(x.a); });
+  const cs = Object.entries(C).sort((a, b) => b[1] - a[1]), cmax = cs.length ? cs[0][1] : 1;
+  const isNow = WL.m == 0, pct = WL.b ? Math.min(100, out / WL.b * 100) : 0, left = WL.b - out;
+  const chip = (k, t) => `<button class="wlch${WL.f == k ? " on" : ""}" data-wl="f" data-k="${k}">${t}</button>`;
+  const days = new Date(by, bm + 1, 0).getDate(), dayN = isNow ? now.getDate() : days;
+  $("#app").innerHTML = xkHead("钱包", `<button class="wlex" data-wl="exp" aria-label="导出账单">${ic("down")}</button>`) + `<div class="sc">
+<div class="xkc"><small>余额</small><b>${money(sum(T))}</b></div>
+<div class="wlmn"><button data-wl="mo" data-d="-1" aria-label="上个月">${ic("back")}</button><span>${by}年${bm + 1}月</span><button data-wl="mo" data-d="1" aria-label="下个月" ${isNow ? "disabled" : ""}>${ic("back")}</button></div>
+<div class="xkg2"><div class="xkc"><small>收入</small><b style="font-size:24px">${money(inc)}</b></div><div class="xkc"><small>支出</small><b style="font-size:24px">${money(out)}</b></div></div>
+<div class="xkc"><small>${WL.b ? "本月预算 " + money(WL.b) : "月度预算"}</small>${WL.b ? `<div class="xkp"><i style="width:${pct}%${pct >= 100 ? ";background:#d33" : ""}"></i></div><div class="xkm"><span>${left >= 0 ? "还可花 " + money(left) : "已超支 " + money(-left)}</span>${isNow ? `<span>日均可花 ${money(Math.max(0, left) / Math.max(1, days - dayN + 1))}</span>` : ""}</div>` : '<p class="xkn" style="margin:6px 0 0">设置后会显示进度和日均可花</p>'}<div class="xkb"><button data-wl="bud">${WL.b ? "修改预算" : "设置预算"}</button></div></div>
+<div class="xkb"><button data-xa="wi">记收入</button><button data-xa="wo">记支出</button></div>
+${cs.length ? `<div class="xkc"><small>支出分类</small>${cs.map(([k, v]) => `<div class="wlcb"><span>${k}</span><div><i style="width:${Math.max(3, v / cmax * 100)}%"></i></div><em>${v.toFixed(2)}</em></div>`).join("")}</div>` : ""}
+<div class="wlfl">${chip("", "全部")}${chip("in", "收入")}${chip("out", "支出")}<button class="wlch${q ? " on" : ""}" data-wl="q">${q ? "搜：" + esc(WL.q.slice(0, 6)) : "搜索"}</button></div>
+${L.length ? Object.keys(G).map((k) => { const day = sum(G[k].filter((x) => x.a < 0)); return `<span class="gh wlgh"><span>${k.slice(5).replace("-", "月")}日</span>${day ? `<em>支出 ${Math.abs(day).toFixed(2)}</em>` : ""}</span>` + G[k].map((x) => `<div class="rw" data-xa="wt" data-id="${x.id}" role="button" tabindex="0"><div><b>${esc(x.n || "无备注")}</b><s>${f2(new Date(x.ts).getHours())}:${f2(new Date(x.ts).getMinutes())} · ${wlCat(x)}</s></div><span class="xkv${x.a > 0 ? " up" : ""}">${x.a > 0 ? "+" : "-"}${Math.abs(x.a).toFixed(2)}</span></div>`).join(""); }).join("") : `<p class="em" style="margin-top:36px">${T.length ? "这个月没有符合的账目" : "还没有账目<br>点上面的按钮记一笔"}</p>`}</div>`;
   a11y();
 }
+document.addEventListener("click", (e) => {
+  const b = e.target.closest && e.target.closest("[data-wl]");
+  if (!b || cur != "wal") return;
+  const k = b.dataset.wl;
+  if (k == "mo") { WL.m = Math.min(0, WL.m + +b.dataset.d); wlR(); }
+  else if (k == "f") { WL.f = b.dataset.k; wlR(); }
+  else if (k == "q") editSheet("搜索账目", WL.q, (v) => { WL.q = v.trim(); wlR(); }, "备注或分类，留空清除");
+  else if (k == "bud") editSheet("每月预算（元）", WL.b ? String(WL.b) : "", (v) => { const n = parseFloat(v); WL.b = n > 0 ? wlRound(n) : 0; wlBSave(); wlR(); }, "留空取消预算");
+  else if (k == "exp") {
+    const rows = [["时间", "分类", "备注", "金额"]].concat([...WL.tx].sort((a, b) => a.ts - b.ts).map((x) => [new Date(x.ts).toLocaleString(), wlCat(x), x.n || "", x.a.toFixed(2)]));
+    const csv = "﻿" + rows.map((r) => r.map((c) => '"' + String(c).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+    const u = URL.createObjectURL(new Blob([csv], { type: "text/csv" })), a = document.createElement("a");
+    a.href = u; a.download = "钱包账单.csv"; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(u), 3e3);
+    gtoast("已导出账单");
+  }
+});
 const HL = { d: {} };
 regApp("app:hl", "健康", () => {
   const s = rd("app:hl");
@@ -7516,11 +7582,17 @@ function xaDo(a, d) {
   } else if (a == "wt") {
     const x = WL.tx.find((y) => y.id == d.id);
     if (!x) return;
-    actSheet(money(x.a), [{ t: "修改备注", f: () => editSheet("修改备注", x.n || "", (v) => {
+    actSheet(money(x.a) + " · " + wlCat(x), [{ t: "修改备注", f: () => editSheet("修改备注", x.n || "", (v) => {
       x.n = v.trim().slice(0, 60);
       wlSave();
       wlR();
-    }) }, { t: "删除这笔", dg: 1, f: () => {
+    }) }, { t: "修改金额", f: () => editSheet("修改金额", Math.abs(x.a).toFixed(2), (v) => {
+      const n = parseFloat(v);
+      if (!(n > 0)) return gtoast("请输入大于 0 的金额");
+      x.a = (x.a < 0 ? -1 : 1) * wlRound(n);
+      wlSave();
+      wlR();
+    }) }, { t: "修改分类", f: () => actSheet("选择分类", (x.a > 0 ? ["收入", "红包转账", "其他"] : [...WLC.map((r) => r[0]), "其他"]).map((c) => ({ t: c, f: () => { x.c = c; wlSave(); wlR(); } }))) }, { t: "删除这笔", dg: 1, f: () => {
       WL.tx = WL.tx.filter((y) => y !== x);
       wlSave();
       wlR();
@@ -12887,7 +12959,7 @@ function bgPick(c) {
     wsave();
     rCS(c.id);
   };
-  actSheet("TA 的聊天背景", [{ t: "默认" + (c.bg ? "" : "  ✓"), f: set(null) }, { t: "从相册选择" + (c.bg && c.bg.u ? "  ✓" : ""), f: () => bgAlbum(c) }, { t: "米白", f: set({ c: "#f3ede2" }) }, { t: "浅灰", f: set({ c: "#e4e4e4" }) }, { t: "雾蓝", f: set({ c: "#c9d6e2" }) }, { t: "深色", f: set({ c: "#1b1b1d" }) }], "截图里 TA 的聊天界面会使用这个背景");
+  actSheet("聊天背景", [{ t: "默认" + (c.bg ? "" : "  ✓"), f: set(null) }, { t: "从相册选择" + (c.bg && c.bg.u ? "  ✓" : ""), f: () => bgAlbum(c) }, { t: "米白", f: set({ c: "#f3ede2" }) }, { t: "浅灰", f: set({ c: "#e4e4e4" }) }, { t: "雾蓝", f: set({ c: "#c9d6e2" }) }, { t: "深色", f: set({ c: "#1b1b1d" }) }], "截图里 TA 的聊天界面会使用这个背景");
 }
 document.addEventListener("click", (e) => {
   const im = e.target && e.target.closest && e.target.closest("#wx .bb.im img");
@@ -15294,7 +15366,7 @@ REG.store = { el: "#app", open: () => {
 
 const maskList = () => WX.acc && Array.isArray(WX.acc.masks) ? WX.acc.masks : [];
 function maskOf(c) {
-  return c ? maskList().find((m) => (m.bind || []).includes(c.id)) || null : null;
+  return c ? maskList().find((m) => (m.bind || []).map(String).includes(String(c.id))) || null : null;
 }
 function maskTxt(c) {
   const m = maskOf(c);
@@ -15302,7 +15374,7 @@ function maskTxt(c) {
   const p = [["名字", m.name], ["性别", m.gender], ["年龄", m.age], ["身份/职业", m.job], ["微信昵称", m.nick], ["个性签名", m.sig], ["简介与性格", m.desc]].filter((x) => x[1] && String(x[1]).trim()).map((x) => x[0] + "：" + String(x[1]).trim());
   return p.length ? "\n\n【对方的身份（面具）】对方现在以下面这个身份与你相处，请按这个身份称呼和对待TA，把它当作你本来就知道的事，不要说破这是设定：" + p.join("；") + "。" : "";
 }
-const wxSys = (c) => wxSys0(c) + maskTxt(c);
+const wxSys = (c) => wxSys0(c) + maskTxt(c) + "\n\n【引用】偶尔（不是每条）想针对我之前说过的某一句话单独回应时，可以在那一行最前面写「[引用:我那句话里的几个字] 你的回复」，聊天里会显示成你引用了我那句话。只在确实需要指明回应哪句话时用，大多数消息正常发就好。不要自己写「（回复「…」）」这种格式。";
 const smsSys = (c) => smsSys0(c) + maskTxt(c);
 const callSys = (c, ...r) => callSys0(c, ...r) + maskTxt(c);
 const offSys = (c, ...r) => offSys0(c, ...r) + maskTxt(c);
@@ -15326,7 +15398,7 @@ function rMaskEdit(id) {
   $("#vc").innerHTML = gh("编辑面具", "mkx") + `<div class="sc">${f("name", "面具名称", "如：上班的我")}${f("gender", "性别")}${f("age", "年龄")}${f("job", "身份 / 职业")}${f("nick", "微信昵称")}${f("sig", "个性签名")}<div class="fd"><small>简介与性格</small><textarea rows="4" data-mkf="desc" placeholder="角色应该知道的关于这个身份的事">${esc(m.desc || "")}</textarea></div>
 <div class="ls"><div class="lr btn" role="button" tabindex="0" data-mk="imp"><div><b>从我的微信资料读取</b><small>填入昵称、签名、手机号等</small></div></div></div>
 <h4 class="cst">绑定角色</h4><div class="ls">${WX.cons.length ? WX.cons.map((c) => {
-    const on = (m.bind || []).includes(c.id), o = maskOf(c);
+    const on = (m.bind || []).map(String).includes(String(c.id)), o = maskOf(c);
     return `<div class="lr btn" role="button" tabindex="0" data-mk="bind" data-cid="${c.id}"><div><b>${esc(nm(c))}</b><small>${on ? "已绑定" : o ? "已绑定到「" + esc(o.name) + "」，点此改绑" : "未绑定"}</small></div><button class="sw${on ? " on" : ""}" role="switch" aria-checked="${on}" tabindex="-1"><i></i></button></div>`;
   }).join("") : '<p class="stt" style="padding:14px">还没有联系人</p>'}</div>
 <div class="ls" style="margin-top:22px"><div class="lr btn dg" role="button" tabindex="0" data-mk="del"><div><b>删除这个面具</b></div></div></div></div>`;
@@ -15696,6 +15768,57 @@ $("#app").addEventListener("click", (e) => {
   };
   wzStyle();
 }
+
+/* ---- 角色引用我的消息 / 聊天背景 / 聊天设置里的面具 ---- */
+const parseLine = (t) => {
+  const m = String(t).match(/^[\[【]引用[:：]\s*(.+?)[\]】]\s*([\s\S]*)$/);
+  if (!m || !m[2].trim()) return parseLine0(t);
+  const key = m[1].trim(), L = (WX.msgs && WX.msgs[WX.cur]) || [];
+  const mine = L.filter((x) => x && x.me && x.t && !x.shot && !x.tf);
+  const hit = [...mine].reverse().find((x) => x.t.includes(key) || key.includes(x.t.slice(0, 8))) || mine[mine.length - 1];
+  const r = parseLine0(m[2].trim());
+  if (hit) r.q = { t: String(hit.t).slice(0, 60), me: 1 };
+  return r;
+};
+function chatBgApply() {
+  const k = $("#vk"), c = WX.cons.find((x) => x.id == WX.cur);
+  if (!k) return;
+  const b = c && c.bg;
+  if (b && b.u) { k.style.background = "center/cover no-repeat url('" + b.u + "')"; k.classList.add("hasbg"); }
+  else if (b && b.c) { k.style.background = b.c; k.classList.add("hasbg"); }
+  else { k.style.background = ""; k.classList.remove("hasbg"); }
+}
+const rChat0 = rChat;
+rChat = function (id) { const r = rChat0(id); chatBgApply(); return r; };
+const rCS0 = rCS;
+rCS = function (id) {
+  const r = rCS0(id);
+  const c = WX.cons.find((x) => x.id == id), box = $("#vc .sc");
+  if (c && box && !box.querySelector('[data-mk="pick"]')) {
+    const m = maskList().find((x) => (x.bind || []).includes(String(c.id)) || (x.bind || []).includes(c.id));
+    const row = document.createElement("div");
+    row.className = "ls";
+    row.innerHTML = `<div class="lr btn" role="button" tabindex="0" data-mk="pick" data-cid="${c.id}" style="cursor:pointer"><div><b>面具（TA 眼中的我）</b><small>${m ? "当前：" + esc(m.name || "未命名") : "未绑定，使用我的微信资料"}</small></div>${ic("chev").replace('class="ico"', 'class="ico ch"')}</div>`;
+    const first = box.querySelector(".ls");
+    if (first) first.parentNode.insertBefore(row, first.nextSibling);
+  }
+  return r;
+};
+$("#vc").addEventListener("click", (e) => {
+  const t = e.target.closest && e.target.closest('[data-mk="pick"]');
+  if (!t) return;
+  e.stopPropagation();
+  const a = WX.acc, cid = t.dataset.cid, ms = maskList();
+  if (!ms.length) return gtoast("还没有面具，先在「我 → 面具」里新建");
+  const has = (m) => (m.bind || []).map(String).includes(String(cid));
+  const setb = (m) => () => {
+    ms.forEach((o) => { o.bind = (o.bind || []).filter((x) => String(x) != String(cid)); });
+    if (m) m.bind.push(cid);
+    wsave();
+    rCS(WX.cur);
+  };
+  actSheet("选择面具", [{ t: "不使用面具" + (ms.some(has) ? "" : "  ✓"), f: setb(null) }, ...ms.map((m) => ({ t: (m.name || "未命名") + (has(m) ? "  ✓" : ""), f: setb(m) }))]);
+}, true);
 window.__boot2 = function(force) {
   const er = (m) => {
     try {
