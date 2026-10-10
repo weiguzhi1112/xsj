@@ -64,7 +64,18 @@ svg{display:block}
 .wgx svg.wcl{display:block;width:min(100%,136px);height:auto;margin:-4px auto 0}
 .wgx .wcal{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:4px;text-align:center;font-size:10.5px;line-height:19px}.wgx .wcal b{font-weight:400;color:var(--mut)}.wgx .wcal i{font-style:normal;border-radius:50%}.wgx .wcal i.t{background:var(--btn);color:var(--btnt)}
 
-.fh{display:flex!important;align-items:center;justify-content:space-between;cursor:pointer;-webkit-user-select:none;user-select:none}.fch{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);opacity:.45;transition:transform .2s;margin:0 4px 0 10px;flex:none}.fcd.cl>.fh .fch{transform:rotate(-45deg)}.fcd.cl>.fb{display:none}.fcd.cl>.fh{margin-bottom:0}
+.fh{display:flex!important;align-items:center;justify-content:space-between;cursor:pointer;-webkit-user-select:none;user-select:none}.fch{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);opacity:.45;transition:transform .2s;margin:0 4px 0 10px;flex:none}.fcd.fcl>.fh .fch{transform:rotate(-45deg)}.fcd.fcl>.fb{display:none}.fcd.fcl>.fh{margin-bottom:0}
+.card.fcd{padding:0 22px;margin-top:14px}.card.fcd>.fh{margin:0;min-height:58px;font-size:16px;font-weight:500;color:var(--ink)}.card.fcd>.fb{padding:0 0 24px}
+.xkc.fcd{padding:0 20px;margin:12px 0}.xkc.fcd>.fh{min-height:58px;font-size:16px!important;font-weight:500;color:var(--ink)!important;letter-spacing:0!important}.xkc.fcd>.fb{padding:0 0 22px}.xkc.fcd>.fb>*:first-child{margin-top:0}
+.fch{width:9px;height:9px;opacity:.38;margin:0 3px 0 12px}
+.fcd .fb p,.fcd .fb .xkn,.fcd .fb .stt{line-height:1.75}.fcd .fb .xkn{margin:6px 0 10px!important}.fcd .fb .seg{margin:8px 0 14px}.fcd .fb .thr,.fcd .fb .lr{min-height:50px}.fcd .fb input[type=range]{margin:10px 0 16px}.fcd .fb .xkb{margin-top:14px}.fcd .fb>small{margin-top:16px}.fcd .fb>small:first-child{margin-top:0}
+
+#lock.lkimg{background:var(--lkimg) center/cover no-repeat}#lock.lkimg::before{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(0,0,0,var(--lkdim,.12))}
+#lock.lkc #lt,#lock.lkc #ld,#lock.lkc #lh,#lock.lkc #lk{color:var(--lkc)}#lock.lkc #lk svg{stroke:var(--lkc)}#lock.nln #ln{display:none}#lock.lkc:not(.up)~#sb{color:var(--lkc)}
+
+.wgcol .wg,.wgcol .wgx{background:rgba(var(--wgrgb),var(--wgo,.62))!important}
+.wgtc .wg,.wgtc .wgx{color:var(--wgc)}.wgtc .wg small,.wgtc .wgx small,.wgtc .wg em,.wgtc .wgx em{color:var(--wgc);opacity:.7}.wgtc .wg b,.wgtc .wgx .bg1,.wgtc .wgx .wcd,.wgtc .wgx .wnt,.wgtc .wgx .wq{color:var(--wgc)}.wgtc .wg .bar u,.wgtc .wgx .wbar u{background:var(--wgc)}
+.wgrd .wg,.wgrd .wgx{border-radius:var(--wgr)!important}
 .edit .ic{animation:jig .28s infinite alternate}
 @keyframes jig{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
 .ic.drag{animation:none!important;transition:none!important;z-index:30;transform:scale(1.1)}
@@ -97,7 +108,7 @@ svg{display:block}
 #lk.scan{animation:pl .5s infinite alternate}
 @keyframes pl{to{opacity:.3;transform:scale(1.2)}}
 #ld{margin-top:20px;font-size:16px;color:var(--t2);letter-spacing:.04em}
-#lt{font-size:92px;font-weight:200;letter-spacing:-3px;line-height:1.05;margin-top:4px}
+#lt{font-size:var(--lkts,92px);font-weight:200;letter-spacing:-3px;line-height:1.05;margin-top:4px}
 #ln{position:absolute;top:392px;left:24px;right:24px;display:flex;flex-direction:column;gap:8px}
 .nt{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:22px;background:rgba(var(--wc),.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 0 0 .5px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06);cursor:pointer}
 .nt i{width:36px;height:36px;border-radius:11px;background:var(--btn);color:var(--btnt);display:grid;place-items:center;flex:none}
@@ -1301,7 +1312,8 @@ function updBadges() {
 }
 function put(k) {
   const p = pos[k], e = els[k];
-  e.style.left = (p.d ? 8 + p.s * W : X + p.s % 4 * W) + (PW - 390) / 2 + "px";
+  const cw = (PW - 48) / 4, dw = (PW - 48) / 4;
+  e.style.left = (p.d ? 8 + p.s * dw + (dw - W) / 2 : X + p.s % 4 * cw + (cw - W) / 2) + "px";
   e.style.top = (p.d ? 11 : Y + Math.floor(p.s / 4) * H) + "px";
 }
 DOCK.forEach((k, i) => {
@@ -1764,10 +1776,10 @@ home.addEventListener("pointermove", (e) => {
 function drop(c, d) {
   const k = c.dataset.k, o = d.o, l = parseFloat(c.style.left), t = parseFloat(c.style.top);
   let tg = null;
-  const OX = (PW - 390) / 2;
-  if (t + 30 >= 722) tg = { d: 1, s: Math.max(0, Math.min(3, Math.round((l - OX - 24) / W))) };
+  const cw = (PW - 48) / 4;
+  if (t + 30 >= (parseFloat(phone.style.height) || 844) - 122) tg = { d: 1, s: Math.max(0, Math.min(3, Math.round((l - 24 - (cw - W) / 2) / cw))) };
   else {
-    const col = Math.max(0, Math.min(3, Math.round((l - OX - X) / W))), row = Math.max(0, Math.min(5, Math.round((t - Y) / H))), sl = row * 4 + col;
+    const col = Math.max(0, Math.min(3, Math.round((l - X - (cw - W) / 2) / cw))), row = Math.max(0, Math.min(rowsNow() - 1, Math.round((t - Y) / H))), sl = row * 4 + col;
     if (!(page == 0 && sl < 8)) tg = { p: page, s: sl };
   }
   if (!tg) {
@@ -1945,7 +1957,6 @@ rt();
 sbr();
 tick();
 rl();
-N.push({ id: ++NID, k: "chat", t: "微信", b: "你有一条新消息" });
 rl();
 const SHs = { items: [] };
 function shOpen(title, sub, html) {
@@ -3304,10 +3315,10 @@ $("#wx").addEventListener("change", async (e) => {
   v.textContent = "";
   l.querySelector("span").textContent = "更换头像";
 });
-const PREF_KEYS = ["fold", "lb", "rs", "ico", "icn", "ist", "isz", "wz", "wzd", "shell", "sbar", "isl", "hbar", "persona", "rx", "ui", "rad", "hap", "pace", "snd", "theme", "af", "bc", "gl", "sp", "sm", "sn", "sv", "sti", "sys", "qh", "dy", "kg", "kbf"];
+const PREF_KEYS = ["wzs", "uim", "pcap", "nolock", "lkbg", "lkc", "lkts", "lkdim", "nln", "fold", "lb", "rs", "ico", "icn", "ist", "isz", "wz", "wzd", "shell", "sbar", "isl", "hbar", "persona", "rx", "ui", "rad", "hap", "pace", "snd", "theme", "af", "bc", "gl", "sp", "sm", "sn", "sv", "sti", "sys", "qh", "dy", "kg", "kbf"];
 const nx = () => ({ type: "openai", url: "", key: "", model: "" });
 const apiDef = () => ({ a: nx(), b: nx(), presets: [], pi: -1, stream: "auto", temp: 0.8, reason: "off", bare: 0, fb: 1, black: [], tok: 0, vis: { on: 1, detail: "high", n: 3, re: "high", desc: 1, px: 1280 }, tts: {}, net: { direct: 1, proxy: "" }, ml: { a: { sig: "", list: [] }, b: { sig: "", list: [] } } });
-const prefDef = () => ({ fold: {}, lb: {}, rs: {}, ico: {}, icn: {}, ist: "", isz: 0, wz: { l: "one", a: "date", b: "clock" }, wzd: {}, shell: 1, sbar: 1, isl: 1, hbar: 1, persona: "", rx: [{ id: 1, name: "隐藏思考内容", find: "<think>[\\s\\S]*?</think>", flags: "gi", rep: "", scope: "ai", where: "both", on: 1 }], ui: 100, dy: 0, kg: 8, kbf: 1, rad: 19, hap: 1, pace: 1, snd: 1, theme: "auto", af: {}, bc: {}, gl: 0, sp: 1, sm: "both", sn: {}, sv: 70, sti: 0, sys: 0, qh: { on: 0, s: 23, e: 7 } });
+const prefDef = () => ({ wzs: {}, uim: 0, pcap: 0, nolock: 0, lkbg: "", lkc: "", lkts: 0, lkdim: 12, nln: 0, fold: {}, lb: {}, rs: {}, ico: {}, icn: {}, ist: "", isz: 0, wz: { l: "one", a: "date", b: "clock" }, wzd: {}, shell: 1, sbar: 1, isl: 1, hbar: 1, persona: "", rx: [{ id: 1, name: "隐藏思考内容", find: "<think>[\\s\\S]*?</think>", flags: "gi", rep: "", scope: "ai", where: "both", on: 1 }], ui: 100, dy: 0, kg: 8, kbf: 1, rad: 19, hap: 1, pace: 1, snd: 1, theme: "auto", af: {}, bc: {}, gl: 0, sp: 1, sm: "both", sn: {}, sv: 70, sti: 0, sys: 0, qh: { on: 0, s: 23, e: 7 } });
 let CFG = Object.assign(apiDef(), prefDef());
 function fixCfg() {
   for (const x of ["a", "b"]) CFG[x] = Object.assign(nx(), isObj(CFG[x]) ? CFG[x] : {});
@@ -3656,7 +3667,7 @@ function rSet(keep) {
   if (t == 2) h += `<div class="card"><h3>请求方式</h3><div class="fd"><small>流式模式</small>${sel('data-b="stream"', [["auto", "自动推荐"], ["off", "强制非流式"], ["on", "强制流式"]], CFG.stream)}</div><div class="fd"><small>温度 <span id="tv">${(+CFG.temp).toFixed(1)}</span></small><input type="range" data-b="temp" data-n="1" min="0" max="2" step="0.1" value="${CFG.temp}"></div><div class="fd"><small>推理深度</small>${sel('data-b="reason"', [["off", "关闭"], ["low", "低"], ["mid", "中"], ["high", "高"]], CFG.reason)}</div></div>
 <div class="card"><h3>兼容与备用</h3><div class="fd"><small>裸反代 Anthropic 格式</small>${sel('data-b="bare" data-n="1"', [[0, "关闭"], [1, "开启"]], CFG.bare)}</div><div class="fd"><small>主接口失败时切换副接口</small>${sel('data-b="fb" data-n="1"', [[1, "开启"], [0, "关闭"]], CFG.fb)}</div><div class="r2"><button class="cb" data-a="rblack">重置流式黑名单（${CFG.black.length}）</button></div><p class="stt">累计 token（估算）：${CFG.tok}</p></div>`;
   if (t == 2) h += `<div class="card"><h3>MCP 服务</h3><p class="stt">让微信里的角色调用外部工具。服务器、工具、资源、调用记录都在桌面的「MCP」应用里管理。目前已添加 ${MC.srv.length} 个服务器，${mcpTools().length} 个工具可用。</p><div class="r2"><button class="cb" data-mxo="1">打开 MCP 控制台</button></div></div>`;
-  if (t == 3) h += `<div class="card"><h3>显示</h3><div class="fd"><small>外观模式</small>${sel('data-b="theme"', [["auto", "跟随系统"], ["light", "浅色"], ["dark", "深色"]], CFG.theme)}</div>${dispSel()}<div class="fd"><small>界面大小 <span id="uv">${CFG.ui}</span>%</small><input type="range" data-d="ui" min="80" max="120" step="5" value="${CFG.ui}"></div><div class="fd"><small>图标圆角 <span id="rv">${CFG.rad}</span></small><input type="range" data-d="rad" min="10" max="30" value="${CFG.rad}"></div><div class="fd"><small>整体上下位置（负数上移，正数下移）</small><div class="dyr"><input type="range" data-d="dy" min="-120" max="120" step="2" value="${CFG.dy || 0}"><b id="dv_dy">${CFG.dy || 0}</b></div></div><div class="fd"><small>键盘弹起后，输入框与键盘的间隔</small><div class="dyr"><input type="range" data-d="kg" min="0" max="60" step="2" value="${CFG.kg >= 0 ? CFG.kg : 8}"><b id="dv_kg">${CFG.kg >= 0 ? CFG.kg : 8}</b></div></div><div class="fd"><small>键盘弹起时界面自动让位</small>${sel('data-d="kbf"', [[1, "开启"], [0, "关闭"]], CFG.kbf === 0 ? 0 : 1)}</div><div class="r2"><button class="cb" data-a="dyr">恢复默认位置</button><button class="cb" data-a="fs">进入全屏</button></div><p class="stt">安卓和电脑浏览器可直接进入全屏。iOS：用 Safari 打开，点分享，选「添加到主屏幕」，之后从主屏幕图标打开即为全屏。隐藏状态栏后，从屏幕顶部向下滑可打开控制中心。</p></div>
+  if (t == 3) h += `<div class="card"><h3>显示</h3><div class="fd"><small>外观模式</small>${sel('data-b="theme"', [["auto", "跟随系统"], ["light", "浅色"], ["dark", "深色"]], CFG.theme)}</div>${dispSel()}<div class="fd"><small>界面大小 <span id="uv">${CFG.ui}</span>%</small><input type="range" data-d="ui" min="60" max="120" step="5" value="${CFG.ui}"></div><div class="fd"><small>图标圆角 <span id="rv">${CFG.rad}</span></small><input type="range" data-d="rad" min="10" max="30" value="${CFG.rad}"></div><div class="fd"><small>整体上下位置（负数上移，正数下移）</small><div class="dyr"><input type="range" data-d="dy" min="-120" max="120" step="2" value="${CFG.dy || 0}"><b id="dv_dy">${CFG.dy || 0}</b></div></div><div class="fd"><small>键盘弹起后，输入框与键盘的间隔</small><div class="dyr"><input type="range" data-d="kg" min="0" max="60" step="2" value="${CFG.kg >= 0 ? CFG.kg : 8}"><b id="dv_kg">${CFG.kg >= 0 ? CFG.kg : 8}</b></div></div><div class="fd"><small>键盘弹起时界面自动让位</small>${sel('data-d="kbf"', [[1, "开启"], [0, "关闭"]], CFG.kbf === 0 ? 0 : 1)}</div><div class="r2"><button class="cb" data-a="dyr">恢复默认位置</button><button class="cb" data-a="fs">进入全屏</button></div><p class="stt">安卓和电脑浏览器可直接进入全屏。iOS：用 Safari 打开，点分享，选「添加到主屏幕」，之后从主屏幕图标打开即为全屏。隐藏状态栏后，从屏幕顶部向下滑可打开控制中心。</p></div>
 <div class="card"><h3>字体与反馈</h3><div class="r2"><label class="cb" style="display:flex;align-items:center;justify-content:center;cursor:pointer">上传字体<input type="file" id="ff" accept=".ttf,.otf,.woff,.woff2" hidden></label><button class="cb" data-a="fr">恢复默认</button></div><div class="fd"><small>触感反馈</small>${sel('data-d="hap"', [[1, "开启"], [0, "关闭"]], CFG.hap)}</div><div class="fd"><small>对方逐条送达（打字节奏）</small>${sel('data-d="pace"', [[1, "开启"], [0, "关闭"]], CFG.pace)}</div><div class="fd"><small>提示音</small>${sel('data-d="snd"', [[1, "开启"], [0, "关闭"]], CFG.snd)}</div></div>`;
   if (t == 3) h += pwaCard();
   if (t == 4) h += body;
@@ -3922,6 +3933,23 @@ async function wxReply(id, hint) {
   if (WX.cur == id) ml();
   wxTouch();
   let out = "";
+  let _nf = 0;
+  const fireN = () => {
+    if (_nf || !out || !String(out).trim()) return;
+    _nf = 1;
+    const c = WX.cons.find((x) => x.id == id);
+    if (!c) return;
+    const seen = cur == "chat" && WX.cur == id && $("#wx").classList.contains("open");
+    if (!seen) {
+      c.unread = (c.unread || 0) + (c.off == 1 ? 1 : Math.max(1, splitLines(stripReact(xsDrop(out))).length));
+      if (!c.mute) notify("chat", nm(c), rxRun(c.off == 1 ? out.trim().slice(0, 60) : stripReact(xsDrop(out)), "ai", "show") || "回应了你的消息");
+    } else if (CFG.sti) {
+      try {
+        ntSound("chat-in");
+      } catch (e) {
+      }
+    }
+  };
   try {
     await memPrep(c.id, hist);
   } catch (e) {
@@ -4005,6 +4033,7 @@ async function wxReply(id, hint) {
           if (ms.length < 2 || document.hidden || CFG.pace === 0) L.splice(i0, 1, ...ms);
           else {
             L.splice(i0, 1, ms[0]);
+            fireN();
             if (WX.cur == id) ml();
             wxTouch();
             wsaveL();
@@ -4050,15 +4079,7 @@ async function wxReply(id, hint) {
     TFDEC = 0;
   }
   const seen = cur == "chat" && WX.cur == id && $("#wx").classList.contains("open");
-  if (out && !seen) {
-    c.unread = (c.unread || 0) + (c.off == 1 ? 1 : Math.max(1, splitLines(stripReact(xsDrop(out))).length));
-    if (!c.mute) notify("chat", nm(c), rxRun(c.off == 1 ? out.trim().slice(0, 60) : stripReact(xsDrop(out)), "ai", "show") || "回应了你的消息");
-  } else if (out && seen && CFG.sti) {
-    try {
-      ntSound("chat-in");
-    } catch (e) {
-    }
-  }
+  fireN();
   if (out && seen && c.off != 1 && ttsCfg().auto && !CALL.on) {
     try {
       const tx = splitLines(stripReact(xsDrop(out))).filter((l) => !/^[\[【]/.test(l) || /^\[语音\]/.test(l)).join("。");
@@ -4510,7 +4531,7 @@ function loadLay(L) {
         break;
       }
       const dk = !!o.d;
-      if (dk ? !(o.s >= 0 && o.s < 4) : !(o.p === 0 || o.p === 1) || !(o.s >= (o.p ? 0 : 8) && o.s < 24)) {
+      if (dk ? !(o.s >= 0 && o.s < 4) : !(o.p === 0 || o.p === 1) || !(o.s >= (o.p ? 0 : 8) && o.s < 36)) {
         ok = false;
         break;
       }
@@ -4566,8 +4587,14 @@ function lpress(root, sel, cb) {
   });
 }
 phone.addEventListener("click", (e) => {
-  const b = e.target.closest && e.target.closest(".ph>b,#app>h1");
-  if (!b || !cur || !b.closest("#app,#sm,#cr,#st")) return;
+  const b = e.target.closest && e.target.closest(".ph>b,.tb>b,.g26>.gt,#app>h1");
+  if (!b || !cur || !b.closest("#app,#sm,#cr,#st,#wx")) return;
+  if (b.closest("#wx") && !b.closest(".ph,.tb,.g26")) return;
+  const hd = b.parentElement, back = hd && hd.querySelector('[aria-label="返回"],[data-a=back],[data-a=home],[data-a=sback]');
+  if (back && back !== b) {
+    back.click();
+    return;
+  }
   closeApp();
 });
 phone.addEventListener("pointerdown", () => {
@@ -9687,7 +9714,7 @@ async function mcpRun(W, out, tick, ctx) {
         ctx.L.splice(j < 0 ? ctx.L.length : j, 0, { s: 1, t: "调用了工具「" + k.name + "」" + (l && l.tool == k.name ? "，耗时 " + l.ms + " 毫秒" : ""), h: hm() });
       }
     }
-    W.hist = [...W.hist, { role: "assistant", content: String(out) }, { role: "user", content: "（工具「" + k.name + "」返回结果：\n" + String(res).slice(0, MC.set.maxlen) + "\n）请根据结果，用你自己的口吻自然地回复对方；不要再输出工具调用，也不要提到“工具”。" }];
+    W.hist = [...W.hist, { role: "assistant", content: String(out) }, { role: "user", content: "（工具「" + k.name + "」返回结果：\n" + String(res).slice(0, MC.set.maxlen) + "\n）这只是供你参考的背景信息，不会改变你和对方平时的相处方式。请像平时聊天一样回复对方：保持你一贯的性格、语气、亲近程度，回复的长短和条数也和不用工具时一样（该分几条发就分几条发），把结果自然地融进你的话里；不要变得冷淡、官方或简短，不要再输出工具调用，也不要提到“工具”或像播报系统消息。" }];
     out = await chat(W.hist, W.sys, tick, 0, mcpDefs(c));
   }
   return mcpClean(out) || String(out || "").replace(/\[\[tool:[\s\S]*?\]\]/g, "").trim();
@@ -11432,7 +11459,7 @@ const MEM = { on: 1, k: 6, auto: 0, items: [], pos: {}, busy: 0, emb: 0, model: 
 const MEMQ = {};
 const MQ = { cid: "all", q: "", res: null, tab: 0, ms: 0, pick: /* @__PURE__ */ new Set() };
 let MEMLAST = {};
-const MD = 512, MSRC = { wx: "微信", sms: "短信", call: "通话", off: "线下", man: "手记", sum: "要点" };
+const MD = 512, MSRC = { wx: "微信", sms: "短信", call: "通话", mom: "朋友圈", off: "线下", man: "手记", sum: "要点" };
 const MSTOP = new Set("的了是我你他她它在有不就也都吧吗呢啊哦嗯呀啦吗么这那和与而且但还又很被把让给对从到".split(""));
 function memH(s) {
   let h = 2166136261;
@@ -11541,6 +11568,28 @@ function memSync() {
       p = j;
     }
     MEM.pos[cv.ck] = p;
+  }
+  try {
+    const wn = (w) => {
+      if (w == "me") return "我";
+      const c = WX.cons.find((x) => x.id == w);
+      return c ? nm(c) : "某人";
+    }, put = (k, t, ts) => {
+      if (MEM.pos[k] || t.length < 4) return;
+      MEM.pos[k] = 1;
+      MEM.items.push({ id: xkId() + add, cid: 0, src: "mom", ck: k, e: 0, t: t.slice(0, 300), ts: ts || now, imp: 1, pin: 0, v: memVec(t, 64) });
+      add++;
+    };
+    for (const p of WX.mom || []) {
+      if (!isObj(p) || !p.id || p.vis && p.vis != "all") continue;
+      const k0 = "mom:" + p.id, ni = (p.im || []).length, tt = String(p.t || "").trim();
+      if (tt || ni) put(k0, wn(p.w) + "发了一条朋友圈" + (tt ? "：「" + tt + "」" : "") + (ni ? "（配图 " + ni + " 张）" : ""), p.ts);
+      (p.cm || []).forEach((cm, i) => {
+        if (!cm || !cm.t) return;
+        put(k0 + ":c" + (cm.ts || i), wn(cm.w) + (cm.to ? "回复" + wn(cm.to) : "评论") + "了" + wn(p.w) + "的朋友圈「" + tt.slice(0, 20) + "」：" + String(cm.t).slice(0, 80), cm.ts);
+      });
+    }
+  } catch (e) {
   }
   if (add) {
     if (MEM.items.length > 2800) {
@@ -14078,7 +14127,7 @@ function mcpRule(c) {
     const p = t.inputSchema && t.inputSchema.properties || {}, rq = t.inputSchema && t.inputSchema.required || [];
     return Object.keys(p).slice(0, 8).map((k) => k + (rq.includes(k) ? "*" : "") + ":" + (p[k] && p[k].type || "string") + (p[k] && p[k].description ? "（" + String(p[k].description).replace(/\s+/g, " ").slice(0, 40) + "）" : "")).join("，") || "无参数";
   };
-  return '\n- 【外部工具】你可以调用下面的工具获取真实信息。只要对方的问题需要查询、搜索、获取实时或外部信息，而下面的工具能做到，就必须先调用工具，不要凭空编造结果；闲聊则不要调用。调用时这一轮只输出一行，格式：[[tool:工具名 {"参数名":"值"}]]，例如 [[tool:' + T[0].name + " {}]]，不要附带其它文字；系统会把结果告诉你，之后你再用自己的口吻回复。如果接口支持函数调用，直接用函数调用也行。\n可用工具（参数后带*为必填）：\n" + T.map((t) => "  · " + t.name + "：" + (t.description || "").replace(/\s+/g, " ").slice(0, 120) + "｜参数：" + ps(t)).join("\n");
+  return '\n- 【外部工具】（只是帮你查资料的信息来源，不改变你平时的说话方式）你可以调用下面的工具获取真实信息。只要对方的问题需要查询、搜索、获取实时或外部信息，而下面的工具能做到，就必须先调用工具，不要凭空编造结果；闲聊则不要调用。调用时这一轮只输出一行，格式：[[tool:工具名 {"参数名":"值"}]]，例如 [[tool:' + T[0].name + " {}]]，不要附带其它文字；系统会把结果告诉你，拿到结果后请和平时聊天一模一样地回复：保持你一贯的语气和性格、同样的回复长短和条数，别因为用过工具就变得冷淡、简短或少发消息。如果接口支持函数调用，直接用函数调用也行。\n可用工具（参数后带*为必填）：\n" + T.map((t) => "  · " + t.name + "：" + (t.description || "").replace(/\s+/g, " ").slice(0, 120) + "｜参数：" + ps(t)).join("\n");
 }
 const mcpH = (s) => {
   const h = { "Content-Type": "application/json", Accept: "application/json, text/event-stream" };
@@ -14460,6 +14509,9 @@ function wzPick(s) {
   } })));
 }
 function diyCard() {
+  return diyCard0() + (typeof wzsCard == "function" ? wzsCard() : "") + (typeof lkCard == "function" ? lkCard() : "");
+}
+function diyCard0() {
   const W = CFG.wz || { l: "one", a: "date", b: "clock" }, two = W.l == "two", slot = (s, l) => `<div class="lr btn" role="button" tabindex="0" data-dy="pick" data-s="${s}"><div><b>${l}</b><small>${wzName(W[s] || "date")}</small></div>${ic("chev").replace('class="ico"', 'class="ico ch"')}</div>` + (["photo", "note", "count"].includes(W[s]) ? `<div class="lr btn" role="button" tabindex="0" data-dy="data" data-s="${s}"><div><b>${l}的内容</b><small>点这里修改</small></div>${ic("chev").replace('class="ico"', 'class="ico ch"')}</div>` : "");
   return `<div class="xkc"><small>图标风格</small><p class="xkn" style="margin:8px 0 0">给全部图标统一换一套风格；单个图标仍可在下面的「应用图标」里换成自己的图片。</p><div class="dyg">${ISTY.map((x) => `<button class="dyt${(CFG.ist || "") == x[0] ? " on" : ""}" data-dy="ist" data-v="${x[0]}"><span class="dyp${x[0] ? " ist-" + x[0] : ""}"><span class="ic" style="--ih:${IHUE[3]}"><i>${ic("chat")}</i></span></span><small>${x[1]}</small></button>`).join("")}</div>
 <small style="margin-top:14px">图标大小 <span id="dy_szv">${CFG.isz || 60}</span></small><input type="range" min="46" max="68" value="${CFG.isz || 60}" id="dy_sz" aria-label="图标大小" style="width:100%;margin-top:6px"></div>
@@ -15348,7 +15400,7 @@ function foldCards(root, ns, mode, first) {
     while (h.nextSibling) fb.appendChild(h.nextSibling);
     c.appendChild(fb);
     c.classList.add("fcd");
-    if (!open) c.classList.add("cl");
+    if (!open) c.classList.add("fcl");
     h.classList.add("fh");
     h.dataset.fold = key;
     h.setAttribute("role", "button");
@@ -15360,8 +15412,8 @@ document.addEventListener("click", (e) => {
   const h = e.target.closest && e.target.closest("[data-fold]");
   if (!h) return;
   const c = h.parentElement;
-  c.classList.toggle("cl");
-  const open = !c.classList.contains("cl");
+  c.classList.toggle("fcl");
+  const open = !c.classList.contains("fcl");
   h.setAttribute("aria-expanded", open ? "true" : "false");
   if (!isObj(CFG.fold)) CFG.fold = {};
   CFG.fold[h.dataset.fold] = open ? 1 : 0;
@@ -15378,6 +15430,271 @@ document.addEventListener("click", (e) => {
     t0(k);
     foldCards($("#app"), "th", "xkc", 2);
   };
+}
+
+function lkApply() {
+  const L = document.getElementById("lock");
+  if (!L) return;
+  const img = CFG.lkbg, st = L.style;
+  if (img) st.setProperty("--lkimg", 'url("' + img + '")');
+  else st.removeProperty("--lkimg");
+  L.classList.toggle("lkimg", !!img);
+  if (CFG.lkc) {
+    st.setProperty("--lkc", CFG.lkc);
+    phone.style.setProperty("--lkc", CFG.lkc);
+  } else {
+    st.removeProperty("--lkc");
+    phone.style.removeProperty("--lkc");
+  }
+  L.classList.toggle("lkc", !!CFG.lkc);
+  if (CFG.lkts >= 50 && CFG.lkts <= 130) st.setProperty("--lkts", CFG.lkts + "px");
+  else st.removeProperty("--lkts");
+  st.setProperty("--lkdim", (CFG.lkdim >= 0 ? CFG.lkdim : 12) / 100);
+  L.classList.toggle("nln", !!CFG.nln);
+}
+{
+  const ln0 = lockNow;
+  lockNow = function() {
+    if (CFG.nolock) {
+      try {
+        closeApp();
+      } catch (e) {
+      }
+      return;
+    }
+    ln0();
+  };
+  if (CFG.nolock) {
+    locked = 0;
+    $("#lock").classList.add("up");
+    try {
+      sbr();
+    } catch (e) {
+    }
+  }
+  lkApply();
+}
+function lkCard() {
+  const sw = (k, on, l, sub) => `<div class="thr"><div style="flex:1"><b>${l}</b>${sub ? `<small>${sub}</small>` : ""}</div><button class="sw${on ? " on" : ""}" role="switch" aria-checked="${on ? "true" : "false"}" aria-label="${l}" data-dy="${k}"><i></i></button></div>`;
+  return `<div class="xkc"><small>锁屏</small>${sw("lkon", !CFG.nolock, "启用锁屏", "关闭后打开就直接进入桌面")}${sw("lknn", !CFG.nln, "显示通知", "锁屏上是否列出未读通知")}
+<div class="xkb" style="margin-top:14px"><button data-dy="lkfile">从本机选择背景</button><button data-dy="lkalb">从相册选择</button></div><div class="xkb" style="margin-top:10px"><button data-dy="lkclr"${CFG.lkbg ? "" : " disabled"}>恢复默认背景</button></div>
+<div class="thr" style="margin-top:8px"><div style="flex:1"><b>文字颜色</b><small>时间、日期、提示文字</small></div><input type="color" id="dy_lkc" value="${CFG.lkc || "#111111"}" aria-label="锁屏文字颜色" style="width:44px;height:30px;border:0;background:none;padding:0"><button class="cb" data-dy="lkcc" style="margin-left:8px">默认</button></div>
+<small style="margin-top:14px">时间大小 <span id="dy_lkv">${CFG.lkts || 92}</span></small><input type="range" min="56" max="124" value="${CFG.lkts || 92}" id="dy_lkts" aria-label="时间大小" style="width:100%">
+<small style="margin-top:6px">背景压暗 <span id="dy_lkdv">${CFG.lkdim >= 0 ? CFG.lkdim : 12}</span>%（有背景图时生效）</small><input type="range" min="0" max="70" value="${CFG.lkdim >= 0 ? CFG.lkdim : 12}" id="dy_lkd" aria-label="背景压暗" style="width:100%"></div>`;
+}
+async function lkPut(u) {
+  try {
+    CFG.lkbg = await new Promise((ok, no) => {
+      const im = new Image();
+      im.onload = () => {
+        const k = Math.min(1, 1100 / Math.max(im.width, im.height)), cv = document.createElement("canvas");
+        cv.width = Math.max(1, Math.round(im.width * k));
+        cv.height = Math.max(1, Math.round(im.height * k));
+        cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height);
+        ok(cv.toDataURL("image/jpeg", 0.82));
+      };
+      im.onerror = () => no(new Error("load"));
+      im.src = u;
+    });
+    save();
+    lkApply();
+    if (cur == "th") thR(1);
+    gtoast("已设为锁屏背景");
+  } catch (e) {
+    gtoast("这张图片无法使用");
+  }
+}
+$("#app").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-dy]");
+  if (!b || cur != "th") return;
+  const a = b.dataset.dy;
+  if (a == "lkon") {
+    CFG.nolock = CFG.nolock ? 0 : 1;
+    save();
+    if (CFG.nolock && locked) unlock();
+    thR(1);
+  } else if (a == "lknn") {
+    CFG.nln = CFG.nln ? 0 : 1;
+    save();
+    lkApply();
+    thR(1);
+  } else if (a == "lkfile") {
+    const f = document.getElementById("dy_lkf");
+    if (f) f.click();
+  } else if (a == "lkalb") {
+    if (!(typeof PHO != "undefined" && PHO.length)) return gtoast("相册里还没有照片");
+    SHs.items = PHO.map((p) => ({ f: () => lkPut(p.u) }));
+    shOpen("选择锁屏背景", "", `<div class="xkwp">${PHO.map((p, i) => `<button data-sk="${i}" style="background-image:url('${p.u}')" aria-label="第 ${i + 1} 张"></button>`).join("")}</div><div class="l"><button class="si" data-sk="x"><span>取消</span></button></div>`);
+  } else if (a == "lkclr") {
+    CFG.lkbg = "";
+    save();
+    lkApply();
+    thR(1);
+  } else if (a == "lkcc") {
+    CFG.lkc = "";
+    save();
+    lkApply();
+    thR(1);
+  }
+});
+$("#app").addEventListener("input", (e) => {
+  const id = e.target.id;
+  if (id == "dy_lkc") {
+    CFG.lkc = e.target.value;
+    lkApply();
+  } else if (id == "dy_lkts") {
+    const v = +e.target.value;
+    CFG.lkts = v == 92 ? 0 : v;
+    const l = $("#dy_lkv");
+    if (l) l.textContent = v;
+    lkApply();
+  } else if (id == "dy_lkd") {
+    CFG.lkdim = +e.target.value;
+    const l = $("#dy_lkdv");
+    if (l) l.textContent = e.target.value;
+    lkApply();
+  }
+});
+$("#app").addEventListener("change", (e) => {
+  if (["dy_lkc", "dy_lkts", "dy_lkd"].includes(e.target.id)) save();
+});
+{
+  const f = document.createElement("input");
+  f.type = "file";
+  f.accept = "image/*";
+  f.id = "dy_lkf";
+  f.hidden = true;
+  f.addEventListener("change", async () => {
+    const x = f.files[0];
+    f.value = "";
+    if (!x) return;
+    try {
+      await lkPut(await imgData(x, 1100, 0.82));
+    } catch (er) {
+      gtoast("这张图片无法读取");
+    }
+  });
+  document.body.appendChild(f);
+}
+
+function rowsNow() {
+  const H2 = parseFloat(phone.style.height) || 844;
+  return Math.max(6, Math.min(9, Math.floor((H2 - 108 - Y) / H)));
+}
+function reflowApps() {
+  const cap = rowsNow() * 4, prev = CFG.pcap || 24;
+  if (CFG.pcap === cap) return;
+  CFG.pcap = cap;
+  const keys = () => Object.keys(pos).filter((k) => !pos[k].d), used = (p, s) => keys().some((k) => pos[k].p === p && pos[k].s === s), free = (p, from) => {
+    for (let s = from; s < cap; s++) if (!used(p, s)) return s;
+    return -1;
+  };
+  let ch = 0;
+  keys().filter((k) => pos[k].s >= cap).sort((a, b) => pos[a].s - pos[b].s).forEach((k) => {
+    let s = free(pos[k].p, pos[k].p ? 0 : 8), p = pos[k].p;
+    if (s < 0 && p === 0) {
+      p = 1;
+      s = free(1, 0);
+    }
+    if (s >= 0) {
+      place(k, { p, s });
+      ch = 1;
+    }
+  });
+  if (cap > prev) keys().filter((k) => pos[k].p === 1).sort((a, b) => pos[a].s - pos[b].s).forEach((k) => {
+    const s = free(0, 8);
+    if (s >= 0) {
+      place(k, { p: 0, s });
+      ch = 1;
+    }
+  });
+  if (ch) store("lay", pos);
+  savePrefs();
+}
+{
+  if (!CFG.uim) {
+    CFG.uim = 1;
+    if ((CFG.ui || 100) == 100) CFG.ui = 90;
+    savePrefs();
+  }
+  const f0 = fit;
+  fit = function() {
+    f0();
+    try {
+      reflowApps();
+    } catch (e) {
+    }
+  };
+  applyDisp();
+}
+
+function wzStyle() {
+  const o = isObj(CFG.wzs) ? CFG.wzs : {}, st = phone.style, hx = (h) => {
+    const m = /^#?([0-9a-f]{6})$/i.exec(h || "");
+    return m ? [parseInt(m[1].slice(0, 2), 16), parseInt(m[1].slice(2, 4), 16), parseInt(m[1].slice(4), 16)].join(",") : "";
+  };
+  const rgb = hx(o.bg);
+  if (rgb) {
+    st.setProperty("--wgrgb", rgb);
+    st.setProperty("--wgo", (o.op >= 10 ? o.op : 62) / 100);
+  } else {
+    st.removeProperty("--wgrgb");
+    st.removeProperty("--wgo");
+  }
+  phone.classList.toggle("wgcol", !!rgb);
+  if (hx(o.tc)) st.setProperty("--wgc", o.tc);
+  else st.removeProperty("--wgc");
+  phone.classList.toggle("wgtc", !!hx(o.tc));
+  if (o.rd >= 0 && o.rd !== void 0 && o.rd !== "") st.setProperty("--wgr", o.rd + "px");
+  else st.removeProperty("--wgr");
+  phone.classList.toggle("wgrd", o.rd >= 0 && o.rd !== void 0 && o.rd !== "");
+}
+function wzsCard() {
+  const o = isObj(CFG.wzs) ? CFG.wzs : {};
+  return `<div class="xkc"><small>小组件装扮</small>
+<div class="thr" style="margin-top:6px"><div style="flex:1"><b>背景颜色</b></div><input type="color" id="dy_wbg" value="${o.bg || "#ffffff"}" aria-label="小组件背景色" style="width:44px;height:30px;border:0;background:none;padding:0"><button class="cb" data-dy="wsx" data-k="bg" style="margin-left:8px">默认</button></div>
+<div class="thr"><div style="flex:1"><b>文字颜色</b></div><input type="color" id="dy_wtc" value="${o.tc || "#111111"}" aria-label="小组件文字色" style="width:44px;height:30px;border:0;background:none;padding:0"><button class="cb" data-dy="wsx" data-k="tc" style="margin-left:8px">默认</button></div>
+<small style="margin-top:12px">背景浓度 <span id="dy_wov">${o.op >= 10 ? o.op : 62}</span>%（设了背景色后生效）</small><input type="range" min="10" max="100" value="${o.op >= 10 ? o.op : 62}" id="dy_wop" aria-label="背景浓度" style="width:100%">
+<small style="margin-top:6px">圆角 <span id="dy_wrv">${o.rd >= 0 && o.rd !== "" && o.rd !== void 0 ? o.rd : 30}</span></small><input type="range" min="0" max="44" value="${o.rd >= 0 && o.rd !== "" && o.rd !== void 0 ? o.rd : 30}" id="dy_wrd" aria-label="小组件圆角" style="width:100%">
+<div class="xkb" style="margin-top:10px"><button data-dy="wsx" data-k="*">恢复小组件默认外观</button></div></div>`;
+}
+$("#app").addEventListener("input", (e) => {
+  const id = e.target.id, o = CFG.wzs = isObj(CFG.wzs) ? CFG.wzs : {};
+  if (id == "dy_wbg") o.bg = e.target.value;
+  else if (id == "dy_wtc") o.tc = e.target.value;
+  else if (id == "dy_wop") {
+    o.op = +e.target.value;
+    const l = $("#dy_wov");
+    if (l) l.textContent = e.target.value;
+  } else if (id == "dy_wrd") {
+    o.rd = +e.target.value;
+    const l = $("#dy_wrv");
+    if (l) l.textContent = e.target.value;
+  } else return;
+  wzStyle();
+});
+$("#app").addEventListener("change", (e) => {
+  if (["dy_wbg", "dy_wtc", "dy_wop", "dy_wrd"].includes(e.target.id)) save();
+});
+$("#app").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-dy=wsx]");
+  if (!b || cur != "th") return;
+  if (b.dataset.k == "*") CFG.wzs = {};
+  else if (isObj(CFG.wzs)) delete CFG.wzs[b.dataset.k];
+  save();
+  wzStyle();
+  thR(1);
+});
+{
+  const _ia = icoAll;
+  icoAll = function() {
+    _ia();
+    try {
+      wzStyle();
+    } catch (e) {
+    }
+  };
+  wzStyle();
 }
 window.__boot2 = function(force) {
   const er = (m) => {
